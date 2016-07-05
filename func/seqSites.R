@@ -1,4 +1,5 @@
 ###############################################################################
+### "func/seqSites.R"
 ## DESCRIPTION: This function subsets a data.frame (data) with a premade list of sites (sites) extracting the sites of interest and rearranging them in the correct west to east order.
 ## USAGE: You must be in the project root directory to use this function. 
 ## ARGUMENTS: The (data) must have columns labeled "site" and "src"
@@ -6,7 +7,10 @@
 ## VALUE:
 ## AUTHORS(S):
 ## REFERENCE(S):
-## EXAMPLE(S)
+## EXAMPLE(S):
+## DEPENDS:
+# "setupParams/site_list_v4.0.csv"
+## USED BY: "trend_analysis.R", "text.R"
 ##############################################################################
 
 seqSites <- function(data, sites = data$site, src = data$src, ...){
@@ -25,9 +29,8 @@ seqSites <- function(data, sites = data$site, src = data$src, ...){
     index <- rbind(index, data3)
   }
   index <- index[order(index$index),]
-  #index$index2 <- paste(index$site, index$src, sep = "/ ")
-  #index$index <- order(index$index) # Reorder factors, used for plotting
-  index$index <- NULL; index$index2 <- NULL # Remove both index columns
+  index$index <- NULL; index$index2 <- NULL # Removes both index column
   rownames(index) <- NULL
+  index$index <- paste(index$site, index$src, sep = "/ ")
   return(index)
 }

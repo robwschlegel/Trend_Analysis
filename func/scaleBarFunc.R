@@ -6,11 +6,14 @@
 # 3. Draw the elements in ggplot2
 ## NB: This script was copied from: http://editerna.free.fr/wp/?p=76
 ## DEPENDS ON:
-library(maps); library(maptools); library(ggplot2); library(grid)
+library(maps)
+library(maptools)
+library(ggplot2)
+library(grid)
 ## USED BY:
-# Most graphing scripts
+# "figures.R"
 ## CREATES:
-# Hopes and dreams
+# A wonderful scale bat in ggplot
 #############################################################################
 
 #############################################################################

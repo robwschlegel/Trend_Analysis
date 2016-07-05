@@ -1,4 +1,5 @@
 ###############################################################################
+### "func/detrendFunc.R"
 ## DESCRIPTION: This function uses a linear model to identify the overall trend of a time series and removes it to create a "flat" time series
 ## USAGE:
 ## ARGUMENTS:
@@ -7,12 +8,12 @@
 ## AUTHORS(S): Robert Schlegel
 ## REFERENCE(S):
 ## EXAMPLE(S):
-## DEPENDS: require(tseries); require(zoo)
-## USED BY: "time_series_bw.R"
+## DEPENDS: 
+library(zoo)
+## USED BY: "trend_analysis.R"
 ##############################################################################
 
 detrend <- function(data){
-  require(tseries); require(zoo)
   data5 <- data.frame()
   for(i in 1:length(levels(as.factor(data$index)))){
     data2 <- droplevels(subset(data, index == levels(as.factor(data$index))[i]))
@@ -25,17 +26,7 @@ detrend <- function(data){
     data3$temp <- lm2$residuals
     data4 <- data.frame(site = data2$site[1:length(data3$temp)], src = data2$src[1:length(data3$temp)],
                         date = data3$date, temp = data3$temp, depth = data2$depth[1:length(data3$temp)],
-                        type = data2$type[1:length(data3$temp)], coast = data2$coast[1:length(data3$temp)],
-                        index = data2$index[1:length(data3$temp)])
-    # 
-    #       ggplot(data = data2, aes(x = date, y = temp)) +
-    #         geom_line() +
-    #         geom_smooth(method = lm, se = F)
-    # 
-    #       ggplot(data = data3, aes(x = date, y = temp)) +
-    #         geom_line() +
-    #         geom_smooth(method = lm, se = F,colour = "red")
-    # 
+                        type = data2$type[1:length(data3$temp)], index = data2$index[1:length(data3$temp)])
     data5 <- rbind(data5, data4)
   }
   return(data5)
