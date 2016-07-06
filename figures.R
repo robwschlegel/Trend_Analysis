@@ -128,10 +128,10 @@ map <- SA +
 map
 
 ##########################################################################
-### 7. Create figure 1
+### 7. Create figure01
 
 ## Combine the two maps to create one inset map
-pdf("graph/figure1.pdf", width = 8, height = 4, pointsize = 6) # Set PDF dimensions
+pdf("graph/figure01.pdf", width = 8, height = 4, pointsize = 6) # Set PDF dimensions
 vp1 <- viewport(x = -0.01, y = 0.05, w = 0.25, h = 0.25, just = c("left", "bottom")) # Africa
 vp2 <- viewport(x = 1.0, y = 1.0, w = 1.00, h = 1.00, just = c("right", "top"))  # South Africa
 print(map, vp = vp2)

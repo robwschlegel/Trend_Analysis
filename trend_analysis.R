@@ -87,7 +87,7 @@ site_list_sub <- droplevels(subset(site_list, index %in% SACTN_sub$index))
 
 # Calculate statistics and meta-data
 wide <- dcast(SACTN_sub, date ~ site+src, value.var = "temp", mean)
-wide_zoo <- zoo(wide[,2:length(colnames(wide))], as.Date(as.POSIXct(wide$date)))
+wide_zoo <- zoo(wide[,2:length(colnames(wide))], as.Date(as.character(as.POSIXct(wide$date))))
 data_summary <- adply(wide_zoo, 2, metaTemp)
 names(data_summary)[c(1:7)] <- c("index", "start date", "end date", "length", "temp months", "NA months", "NA%")
 data_summary$site <- sapply(strsplit(as.character(data_summary$index), "[_]"), "[[", 1)
@@ -258,6 +258,42 @@ gamm_lin_fun <- function(df) {
 }
 
 # Non-linear GAMM
+# Non-linear GAMM
+gamm_non_fun <- function(df) {
+  out <- tryCatch(
+    {
+      model <- gamm(temp ~ s(month, bs = "cc", k = 6) + s(time, bs = "cr"),
+                    correlation = corARMA(form = ~ 1 | year, p = 2),
+                    method = "REML", data = df)
+      stats <- data.frame(DT_model = NA,
+                          se_trend = NA,
+                          sd_initial = round(sd(df$temp), 2),
+                          sd_residual = round(sd(model$gam$residuals), 2),
+                          r = round(sqrt(summary(model$gam)$r.sq), 2),
+                          R2 = round(summary(model$gam)$r.sq, 2),
+                          p_trend = as.numeric(summary(model$gam)$p.pv[2]),
+                          p_seas = as.numeric(summary(model$gam)$s.pv),
+                          length = length(df$temp),
+                          model = "gamm_non")
+      return(stats)
+    },
+    error = function(cond) {
+      stats <- data.frame(DT_model = NA,
+                          se_trend = NA,
+                          sd_initial = round(sd(df$temp), 2),
+                          sd_residual = NA,
+                          r = NA,
+                          R2 = NA,
+                          p_trend = NA,
+                          p_seas = NA,
+                          length = length(df$temp),
+                          model = "gamm_non")
+      return(stats)
+    }
+  )
+  rm(model)
+  return(out)
+}
 
 #############################################################################
 ### 10. Fit the models to the fully grown and expanded data and extract the results
