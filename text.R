@@ -90,6 +90,19 @@ length(levels(SACTN_full$index2)) # 1680
 #############################################################################
 ### 5. Results
 
+## Systematic Analysis of Time Series
+
+# Table of statistics - Must be something better shown with a table than a figure
+
+# Range of p_trend detected in models
+p_ranges <- gls_df %>%
+  summarise(min(p_trend)) %>%
+  summarise(min(p_trend)) %>%
+  summarise(min(p_trend))
+
+
+# Calculate correlation between different precisions
+
 #############################################################################
 ### 6. Discussion
 

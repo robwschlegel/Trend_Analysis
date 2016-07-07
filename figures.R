@@ -7,17 +7,23 @@
 # 4. Create the map of Africa to be windowed
 # 5. Create the map of southern Africa
 # 6. Add site list information
-# 7. Create figure 1
+# 7. Create figure01
 # 8. Load analysis results
 # 9. 
 #############################################################################
 
 #############################################################################
 ### 1. Load all packages required for the analyses
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(doMC); doMC::registerDoMC(cores = 8)
+
 # library(tseries)
 # library(zoo)
 # library(vegan)
-library(ggplot2)
 # library(xtable)
 # library(reshape2)
 # library(FNN)
@@ -28,10 +34,9 @@ library(ggplot2)
 # library(nlme)
 # library(mgcv)
 # library(dplyr)
-# library(tidyr)
 # library(purrr)
 # library(broom)
-library(doMC); doMC::registerDoMC(cores = 8)
+
 
 #############################################################################
 ### 2. Load all functions etc. found in other scripts
@@ -140,3 +145,156 @@ dev.off()
 
 ##########################################################################
 ### 8. Load analysis results
+load(file = "data/gls_df_non.RData")
+gls_df <- as_tibble(gls_df)
+gls_df
+load("data/SACTN_flat.Rdata")
+SACTN_flat <- as_tibble((SACTN_flat))
+SACTN_flat
+
+# boxplots ----------------------------------------------------------------
+SACTN_flat %>% # remains unchanged
+  ggplot(aes(x = index, y = temp, group = index)) +
+  geom_hline(yintercept = 0, size = 0.4, col = "red") +
+  geom_boxplot(size = 0.3, outlier.size = 0.5, show.legend = FALSE,
+               outlier.shape = 21, notch = TRUE, fill = "grey80", varwidth = TRUE) +
+  scale_x_discrete(name = "Time series no.", labels = 1:length(levels(ISflat$index))) +
+  scale_y_continuous(name = expression(paste("Detrended temperature anomaly (", degree, "C)"))) +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5, size = 8))
+ggsave("all_plt1.pdf", plot = last_plot(), width = 8.0, height = 3.25, units = "in")
+
+# data prep for correlation -----------------------------------------------
+dat_w <- gls_df %>%
+  unite(fac, site, src, remove = TRUE) %>%
+  select(fac, DT, length, DT_model, prec)
+x1 <- filter(dat_w, prec == "prec0001")
+x2 <- filter(dat_w, prec == "prec001")
+x3 <- filter(dat_w, prec == "prec01")
+x4 <- filter(dat_w, prec == "prec05")
+length(x1) == length(x2) # they are all of the same length; proceed...
+
+# t-tests and correlations ------------------------------------------------
+t.test(x1$DT_model, x2$DT_model, paired = TRUE) # different?!
+t.test(x1$DT_model, x3$DT_model, paired = TRUE) # not different!!
+t.test(x1$DT_model, x4$DT_model, paired = TRUE) # different!
+cor1 <- cor.test(x = x1$DT_model, y = x2$DT_model)
+cor2 <- cor.test(x = x1$DT_model, y = x4$DT_model)
+
+# correlation plots -------------------------------------------------------
+pdf(file = "correlations_new.pdf", width = 6, height = 3)
+par(mfrow=c(1, 2))
+plot(x1$DT_model, x2$DT_model, pch = ".", col = "red", type = "p",
+     xlab = "Precision: 0.001", ylab = "Precision: 0.01")
+plot(x1$DT_model, x4$DT_model, pch = ".", col = "red", type = "p",
+     xlab = "Precision: 0.001", ylab = "Precision: 0.5")
+par(mfrow=c(1, 1))
+dev.off()
+
+# RMSE --------------------------------------------------------------------
+# where vec1 is the reference; vec1 and vec2 of equal length
+rmse <- function(vec1, vec2) {
+  sqrt(mean((vec1 - vec2)^2))
+}
+# assume pred0001 is best, i.e. reference, then...
+rmse(x1$DT_model, x2$DT_model) # smaller is better
+rmse(x1$DT_model, x3$DT_model)
+rmse(x1$DT_model, x4$DT_model)
+
+# data prep for plotting --------------------------------------------------
+dat <- gls_df %>%
+  filter(prec == "prec001") %>%
+  select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
+         p_trend, length) %>%
+  unite(fac, site, src, remove = FALSE)
+dat$DT[dat$DT == "DT000"] <- 0
+dat$DT[dat$DT == "DT005"] <- 0.05
+dat$DT[dat$DT == "DT010"] <- 0.10
+dat$DT[dat$DT == "DT015"] <- 0.15
+dat$DT[dat$DT == "DT020"] <- 0.20
+dat$DT <- as.numeric(dat$DT)
+
+
+# other questions ---------------------------------------------------------
+# the relationship between precision and regression (slope) SE?
+# the relationship between sd_initial and regression (slope) SE?
+
+
+# plotting modelled trend vs. length --------------------------------------
+dat %>%
+  ggplot(aes(x = length, y = DT_model)) +
+  geom_line(col = "black", show.legend = TRUE) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = expression(paste("Model trend (", degree, "C)")),
+                     limits = c(-0.5, 0.5)) +
+  facet_wrap("DT", ncol = 5) +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("all_plt2_new.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
+
+# plotting effect of SD (initial) on modelled DT --------------------------
+dat %>%
+  ggplot(aes(x = sd_initial, y = DT_model, group = site)) +
+  geom_point(aes(col = src), shape = 21, alpha = 0.7, size = 0.4,
+             show.legend = TRUE) +
+  scale_y_continuous(limits = c(-1.5, 1.5)) +
+  facet_wrap("DT", ncol = 1)
+ggsave("all_plt3_new.pdf", plot = last_plot(), width = 3.5, height = 5,
+       units = "in")
+
+# plotting effect of SD (initial) on the p-value of the trend -------------
+dat %>%
+  ggplot(aes(x = sd_initial, y = p_trend)) +
+  geom_hline(yintercept = 0.05, col = "red") +
+  geom_point(aes(size = (sqrt(length) - 1)), col = "black", shape = 21, stroke = 0.2) +
+  scale_y_continuous(name = "p-value", limits = c(0, 1)) +
+  scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
+  scale_size_continuous(name = "Length (months)") +
+  facet_wrap("DT", ncol = 1)
+ggsave("all_plt4_new_a.pdf", plot = last_plot(), width = 5, height = 7,
+       units = "in")
+
+dat %>%
+  ggplot(aes(x = sd_initial, y = p_trend)) +
+  geom_hline(yintercept = 0.05, col = "red") +
+  geom_point(size = 1.2, col = "black", shape = 21, stroke = 0.2) +
+  scale_y_continuous(name = "p-value", limits = c(0, 1)) +
+  scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
+  facet_wrap("DT", ncol = 1)
+ggsave("all_plt4_new_b.pdf", plot = last_plot(), width = 5, height = 7,
+       units = "in")
+
+# plotting effect of SD (initial) on the R2 of the fit --------------------
+dat %>%
+  ggplot(aes(x = sd_initial, y = R2, group = site)) +
+  geom_point(aes(col = src), shape = 21, alpha = 0.7, size = 0.4, show.legend = TRUE) +
+  scale_y_continuous(limits = c(0, 1)) +
+  facet_grid(DT ~ model)
+ggsave("all_plt5_new.pdf", plot = last_plot(), width = 7.5, height = 5,
+       units = "in")
+
+# plotting effect of ts length on the ratio of DT to DT_model -------------
+dat %>%
+  ggplot(aes(x = length, y = abs(DT/DT_model))) +
+  geom_point(aes(size = se_trend/20, alpha = ((1/se_trend) * 2)), col = "black",
+             shape = 21, show.legend = TRUE) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = "Actual trend / Model trend", limits = c(-0.1, 1)) +
+  scale_alpha_continuous(guide = FALSE) +
+  scale_size_continuous(name = "SE of trend") +
+  facet_wrap("DT", ncol = 5)
+ggsave("all_plt6_new.pdf", plot = last_plot(), width = 8, height = 2.45, units = "in")
+
+# plotting effect of ts length on the SE of the modelled trend ------------
+dat %>%
+  ggplot(aes(x = length, y = se_trend)) +
+  geom_line(col = "black", show.legend = TRUE) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = "SE of trend") +
+  facet_wrap("DT", ncol = 5) +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("all_plt7_new.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
+
+# the relationship between DT and regression (slope) SE?
+dat %>%
+  ggplot(aes(x = sd_initial, y = se_trend)) +
+  geom_point(aes(col = sd_residual, shape = src)) +
+  facet_wrap("DT", ncol = 2)
