@@ -151,8 +151,8 @@ load(file = "data/gls_fitted_full_nointerp_grown.RData") # for interpolated, ful
 gls_gro <- as_tibble(gls_df)
 glimpse(gls_gro)
 rm(gls_df)
-load("data/SACTN_flat.Rdata")
-SACTN_flat <- as_tibble((SACTN_flat))
+load("data/SACTN_flat_interp.Rdata")
+SACTN_flat <- as_tibble(SACTN_flat)
 SACTN_flat
 
 # boxplots ----------------------------------------------------------------
@@ -218,7 +218,7 @@ dat$DT <- as.numeric(dat$DT)
 
 dat_gro <- gls_gro %>%
   select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
-         p_trend, length) %>%
+         p_trend, length, year_index) %>%
   unite(fac, site, src, remove = FALSE)
 dat_gro$DT[dat_gro$DT == "DT000"] <- 0
 dat_gro$DT[dat_gro$DT == "DT005"] <- 0.05
@@ -244,7 +244,7 @@ ggsave("graph/all_plt2_no_interp_natural.pdf", plot = last_plot(), width = 8, he
 
 # plotting modelled trend vs. length (grown, no-interp) -------------------
 dat_gro %>%
-  ggplot(aes(x = length, y = DT_model, group = fac)) +
+  ggplot(aes(x = year_index, y = DT_model, group = fac)) +
   geom_line(col = "black", show.legend = TRUE, alpha = 0.35) +
   scale_x_continuous(name = "Time series length (months)") +
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C)")),
@@ -266,7 +266,16 @@ ggsave("graph/all_plt4_no_interp_natural.pdf", plot = last_plot(), width = 5, he
        units = "in")
 
 # plotting p-value vs. SD (initial) (grown, no-interp) --------------------
-# to insert
+dat_gro %>%
+  ggplot(aes(x = sd_initial, y = p_trend)) +
+  geom_hline(yintercept = 0.05, col = "red") +
+  geom_point(aes(size = (sqrt(length) - 1)), col = "black", shape = 21, stroke = 0.2) +
+  scale_y_continuous(name = "p-value", limits = c(0, 1)) +
+  scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
+  scale_size_continuous(name = "Length (months)") +
+  facet_wrap("DT", ncol = 1)
+ggsave("graph/all_plt4_no_interp_gro.pdf", plot = last_plot(), width = 5, height = 7,
+       units = "in")
 
 # plotting DT/DT_modeled vs. length (natural, no-interp) ------------------
 dat %>%
@@ -281,7 +290,16 @@ dat %>%
 ggsave("graph/all_plt6_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2.45, units = "in")
 
 # plotting DT/DT_modeled vs. length (grown, no-interp) --------------------
-# to insert
+dat_gro %>%
+  ggplot(aes(x = year_index, y = abs(DT/DT_model))) +
+  geom_point(aes(size = se_trend/20, alpha = ((1/se_trend) * 2)), col = "black",
+             shape = 21, show.legend = TRUE) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = "Actual trend / Model trend", limits = c(-0.1, 1)) +
+  scale_alpha_continuous(guide = FALSE) +
+  scale_size_continuous(name = "SE of trend") +
+  facet_wrap("DT", ncol = 5)
+ggsave("graph/all_plt6_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 2.45, units = "in")
 
 # plotting ts length vs. se_trend (natural, no-interp) --------------------
 dat %>%
@@ -293,11 +311,17 @@ dat %>%
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
 ggsave("graph/all_plt7_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
-# the relationship between DT and regression (slope) SE?
-dat %>%
-  ggplot(aes(x = sd_initial, y = se_trend)) +
-  geom_point(aes(col = sd_residual, shape = src)) +
-  facet_wrap("DT", ncol = 2)
+# plotting ts length vs. se_trend (grown, no-interp) ----------------------
+dat_gro %>%
+  ggplot(aes(x = year_index, y = se_trend, group = fac)) +
+  geom_line(aes(col = sd_initial), alpha = 0.35, show.legend = TRUE) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = "SE of trend") +
+  scale_colour_distiller(name = expression(paste("Initial SD (", degree, "C)")),
+                         palette = "Spectral") +
+  facet_wrap("DT", ncol = 1) +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("graph/all_plt7_no_interp_grown.pdf", plot = last_plot(), width = 4, height = 7, units = "in")
 
 #############################################################################
 ### 11. Relationship between NA% and significance of detected trend
@@ -309,24 +333,24 @@ SACTN_sub2 <- as.data.frame(SACTN_sub2)
 
 ## Load the modelled data and add the index and type columns
 # The interpolated data
-load("data/gls_fitted_full_interp_grown.RData")
-gls_df_interp <- gls_df
-gls_df_interp$index <- as.factor(paste(gls_df_interp$site, gls_df_interp$src, sep = "/ "))
-gls_df_interp$type <- NA
-gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
-gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
-gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
+# load("data/gls_fitted_full_interp_grown.RData")
+# gls_df_interp <- gls_df
+# gls_df_interp$index <- as.factor(paste(gls_df_interp$site, gls_df_interp$src, sep = "/ "))
+# gls_df_interp$type <- NA
+# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
+# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
+# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
 # The non-interpolated data
 load("data/gls_fitted_full_nointerp_grown.RData")
 gls_df_non <- gls_df; rm(gls_df)
 
 ## Subset gls_fitted_full_interp_grown results by max(year_index) and Prec0.001 # Or just use a "natural" data frame
 # The interpolated data
-gls_df_interp <- gls_df_interp %>%
-  group_by(site, src) %>%
-  # filter(DT == "DT020") %>%
-  filter(prec == "prec0001") %>%
-  filter(year_index == max(year_index))
+# gls_df_interp <- gls_df_interp %>%
+#   group_by(site, src) %>%
+#   # filter(DT == "DT020") %>%
+#   filter(prec == "prec0001") %>%
+#   filter(year_index == max(year_index))
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
   group_by(site, src) %>%
@@ -335,10 +359,10 @@ gls_df_non <- gls_df_non %>%
 
 ## Add NA% from data_summary2 # The warning issues persist... :(
 # The interpolated data
-gls_df_interp <- gls_df_interp %>%
-  group_by(index) %>%
-  mutate(interp_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
-gls_df_interp <- data.frame(gls_df_interp)
+# gls_df_interp <- gls_df_interp %>%
+#   group_by(index) %>%
+#   mutate(interp_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
+# gls_df_interp <- data.frame(gls_df_interp)
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
   group_by(index) %>%
@@ -350,52 +374,61 @@ gls_df_non<- data.frame(gls_df_non)
 # Set limits for missing data
 miss_limit <- c(1, 2.5, 5, 7.5, 10, 12.5, 15)
 # Grow the interpolated data
-gls_df_interp_grow <- data.frame()
-for(i in 1:length(miss_limit)){
-  data1 <- data.frame(gls_df_interp[gls_df_interp$interp_perc <= miss_limit[i],])
-  data1$miss_limit <- miss_limit[i]
-  gls_df_interp_grow <- rbind(gls_df_interp_grow, data1)
-}; rm(data1)
+# gls_df_interp_grow <- data.frame()
+# for(i in 1:length(miss_limit)){
+#   data1 <- data.frame(gls_df_interp[gls_df_interp$interp_perc <= miss_limit[i],])
+#   data1$miss_limit <- miss_limit[i]
+#   gls_df_interp_grow <- rbind(gls_df_interp_grow, data1)
+# }; rm(data1)
 # Grow the non-interpolated data
 gls_df_non_grow <- data.frame()
-for(i in 1:length(miss_limit)){
+for(i in 1:length(miss_limit)) {
   data1 <- data.frame(gls_df_non[gls_df_non$na_perc <= miss_limit[i],])
   data1$miss_limit <- miss_limit[i]
   gls_df_non_grow <- rbind(gls_df_non_grow, data1)
 }; rm(data1)
 
 ## Show relation between p_trend and missing values
-# The interpolated data
-ggplot(data = gls_df_interp_grow, aes(x = interp_perc, y = p_trend)) +# bw_update +
-  geom_point(aes(colour = as.factor(DT))) +
-  geom_smooth(aes(colour = as.factor(DT)), 
-              method = "glm", alpha = 0.2) + 
-  #geom_smooth(method = "glm", family = "poisson") + 
-  # The "poisson" functionality seems to have been removed from ggplot2 at some point
-  # http://comments.gmane.org/gmane.comp.lang.r.ggplot2/6006
-  facet_wrap(~miss_limit, scales = "free_x") +
-  labs(title = "Interpolation%")
-ggsave("interp.pdf", height = 8, width = 10)
+# # The interpolated data
+# ggplot(data = gls_df_interp_grow, aes(x = interp_perc, y = p_trend)) +
+#   geom_point(aes(colour = as.factor(DT))) +
+#   # geom_smooth(aes(colour = as.factor(DT)), method = "glm", alpha = 0.2) + 
+#   geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
+#   facet_wrap(~miss_limit, scales = "free_x")
+# ggsave("interp.pdf", height = 8, width = 10)
+
 # The non-interpolated data
-ggplot(data = gls_df_non_grow, aes(x = na_perc, y = p_trend)) +# bw_update +
-  geom_point(aes(colour = as.factor(DT))) +
-  geom_smooth(aes(colour = as.factor(DT)), 
-              method = "glm", alpha = 0.2) +
-  facet_wrap(~miss_limit, scales = "free_x") +
-  labs(title = "NA%")
-ggsave("non.pdf", height = 8, width = 10)
+head(gls_df_non_grow)
+
+library(fitdistrplus)
+descdist(gls_df_non_grow$na_perc, boot = 500, graph = TRUE)
+plot(hist(gls_df_non_grow$na_perc))
+plot(hist(log(gls_df_non_grow$na_perc)))
+
+gls_df_non_grow %>% 
+  filter(miss_limit != 7.5) %>% 
+  ggplot(aes(x = log(na_perc), y = p_trend)) +
+  geom_point(aes(shape = as.factor(DT)), col = "black", stroke = 0.3) +
+  geom_smooth(aes(fill = as.factor(DT)), method = "lm", size = 0.3, col = "black") +
+  # geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
+  scale_x_continuous(name = "Log % NA") +
+  scale_y_continuous(name = "p-value") +
+  scale_fill_discrete(name = expression(paste("Trend: (", degree, "C/dec)"))) +
+  scale_shape_discrete(name = expression(paste("Trend: (", degree, "C/dec)"))) +
+  facet_wrap(~miss_limit, scales = "free_x") 
+ggsave("graph/non_NA_perc.pdf", height = 6, width = 10)
 
 ## Calculate correlation summary between p_trend and missing values
 # The interpolated data
-gls_df_interp_stats <- gls_df_interp_grow %>%
-  group_by(DT, miss_limit) %>%
-  mutate(p_mean = mean(p_trend)) %>%
-  mutate(r_miss_p = cor(p_trend, interp_perc)) %>%
-  mutate(p_miss_p = as.numeric(cor.test(p_trend, interp_perc)[3]))
-gls_df_interp_stats <- gls_df_interp_stats[c(3,19:22)]
-gls_df_interp_stats <- gls_df_interp_stats %>%
-  unique() %>%
-  mutate(method = "interp")
+# gls_df_interp_stats <- gls_df_interp_grow %>%
+#   group_by(DT, miss_limit) %>%
+#   mutate(p_mean = mean(p_trend)) %>%
+#   mutate(r_miss_p = cor(p_trend, interp_perc)) %>%
+#   mutate(p_miss_p = as.numeric(cor.test(p_trend, interp_perc)[3]))
+# gls_df_interp_stats <- gls_df_interp_stats[c(3,19:22)]
+# gls_df_interp_stats <- gls_df_interp_stats %>%
+#   unique() %>%
+#   mutate(method = "interp")
 # The non-interpolated data
 gls_df_non_stats <- gls_df_non_grow %>%
   group_by(DT, miss_limit) %>%

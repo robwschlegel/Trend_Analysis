@@ -72,12 +72,6 @@ gls_fun <- function(df) {
   return(out)
 }
 
-
-
-pipe %>% 
-
-
-
 # add year_index and remove prec if grown data are used
 system.time(mod_gls <- dlply(mod, .(site, src, DT, year_index), .progress = "text",
                              .parallel = TRUE, gls_fun))
