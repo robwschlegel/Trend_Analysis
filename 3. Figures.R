@@ -147,7 +147,7 @@ gls_nat <- as_tibble(gls_df)
 glimpse(gls_nat)
 rm(gls_df)
 # the interpolated, grown data need to be replaced with non-interpolated, grown data...
-load(file = "data/gls_fitted_full_interp_grown.RData") # for interpolated, full, grown
+load(file = "data/gls_fitted_full_nointerp_grown.RData") # for interpolated, full, grown
 gls_gro <- as_tibble(gls_df)
 glimpse(gls_gro)
 rm(gls_df)
@@ -216,6 +216,16 @@ dat$DT[dat$DT == "DT015"] <- 0.15
 dat$DT[dat$DT == "DT020"] <- 0.20
 dat$DT <- as.numeric(dat$DT)
 
+dat_gro <- gls_gro %>%
+  select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
+         p_trend, length) %>%
+  unite(fac, site, src, remove = FALSE)
+dat_gro$DT[dat_gro$DT == "DT000"] <- 0
+dat_gro$DT[dat_gro$DT == "DT005"] <- 0.05
+dat_gro$DT[dat_gro$DT == "DT010"] <- 0.10
+dat_gro$DT[dat_gro$DT == "DT015"] <- 0.15
+dat_gro$DT[dat_gro$DT == "DT020"] <- 0.20
+dat_gro$DT <- as.numeric(dat_gro$DT)
 
 # other questions ---------------------------------------------------------
 # the relationship between precision and regression (slope) SE?
@@ -233,7 +243,15 @@ dat %>%
 ggsave("graph/all_plt2_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
 # plotting modelled trend vs. length (grown, no-interp) -------------------
-# to insert
+dat_gro %>%
+  ggplot(aes(x = length, y = DT_model, group = fac)) +
+  geom_line(col = "black", show.legend = TRUE, alpha = 0.35) +
+  scale_x_continuous(name = "Time series length (months)") +
+  scale_y_continuous(name = expression(paste("Model trend (", degree, "C)")),
+                     limits = c(-2, 2)) +
+  facet_wrap("DT", ncol = 5) +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
 # plotting p-value vs. SD (initial) (natural, no-interp) ------------------
 dat %>%
