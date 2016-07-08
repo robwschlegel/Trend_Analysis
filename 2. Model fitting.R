@@ -16,6 +16,11 @@ doMC::registerDoMC(cores = 4)
 # mod <- as_tibble(SACTN_full_natural_no_interp)
 load(file = "data/SACTN_full_grown_no_interp.Rdata") # 3. not interpolated, full, grown
 mod <- as_tibble(SACTN_full_grown_no_interp)
+
+# Use below for grown data only (not interested in precision effects)
+mod %>%
+  filter(prec == "prec0001")
+
 rm(SACTN_full_grown_no_interp)
 
 # tDat <- SACTN_full_natural %>%
@@ -67,8 +72,8 @@ gls_fun <- function(df) {
   return(out)
 }
 
-# add year_index if grown
-system.time(mod_gls <- dlply(mod, .(site, src, DT, prec), .progress = "text",
+# add year_index and remove prec if grown data are used
+system.time(mod_gls <- dlply(mod, .(site, src, DT, year_index), .progress = "text",
                              .parallel = TRUE, gls_fun))
 # timing
 # Progress disabled when using parallel plyr
@@ -76,7 +81,7 @@ system.time(mod_gls <- dlply(mod, .(site, src, DT, prec), .progress = "text",
 # 1566.123  346.321  644.384
 gls_df <- ldply(mod_gls, data.frame, .progress = "text")
 ht(gls_df)
-save(gls_df, file = "data/gls_fitted_full_nointerp_natural.RData")
+save(gls_df, file = "data/gls_fitted_full_nointerp_grown.RData")
 
 
 # the linear GAMM ---------------------------------------------------------
@@ -130,7 +135,7 @@ system.time(mod_gamm_lin <- dlply(mod, .(site, src, DT, prec), .progress = "text
 # 4009.411  343.352 4358.262
 gamm_lin_df <- ldply(mod_gamm_lin, data.frame, .progress = "text")
 ht(gamm_lin_df)
-save(gamm_lin_df, file = "data/gamm_lin_fitted_full_nointerp_natural.RData")
+save(gamm_lin_df, file = "data/gamm_lin_fitted_full_nointerp_grown.RData")
 
 
 # the non-linear GAMM -----------------------------------------------------
@@ -183,4 +188,4 @@ system.time(mod_gamm_non <- dlply(mod, .(site, src, DT, prec), .progress = "text
                                   .parallel = TRUE, gamm_non_fun))
 gamm_non_df <- ldply(mod_gamm_non, data.frame, .progress = "text")
 ht(gamm_non_df)
-save(gamm_non_df, file = "data/gamm_non_fitted_full_nointerp_natural.RData")
+save(gamm_non_df, file = "data/gamm_non_fitted_full_nointerp_grown.RData")
