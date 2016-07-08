@@ -38,7 +38,7 @@ library(doMC); doMC::registerDoMC(cores = 4)
 #############################################################################
 ### 2. Load all functions etc. found in other scripts
 source("func/scaleBarFunc.R") # A custom ggplot function that creates a very snazy scale bar
-source("graph/themes.R") # The ggplot theme used for all figures
+source("setupParams/themes.R") # The ggplot theme used for all figures
 
 #############################################################################
 ### 3. Load the site list and spatial data used for the map

@@ -1,0 +1,183 @@
+library(doMC) # multi-core
+require(mgcv)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(tibble)
+library(lubridate)
+
+# set-up and load data ----------------------------------------------------
+doMC::registerDoMC(cores = 4)
+
+# load("/Users/ajsmit/Dropbox/repos/testing/data/ISfull.Rdata") # interpolated, full, grown
+# mod <- as_tibble(ISfull) %>%
+load(file = "/Users/ajsmit/Dropbox/repos/testing/data/SACTN_full_natural.Rdata") # not interpolated, full, natural
+mod <- as_tibble(SACTN_full_natural)
+rm(SACTN_full_natural)
+
+# tDat <- SACTN_full_natural %>%
+#   filter(prec == "prec0001") %>%
+#   filter(site == "Lamberts Bay") %>%
+#   filter(DT == "DT020")
+# rm(SACTN_full_natural)
+
+# the GLS-AR2 -------------------------------------------------------------
+gls_fun <- function(df) {
+  out <- tryCatch({
+    model <- gls(
+      temp ~ num,
+      correlation = corARMA(form = ~ 1 | year, p = 2),
+      method = "REML",
+      data = df, na.action = na.exclude
+    )
+    stats <-
+      data.frame(
+        DT_model = round(as.numeric(coef(model)[2]) * 120, 3),
+        se_trend = round(summary(model)[["tTable"]][[2, 2]], 10),
+        sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+        sd_residual = round(sd(model$residuals), 2),
+        r = NA,
+        R2 = NA,
+        p_trend = summary(model)[["tTable"]][[2, 4]],
+        p_seas = NA,
+        length = length(df$temp),
+        model = "gls"
+      )
+    return(stats)
+  },
+  error = function(cond) {
+    stats <- data.frame(
+      DT_model = NA,
+      se_trend = NA,
+      sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+      sd_residual = NA,
+      r = NA,
+      R2 = NA,
+      p_trend = NA,
+      p_seas = NA,
+      length = length(df$temp),
+      model = "gls"
+    )
+    return(stats)
+  })
+  rm(model)
+  return(out)
+}
+
+# add year_index if grown
+system.time(mod_gls <- dlply(mod, .(site, src, DT, prec), .progress = "text",
+                             .parallel = TRUE, gls_fun))
+# timing
+# Progress disabled when using parallel plyr
+# user   system  elapsed
+# 1566.123  346.321  644.384
+gls_df <- ldply(mod_gls, data.frame, .progress = "text")
+ht(gls_df)
+save(gls_df, file = "data/gls_fitted_full_nointerp_natural.RData")
+
+
+# the linear GAMM ---------------------------------------------------------
+gamm_lin_fun <- function(df) {
+  out <- tryCatch({
+    model <- gamm(
+      temp ~ s(month, bs = "cc", k = 12) + num,
+      correlation = corARMA(form = ~ 1 | year, p = 2),
+      method = "REML",
+      data = df, na.action = na.omit
+    )
+    stats <-
+      data.frame(
+        DT_model = round(as.numeric(summary(model$gam)$p.coeff[2]) * 120, 3),
+        se_trend = round(as.numeric(summary(model$gam)$se[2]), 10),
+        sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+        sd_residual = round(sd(model$gam$residuals), 2),
+        r = round(sqrt(summary(model$gam)$r.sq), 2),
+        R2 = round(summary(model$gam)$r.sq, 2),
+        p_trend = as.numeric(summary(model$gam)$p.pv[2]),
+        p_seas = as.numeric(summary(model$gam)$s.pv),
+        length = length(df$temp),
+        model = "gamm_lin"
+      )
+    return(stats)
+  },
+  error = function(cond) {
+    stats <- data.frame(
+      DT_model = NA,
+      se_trend = NA,
+      sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+      sd_residual = NA,
+      r = NA,
+      R2 = NA,
+      p_trend = NA,
+      p_seas = NA,
+      length = length(df$temp),
+      model = "gamm_lin"
+    )
+    return(stats)
+  })
+  rm(model)
+  return(out)
+}
+
+# add year_index if grown
+system.time(mod_gamm_lin <- dlply(mod, .(site, src, DT, prec), .progress = "text",
+                                  .parallel = TRUE, gamm_lin_fun))
+# timing
+#     user   system  elapsed
+# 4009.411  343.352 4358.262
+gamm_lin_df <- ldply(mod_gamm_lin, data.frame, .progress = "text")
+ht(gamm_lin_df)
+save(gamm_lin_df, file = "data/gamm_lin_fitted_full_nointerp_natural.RData")
+
+
+# the non-linear GAMM -----------------------------------------------------
+
+
+gamm_non_fun <- function(df) {
+  out <- tryCatch({
+    model <-
+      gamm(
+        temp ~ s(month, bs = "cc", k = 6) + s(num, bs = "cr"),
+        correlation = corARMA(form = ~ 1 | year, p = 2),
+        method = "REML",
+        data = df, na.action = na.omit
+      )
+    stats <- data.frame(
+      DT_model = NA,
+      se_trend = NA,
+      sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+      sd_residual = round(sd(model$gam$residuals), 2),
+      r = round(sqrt(summary(model$gam)$r.sq), 2),
+      R2 = round(summary(model$gam)$r.sq, 2),
+      p_trend = as.numeric(summary(model$gam)$p.pv[2]),
+      p_seas = as.numeric(summary(model$gam)$s.pv),
+      length = length(df$temp),
+      model = "gamm_non"
+    )
+    return(stats)
+  },
+  error = function(cond) {
+    stats <- data.frame(
+      DT_model = NA,
+      se_trend = NA,
+      sd_initial = round(sd(df$temp, na.rm = TRUE), 2),
+      sd_residual = NA,
+      r = NA,
+      R2 = NA,
+      p_trend = NA,
+      p_seas = NA,
+      length = length(df$temp),
+      model = "gamm_non"
+    )
+    return(stats)
+  })
+  rm(model)
+  return(out)
+}
+
+# add year_index if grown
+system.time(mod_gamm_non <- dlply(mod, .(site, src, DT, prec), .progress = "text",
+                                  .parallel = TRUE, gamm_non_fun))
+gamm_non_df <- ldply(mod_gamm_non, data.frame, .progress = "text")
+ht(gamm_non_df)
+save(gamm_non_df, file = "data/gamm_non_fitted_full_nointerp_natural.RData")
