@@ -146,6 +146,7 @@ load(file = "data/gls_fitted_full_nointerp_natural.RData") # for non-interpolate
 gls_nat <- as_tibble(gls_df)
 glimpse(gls_nat)
 rm(gls_df)
+# the interpolated, grown data need to be replaced with non-interpolated, grown data...
 load(file = "data/gls_fitted_full_interp_grown.RData") # for interpolated, full, grown
 gls_gro <- as_tibble(gls_df)
 glimpse(gls_gro)
