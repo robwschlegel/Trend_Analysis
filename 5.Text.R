@@ -170,7 +170,7 @@ ptrend_vs_NA <- gls_df_no_0 %>%
 ptrend_vs_NA <- ptrend_vs_NA[,c(3,20:21)] %>% 
   unique() # r = 0.57, p < 0.001
 
-# Group 
+# Create a grouping column so that the correlation by missing percent can be calculated
 
 # Correlation between abs(DT_perc) vs. se_trend
 ptrend_vs_NA <- gls_df_no_0 %>%
