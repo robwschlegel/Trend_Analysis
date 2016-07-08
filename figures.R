@@ -19,7 +19,7 @@ library(plyr)
 library(dplyr)
 library(tidyr)
 library(tibble)
-library(doMC); doMC::registerDoMC(cores = 8)
+library(doMC); doMC::registerDoMC(cores = 4)
 
 # library(tseries)
 # library(zoo)
@@ -34,14 +34,11 @@ library(doMC); doMC::registerDoMC(cores = 8)
 # library(nlme)
 # library(mgcv)
 # library(dplyr)
-# library(purrr)
-# library(broom)
-
-
+# 
 #############################################################################
 ### 2. Load all functions etc. found in other scripts
 source("func/scaleBarFunc.R") # A custom ggplot function that creates a very snazy scale bar
-source("graph/theme.R") # The ggplot theme used for all figures
+source("graph/themes.R") # The ggplot theme used for all figures
 
 #############################################################################
 ### 3. Load the site list and spatial data used for the map
@@ -145,9 +142,14 @@ dev.off()
 
 ##########################################################################
 ### 8. Load analysis results
-load(file = "data/gls_df_non.RData")
-gls_df <- as_tibble(gls_df)
-gls_df
+load(file = "data/gls_fitted_full_nointerp_natural.RData") # for non-interpolated, full, natural
+gls_nat <- as_tibble(gls_df)
+glimpse(gls_nat)
+rm(gls_df)
+load(file = "data/gls_fitted_full_interp_grown.RData") # for interpolated, full, grown
+gls_gro <- as_tibble(gls_df)
+glimpse(gls_gro)
+rm(gls_df)
 load("data/SACTN_flat.Rdata")
 SACTN_flat <- as_tibble((SACTN_flat))
 SACTN_flat
@@ -158,13 +160,13 @@ SACTN_flat %>% # remains unchanged
   geom_hline(yintercept = 0, size = 0.4, col = "red") +
   geom_boxplot(size = 0.3, outlier.size = 0.5, show.legend = FALSE,
                outlier.shape = 21, notch = TRUE, fill = "grey80", varwidth = TRUE) +
-  scale_x_discrete(name = "Time series no.", labels = 1:length(levels(ISflat$index))) +
+  scale_x_discrete(name = "Time series no.", labels = 1:length(levels(SACTN_flat$index))) +
   scale_y_continuous(name = expression(paste("Detrended temperature anomaly (", degree, "C)"))) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5, size = 8))
-ggsave("all_plt1.pdf", plot = last_plot(), width = 8.0, height = 3.25, units = "in")
+ggsave("graph/all_plt1.pdf", plot = last_plot(), width = 8.0, height = 3.25, units = "in")
 
 # data prep for correlation -----------------------------------------------
-dat_w <- gls_df %>%
+dat_w <- gls_nat %>%
   unite(fac, site, src, remove = TRUE) %>%
   select(fac, DT, length, DT_model, prec)
 x1 <- filter(dat_w, prec == "prec0001")
@@ -181,7 +183,7 @@ cor1 <- cor.test(x = x1$DT_model, y = x2$DT_model)
 cor2 <- cor.test(x = x1$DT_model, y = x4$DT_model)
 
 # correlation plots -------------------------------------------------------
-pdf(file = "correlations_new.pdf", width = 6, height = 3)
+pdf(file = "graph/correlations_new.pdf", width = 6, height = 3)
 par(mfrow=c(1, 2))
 plot(x1$DT_model, x2$DT_model, pch = ".", col = "red", type = "p",
      xlab = "Precision: 0.001", ylab = "Precision: 0.01")
@@ -201,7 +203,7 @@ rmse(x1$DT_model, x3$DT_model)
 rmse(x1$DT_model, x4$DT_model)
 
 # data prep for plotting --------------------------------------------------
-dat <- gls_df %>%
+dat <- gls_nat %>%
   filter(prec == "prec001") %>%
   select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
          p_trend, length) %>%
@@ -218,8 +220,7 @@ dat$DT <- as.numeric(dat$DT)
 # the relationship between precision and regression (slope) SE?
 # the relationship between sd_initial and regression (slope) SE?
 
-
-# plotting modelled trend vs. length --------------------------------------
+# plotting modelled trend vs. length (natural, no-interp) -----------------
 dat %>%
   ggplot(aes(x = length, y = DT_model)) +
   geom_line(col = "black", show.legend = TRUE) +
@@ -228,19 +229,12 @@ dat %>%
                      limits = c(-0.5, 0.5)) +
   facet_wrap("DT", ncol = 5) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
-ggsave("all_plt2_new.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
+ggsave("graph/all_plt2_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
-# plotting effect of SD (initial) on modelled DT --------------------------
-dat %>%
-  ggplot(aes(x = sd_initial, y = DT_model, group = site)) +
-  geom_point(aes(col = src), shape = 21, alpha = 0.7, size = 0.4,
-             show.legend = TRUE) +
-  scale_y_continuous(limits = c(-1.5, 1.5)) +
-  facet_wrap("DT", ncol = 1)
-ggsave("all_plt3_new.pdf", plot = last_plot(), width = 3.5, height = 5,
-       units = "in")
+# plotting modelled trend vs. length (grown, no-interp) -------------------
+# to insert
 
-# plotting effect of SD (initial) on the p-value of the trend -------------
+# plotting p-value vs. SD (initial) (natural, no-interp) ------------------
 dat %>%
   ggplot(aes(x = sd_initial, y = p_trend)) +
   geom_hline(yintercept = 0.05, col = "red") +
@@ -249,29 +243,13 @@ dat %>%
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Length (months)") +
   facet_wrap("DT", ncol = 1)
-ggsave("all_plt4_new_a.pdf", plot = last_plot(), width = 5, height = 7,
+ggsave("graph/all_plt4_no_interp_natural.pdf", plot = last_plot(), width = 5, height = 7,
        units = "in")
 
-dat %>%
-  ggplot(aes(x = sd_initial, y = p_trend)) +
-  geom_hline(yintercept = 0.05, col = "red") +
-  geom_point(size = 1.2, col = "black", shape = 21, stroke = 0.2) +
-  scale_y_continuous(name = "p-value", limits = c(0, 1)) +
-  scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
-  facet_wrap("DT", ncol = 1)
-ggsave("all_plt4_new_b.pdf", plot = last_plot(), width = 5, height = 7,
-       units = "in")
+# plotting p-value vs. SD (initial) (grown, no-interp) --------------------
+# to insert
 
-# plotting effect of SD (initial) on the R2 of the fit --------------------
-dat %>%
-  ggplot(aes(x = sd_initial, y = R2, group = site)) +
-  geom_point(aes(col = src), shape = 21, alpha = 0.7, size = 0.4, show.legend = TRUE) +
-  scale_y_continuous(limits = c(0, 1)) +
-  facet_grid(DT ~ model)
-ggsave("all_plt5_new.pdf", plot = last_plot(), width = 7.5, height = 5,
-       units = "in")
-
-# plotting effect of ts length on the ratio of DT to DT_model -------------
+# plotting DT/DT_modeled vs. length (natural, no-interp) ------------------
 dat %>%
   ggplot(aes(x = length, y = abs(DT/DT_model))) +
   geom_point(aes(size = se_trend/20, alpha = ((1/se_trend) * 2)), col = "black",
@@ -281,9 +259,12 @@ dat %>%
   scale_alpha_continuous(guide = FALSE) +
   scale_size_continuous(name = "SE of trend") +
   facet_wrap("DT", ncol = 5)
-ggsave("all_plt6_new.pdf", plot = last_plot(), width = 8, height = 2.45, units = "in")
+ggsave("graph/all_plt6_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2.45, units = "in")
 
-# plotting effect of ts length on the SE of the modelled trend ------------
+# plotting DT/DT_modeled vs. length (grown, no-interp) --------------------
+# to insert
+
+# plotting ts length vs. se_trend (natural, no-interp) --------------------
 dat %>%
   ggplot(aes(x = length, y = se_trend)) +
   geom_line(col = "black", show.legend = TRUE) +
@@ -291,7 +272,7 @@ dat %>%
   scale_y_continuous(name = "SE of trend") +
   facet_wrap("DT", ncol = 5) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
-ggsave("all_plt7_new.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
+ggsave("graph/all_plt7_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
 # the relationship between DT and regression (slope) SE?
 dat %>%
