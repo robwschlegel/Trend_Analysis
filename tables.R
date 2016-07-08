@@ -8,17 +8,13 @@
 
 #############################################################################
 ## 1. Load all packages required for the analyses
-# library(tseries)
 # library(zoo)
-# library(vegan)
 library(ggplot2)
 library(xtable)
 # library(reshape2)
-# library(FNN)
 # library(gridExtra)
 # library(grid)
 # library(lubridate)
-# library(pwr)
 # library(nlme)
 # library(mgcv)
 library(dplyr)
@@ -36,11 +32,13 @@ source("func/seqSites.R") # A function that orders sites correctly along the coa
 ### 3. Create table01
 
 # Rows
-  # type min-mean-max
+  # type? 
+  # sd-mean-sd
 # Columns
   # Length
-  # p
-  # DT/ DT_model
+  # p_trend
+  # rmse(DTdata-DT_model)
+  # se_trend
 
 ## Load the modelled data and add the type column
 load("data/gls_df.RData")
