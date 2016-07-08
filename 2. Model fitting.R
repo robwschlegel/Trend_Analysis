@@ -9,11 +9,14 @@ library(lubridate)
 # set-up and load data ----------------------------------------------------
 doMC::registerDoMC(cores = 4)
 
-# load("/Users/ajsmit/Dropbox/repos/testing/data/ISfull.Rdata") # interpolated, full, grown
+# Select one of 1., 2. or 3.:
+# load("data/SACTN_full_interp.Rdata") # 1. interpolated, full, grown 
 # mod <- as_tibble(ISfull) %>%
-load(file = "/Users/ajsmit/Dropbox/repos/testing/data/SACTN_full_natural.Rdata") # not interpolated, full, natural
-mod <- as_tibble(SACTN_full_natural)
-rm(SACTN_full_natural)
+# load(file = "data/SACTN_full_natural_no_interp.Rdata") # 2. not interpolated, full, natural
+# mod <- as_tibble(SACTN_full_natural_no_interp)
+load(file = "data/SACTN_full_grown_no_interp.Rdata") # 3. not interpolated, full, grown
+mod <- as_tibble(SACTN_full_grown_no_interp)
+rm(SACTN_full_grown_no_interp)
 
 # tDat <- SACTN_full_natural %>%
 #   filter(prec == "prec0001") %>%

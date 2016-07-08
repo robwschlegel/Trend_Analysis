@@ -23,7 +23,7 @@ colnames(SACTN_sub2)[8] <- "na_perc" # your woes started because you use "NA%" a
 SACTN_sub2 <- as.data.frame(SACTN_sub2)
 
 # add necessary info for models -------------------------------------------
-SACTN_flat <- SACTN_sub2 %>%
+SACTN_flat_no_interp <- SACTN_sub2 %>%
   filter(complete.cases(temp)) %>%
   group_by(index) %>%
   mutate(time = as.numeric(date)) %>%
@@ -32,18 +32,18 @@ SACTN_flat <- SACTN_sub2 %>%
   mutate(num = 1:length(date)) # to use as regressor
 
 # detrend -----------------------------------------------------------------
-resids <- ldply(dlply(SACTN_flat, .(site, src, index),
+resids <- ldply(dlply(SACTN_flat_no_interp, .(site, src, index),
                       function(df) as.numeric(residuals(lm(temp ~ time, data = df, na.action = na.omit)))), data.frame)
 colnames(resids)[4] <- "residuals"
-SACTN_flat$temp <- resids$residuals
+SACTN_flat_no_interp$temp <- resids$residuals
 
-save(SACTN_flat, file = "data/SACTN_flat.Rdata")
-# load("data/SACTN_flat.Rdata")
+save(SACTN_flat_no_interp, file = "data/SACTN_flat_no_interp.Rdata")
+# load("data/SACTN_flat_no_interp.Rdata")
 
 # "grow" the time series --------------------------------------------------
-SACTN_grow <- data.frame()
-for(i in 1:length(levels(SACTN_flat$index))){
-  data1 <- data.frame(droplevels(subset(SACTN_flat, index == levels(SACTN_flat$index)[i])))
+SACTN_grown_no_interp <- data.frame()
+for(i in 1:length(levels(SACTN_flat_no_interp$index))){
+  data1 <- data.frame(droplevels(subset(SACTN_flat_no_interp, index == levels(SACTN_flat_no_interp$index)[i])))
   if(length(data1$year[data1$year == levels(as.factor(data1$year))[1]]) < 12){
     data1 <- droplevels(subset(data1, year != levels(as.factor(data1$year))[1]))
   }
@@ -55,22 +55,22 @@ for(i in 1:length(levels(SACTN_flat$index))){
     for(j in 5:length(levels(as.factor(data1$year)))){
       data2 <- droplevels(subset(data1, year %in% levels(as.factor(data1$year))[1:j]))
       data2$year_index <- j
-      SACTN_grow <- rbind(SACTN_grow, data2)
+      SACTN_grown_no_interp <- rbind(SACTN_grown_no_interp, data2)
     }
   }
 }
 
-save(SACTN_grow, file = "data/SACTN_grow.Rdata")
-load("data/SACTN_grow.Rdata")
+save(SACTN_grown_no_interp, file = "data/SACTN_grown_no_interp.Rdata")
+# load("data/SACTN_grown_no_interp.Rdata")
 # load("data/SACTN_grow_interp.Rdata")
 
 # Expand data to show different DT and precision --------------------------
 # Uncomment as follows:
-# 1. SACTN_flat to expand the flat, uninterpolated, natural data; or
-# 2. SACTN_grow to expand the flat, uninterpolated, grown data
+# 1. SACTN_flat_no_interp to expand the flat, uninterpolated, natural data; or
+# 2. SACTN_grown_no_interp to expand the flat, uninterpolated, grown data
 
-# SACTN_full_natural <- SACTN_flat %>% # 1.
-SACTN_full_grown <- SACTN_grow %>% # 2.
+SACTN_full_natural_no_interp <- SACTN_flat_no_interp %>% # 1.
+# SACTN_full_grown_no_interp <- SACTN_grown_no_interp %>% # 2.
   group_by(site, src, type) %>%
   mutate(time = as.numeric(date)) %>%
   ddply(.(site, src), mutate, DT000 = (seq(0, by = (0.00 / 120), length.out = length(date))) + temp) %>%
@@ -88,7 +88,7 @@ SACTN_full_grown <- SACTN_grow %>% # 2.
   gather(prec, value = temp, prec0001, prec001, prec01, prec05) %>%
   tbl_df()
 
-save(SACTN_full_natural, file = "data/SACTN_full_natural.Rdata")
-save(SACTN_full_grown, file = "data/SACTN_full_grown.Rdata")
-# load("data/SACTN_full_natural.Rdata")
-# load("data/SACTN_full_grown.Rdata")
+save(SACTN_full_natural_no_interp, file = "data/SACTN_full_natural_no_interp.Rdata")
+save(SACTN_full_grown_no_interp, file = "data/SACTN_full_grown_no_interp.Rdata")
+# load("data/SACTN_full_natural_no_interp.Rdata")
+# load("data/SACTN_full_grown_no_interp.Rdata")
