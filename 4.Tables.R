@@ -11,17 +11,12 @@
 # library(zoo)
 library(ggplot2)
 library(xtable)
-# library(reshape2)
-# library(gridExtra)
-# library(grid)
-# library(lubridate)
-# library(nlme)
-# library(mgcv)
+library(reshape2)
 library(dplyr)
 library(tidyr)
 library(purrr)
 library(broom)
-library(doMC); doMC::registerDoMC(cores = 8)
+library(doMC); doMC::registerDoMC(cores = 4)
 
 #############################################################################
 ## 2. Load all functions etc. found in other scripts
@@ -40,15 +35,56 @@ source("func/seqSites.R") # A function that orders sites correctly along the coa
   # rmse(DTdata-DT_model)
   # se_trend
 
-## Load the modelled data and add the type column
-load("data/gls_df.RData")
-gls_df$index <- as.factor(paste(gls_df$site, gls_df$src, sep = "/ "))
-gls_df$type <- NA
-gls_df$type[gls_df$index %in% levels(droplevels(site_list$index[site_list$type == "thermo"]))] <- "thermo"
-gls_df$type[gls_df$index %in% levels(droplevels(site_list$index[site_list$type == "old"]))] <- "old"
-gls_df$type[gls_df$index %in% levels(droplevels(site_list$index[site_list$type == "new"]))] <- "new"
+## Load the modelled data
+load("data/gls_fitted_full_nointerp_natural.RData")
+# head(gls_df)
 
+## Add "DT_real" column as numeric values
+gls_df$DT_real <- NA
+gls_df$DT_real[gls_df$DT == "DT000"] <- 0.00
+gls_df$DT_real[gls_df$DT == "DT005"] <- 0.05
+gls_df$DT_real[gls_df$DT == "DT010"] <- 0.10
+gls_df$DT_real[gls_df$DT == "DT015"] <- 0.15
+gls_df$DT_real[gls_df$DT == "DT020"] <- 0.20
 
+# Add same small value to "DT_model" for DT 0.00
+# gls_df0 <- gls_df %>%
+#   filter(DT == "DT000") %>% 
+#   mutate(DT_model = DT_model + 0.001)
+# 
+# gls_df1 <- gls_df %>%
+#   filter(DT != "DT000")
+# 
+# gls_df <- rbind(gls_df0, gls_df1)
 
-results_table <- gls_df %>%
-  group_by(type)
+## Calculate "DT_perc", the percentage different between the real DT and the modelled DT
+gls_df <- gls_df %>% 
+  mutate(DT_perc = ((DT_real-DT_model)/DT_real)*100)
+
+# Ply the data to get the required statistics
+  # Only use prec0001
+results_table <- gls_df[,c(3:8,11,13,16)] %>%
+  group_by(DT) %>%
+  filter(prec == "prec0001") %>% 
+  mutate(length_low = mean(length/4)-sd(length/4)) %>% # For some reason length values are four times larger than they should be
+  mutate(length_mean = mean(length/4)) %>% 
+  mutate(length_high = mean(length/4)+sd(length/4)) %>%
+  mutate(p_trend_low = mean(p_trend)-sd(p_trend)) %>% 
+  mutate(p_trend_mean = mean(p_trend)) %>% 
+  mutate(p_trend_high = mean(p_trend)+sd(p_trend)) %>% 
+  mutate(DT_perc_low = mean(DT_perc)-sd(DT_perc)) %>% 
+  mutate(DT_perc_mean = mean(DT_perc)) %>% 
+  mutate(DT_perc_high = mean(DT_perc)+sd(DT_perc)) %>% 
+  mutate(se_trend_low = mean(se_trend)-sd(se_trend)) %>% 
+  mutate(se_trend_mean = mean(se_trend)) %>% 
+  mutate(se_trend_high = mean(se_trend)+sd(se_trend))
+
+  
+results_table <- results_table[c(1,10:21)] %>% 
+  unique()
+save(results_table, file = "data/results_table.Rdata")
+xtable(results_table)
+
+results_table_long <- results_table %>% 
+  melt(id = c("DT"))
+
