@@ -340,7 +340,7 @@ ggsave("graph/all_plt7_no_interp_natural.pdf", plot = last_plot(), width = 8, he
 dat_gro %>%
   ggplot(aes(x = year_index, y = se_trend, group = fac)) +
   geom_line(aes(col = sd_initial), alpha = 0.35, show.legend = TRUE) +
-  scale_x_continuous(name = "Time series length (months)") +
+  scale_x_continuous(name = "Time series length (years)") +
   scale_y_continuous(name = "SE of trend") +
   scale_colour_distiller(name = expression(paste("Initial SD (", degree, "C)")),
                          palette = "Spectral") +
@@ -376,6 +376,7 @@ gls_df_non <- gls_df; rm(gls_df)
 #   # filter(DT == "DT020") %>%
 #   filter(prec == "prec0001") %>%
 #   filter(year_index == max(year_index))
+
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
   group_by(site, src) %>%
@@ -388,16 +389,19 @@ gls_df_non <- gls_df_non %>%
 #   group_by(index) %>%
 #   mutate(interp_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
 # gls_df_interp <- data.frame(gls_df_interp)
+
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
   group_by(index) %>%
   mutate(na_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
-gls_df_non<- data.frame(gls_df_non)
+gls_df_non <- data.frame(gls_df_non)
 
 ## "Grow" the limit of NA/ Interp used on the data 
     # I have since realised that these differences could be calculated easily without for loops...
+
 # Set limits for missing data
 miss_limit <- c(1, 2.5, 5, 7.5, 10, 12.5, 15)
+
 # Grow the interpolated data
 # gls_df_interp_grow <- data.frame()
 # for(i in 1:length(miss_limit)){
@@ -405,6 +409,7 @@ miss_limit <- c(1, 2.5, 5, 7.5, 10, 12.5, 15)
 #   data1$miss_limit <- miss_limit[i]
 #   gls_df_interp_grow <- rbind(gls_df_interp_grow, data1)
 # }; rm(data1)
+
 # Grow the non-interpolated data
 gls_df_non_grow <- data.frame()
 for(i in 1:length(miss_limit)) {
@@ -424,6 +429,12 @@ for(i in 1:length(miss_limit)) {
 
 # The non-interpolated data
 head(gls_df_non_grow)
+gls_df_non_grow$DT[gls_df_non_grow$DT == "DT000"] <- 0
+gls_df_non_grow$DT[gls_df_non_grow$DT == "DT005"] <- 0.05
+gls_df_non_grow$DT[gls_df_non_grow$DT == "DT010"] <- 0.10
+gls_df_non_grow$DT[gls_df_non_grow$DT == "DT015"] <- 0.15
+gls_df_non_grow$DT[gls_df_non_grow$DT == "DT020"] <- 0.20
+gls_df_non_grow$DT <- as.numeric(gls_df_non_grow$DT)
 
 library(fitdistrplus)
 descdist(gls_df_non_grow$na_perc, boot = 500, graph = TRUE)
@@ -438,8 +449,8 @@ gls_df_non_grow %>%
   # geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
   scale_x_continuous(name = "Log % NA") +
   scale_y_continuous(name = "p-value") +
-  scale_fill_discrete(name = expression(paste("Trend: (", degree, "C/dec)"))) +
-  scale_shape_discrete(name = expression(paste("Trend: (", degree, "C/dec)"))) +
+  scale_fill_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
+  scale_shape_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
   facet_wrap(~miss_limit, scales = "free_x") 
 ggsave("graph/non_NA_perc.pdf", height = 6, width = 10)
 
