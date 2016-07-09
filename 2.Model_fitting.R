@@ -92,6 +92,10 @@ gls_df$type <- NA
 gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
 gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
 gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
+# Correct "sd_initial" column to show the sd before the slope was added
+gls_df <- gls_df %>% 
+  group_by(site, src, index, year_index) %>% 
+  mutate(sd_initial = sd_initial[DT == "DT000"])
 
 ht(gls_df)
 save(gls_df, file = "data/gls_fitted_full_nointerp_grown.RData")
