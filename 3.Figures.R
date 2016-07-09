@@ -231,6 +231,28 @@ dat_gro$DT <- as.numeric(dat_gro$DT)
 # the relationship between precision and regression (slope) SE?
 # the relationship between sd_initial and regression (slope) SE?
 
+dat %>%
+  ggplot(aes(x = DT, y = DT_model, group = as.factor(DT))) +
+  geom_jitter(aes(col = sd_initial), show.legend = TRUE, width = 0.015, shape = 1) +
+  geom_boxplot(fill = "grey20", alpha = 0.35, outlier.colour = NA, size = 0.3) +
+  scale_x_continuous(name = expression(paste("Actual trend (", degree, "C/dec)"))) +
+  scale_y_continuous(name = expression(paste("Model trend (", degree, "C/dec)")),
+                     breaks = c(-0.2, 0, 0.05, 0.1, 0.15, 0.2, 0.4)) +
+  scale_colour_distiller(name = "Initial SD", palette = "Spectral") +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("graph/all_plt0_no_interp_natural.pdf", plot = last_plot(), width = 7, height = 4.5, units = "in")
+
+dat %>%
+  ggplot(aes(x = DT, y = DT_model, group = as.factor(DT))) +
+  geom_jitter(aes(col = length), show.legend = TRUE, width = 0.015, shape = 1) +
+  geom_boxplot(fill = "grey20", alpha = 0.35, outlier.colour = NA, size = 0.3) +
+  scale_x_continuous(name = expression(paste("Actual trend (", degree, "C/dec)"))) +
+  scale_y_continuous(name = expression(paste("Model trend (", degree, "C/dec)")),
+                     breaks = c(-0.2, 0, 0.05, 0.1, 0.15, 0.2, 0.4)) +
+  scale_colour_distiller(name = "Time series length", palette = "Spectral") +
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+ggsave("graph/all_plt1_no_interp_natural.pdf", plot = last_plot(), width = 7, height = 4.5, units = "in")
+
 # plotting modelled trend vs. length (natural, no-interp) -----------------
 dat %>%
   ggplot(aes(x = length, y = DT_model)) +
@@ -245,19 +267,22 @@ ggsave("graph/all_plt2_no_interp_natural.pdf", plot = last_plot(), width = 8, he
 # plotting modelled trend vs. length (grown, no-interp) -------------------
 dat_gro %>%
   ggplot(aes(x = year_index, y = DT_model, group = fac)) +
-  geom_line(col = "black", show.legend = TRUE, alpha = 0.35) +
-  scale_x_continuous(name = "Time series length (months)") +
+  geom_line(aes(col = se_trend), show.legend = TRUE, alpha = 0.85, size = 0.3) +
+  scale_x_continuous(name = "Time series length (years)") +
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C)")),
                      limits = c(-2, 2)) +
+  scale_colour_distiller(name = "SE of trend", palette = "Spectral") +
   facet_wrap("DT", ncol = 5) +
-  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5),
+        legend.position = "right",
+        legend.direction = "vertical")
 ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
 # plotting p-value vs. SD (initial) (natural, no-interp) ------------------
 dat %>%
   ggplot(aes(x = sd_initial, y = p_trend)) +
   geom_hline(yintercept = 0.05, col = "red") +
-  geom_point(aes(size = (sqrt(length) - 1)), col = "black", shape = 21, stroke = 0.2) +
+  geom_point(aes(size = length), col = "black", shape = 21, stroke = 0.2) +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Length (months)") +
@@ -269,7 +294,7 @@ ggsave("graph/all_plt4_no_interp_natural.pdf", plot = last_plot(), width = 5, he
 dat_gro %>%
   ggplot(aes(x = sd_initial, y = p_trend)) +
   geom_hline(yintercept = 0.05, col = "red") +
-  geom_point(aes(size = (sqrt(length) - 1)), col = "black", shape = 21, stroke = 0.2) +
+  geom_point(aes(size = length), col = "black", shape = 21, stroke = 0.2) +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Length (months)") +
