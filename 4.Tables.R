@@ -65,22 +65,20 @@ gls_df <- gls_df %>%
   # Only use prec0001
 results_table <- gls_df[,c(3:8,11,13,16)] %>%
   group_by(DT) %>%
-  filter(prec == "prec0001") %>% 
-  mutate(length_low = mean(length/4)-sd(length/4)) %>% # For some reason length values are four times larger than they should be
-  mutate(length_mean = mean(length/4)) %>% 
-  mutate(length_high = mean(length/4)+sd(length/4)) %>%
-  mutate(p_trend_low = mean(p_trend)-sd(p_trend)) %>% 
+  filter(prec == "prec0001") %>%
+  mutate(length_mean = mean(length)) %>% 
+  mutate(length_sd = sd(length)) %>%
+  mutate(sd_mean = mean(sd_initial)) %>% 
+  mutate(sd_sd = sd(sd_initial)) %>%
   mutate(p_trend_mean = mean(p_trend)) %>% 
-  mutate(p_trend_high = mean(p_trend)+sd(p_trend)) %>% 
-  mutate(DT_perc_low = mean(DT_perc)-sd(DT_perc)) %>% 
+  mutate(p_trend_sd = sd(p_trend)) %>%
   mutate(DT_perc_mean = mean(DT_perc)) %>% 
-  mutate(DT_perc_high = mean(DT_perc)+sd(DT_perc)) %>% 
-  mutate(se_trend_low = mean(se_trend)-sd(se_trend)) %>% 
+  mutate(DT_perc_sd = sd(DT_perc)) %>% 
   mutate(se_trend_mean = mean(se_trend)) %>% 
-  mutate(se_trend_high = mean(se_trend)+sd(se_trend))
+  mutate(se_trend_sd = sd(se_trend))
 
   
-results_table <- results_table[c(1,10:21)] %>% 
+results_table <- results_table[c(1,10:19)] %>% 
   unique()
 save(results_table, file = "data/results_table.Rdata")
 xtable(results_table)

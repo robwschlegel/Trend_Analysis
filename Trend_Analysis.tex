@@ -63,16 +63,17 @@ Any time series with a temporal precision greater than one day were averaged int
 \subsection{Systematic Analysis of Time Series}
 We used the 84 time series simply for their variance properties (comprised of seasonal, interannual, decadal and ‘noise’ components), which reflect that of the thermal environment naturally present along the ~3,000 km of South African coastline. Unknown linear trends that may have been present in each time series were removed prior to the ensuing analysis by applying an ordinary least squares regression and keeping the detrended residuals. In doing so we avoided the need to simulate a series of synthetic time series, whose variance components may not have been fully representative of that naturally present in coastal waters. These detrended time series represent a range of time scales, from 72 to 519 months in duration.
 
-To each of the 84 detrended time series we artificially added linear decadal trends of \SIrange{0.5}{0.001}{\degreeCelsius}~dec$^{-1}$). In other words, we now had time series that captured the natural thermal variabilities around the coast, but with their decadal trends known \emph{a priori}. The range of decadal trends was selected based on the global average of \emph{RWS: Insert correct value here.} \SI{xx}{\degreeCelsius} (cite: IPCC, 2013). Furthermore, in order to replicate the instrumental precision of the instruments used to collect these time series, we rounded each of these (84 time series \texttimes{} 5 decadal trends) to four levels of precision: \SI{0.5}{\degreeCelsius}, \SI{0.1}{\degreeCelsius}, \SI{0.01}{\degreeCelsius} and \SI{0.001}{\degreeCelsius}. Consequently, we had a pool of 1,680 time series with which to work.
+To each of the 84 detrended time series we artificially added linear decadal trends of \SIrange{0.5}{0.001}{\degreeCelsius}~dec$^{-1}$). In other words, we now had time series that captured the natural thermal variabilities around the coast, but with their decadal trends known \emph{a priori}. The range of decadal trends was selected based on the global average of \emph{RWS: Insert correct value here.} \SI{xx}{\degreeCelsius} \citep{IPCC2013}. Furthermore, in order to replicate the instrumental precision of the instruments used to collect these time series, we rounded each of these (84 time series \texttimes{} 5 decadal trends) to four levels of precision: \SI{0.5}{\degreeCelsius}, \SI{0.1}{\degreeCelsius}, \SI{0.01}{\degreeCelsius} and \SI{0.001}{\degreeCelsius}. Consequently, we had a pool of 1,680 time series with which to work.
 
 To gain further insight into the effect of time series length on trend detection, each time series was first shortened to a minimum length of 5 years, starting in January so that the timing of the seasonal signal for each time series would be equitable. After fitting the model (see below) to the all 1,680 of the shortened time series, the next year of data for each time series was added and the models fitted again. This process was iterated until the full length of each time series was attained. For example, if a time series consisted of 12 full years of data, it would require 160 models (8 iterations of increasing length plus 5 decadal trends plus 4 levels of precision); similarly, 720 models would be applied to a 40 year time series. Considering the 84 time series available, the total number of individual models required to capture each combination of variables quickly increased to 36,220.
 
 In order to deal with missing values (\texttt{NA}) that were present in some of the time series, we initially replaced these with linearly interpolated temperature values. It turned out that this was a terrible idea because doing so resulted in artificially increasing the goodness of fit of the detected trend: the degree to which this `improvement' occurs is proportional to the amount of \texttt{NA} present and to the magnitude of the linear decadal trend added (see Supplement XYZ). The analysis presented here therefore proceeded with non-interpolated data only.
 
-Our approach of fitting models to each of the semi-artificial time series that we generated allowed us to study the effect that the relevant variables (time series length, natural variability, added slope and level of measurement precision) has on the ability of the time series model to faithfully detect the decadal thermal trend, which was known \emph{a priori}. The primary results of interest in these analyses were the significance (\emph{p}-value) of the model fit, the magnitude of the decadal trend determined by the GLS model as well as the error associated with the trend estimate.
+Our approach of fitting models to each of the semi-artificial time series that we generated allowed us to study the effect that the relevant variables (time series length, natural variability, added slope and level of measurement precision) has on the ability of the time series model to faithfully detect the decadal thermal trend, which was known \emph{a priori}. The primary results of interest in these analyses were the significance (\emph{p}-value) of the model fit, the magnitude of the decadal trend determined by the GLS model as well as the error associated with the trend estimate. 
+\emph{RWS - Would it not be better to replace "the magnitude of the decadal trend determined by the GLS model" with "the accuracy of the decadal trend determined by the GLS model" because the magnitudes aren't as informative when not compared against the added slope.}
 
 \subsection{Time series model}
-The selection of the appropriate model can greatly influence the ability to detect trends \citet{Franzke2012}. Two broad approaches are widely used in climate change research (cite: IPCC, 2013). The first group of models estimates linear trends, and although linearity may not reflect reality (\emph{i.e.} trends are very frequently non-linear), these models do provide the convenience of producing an easy to understand decadal trend (\si{\degreeCelsius}~dec$^{-1}$) (insert refs here). The other group accommodates non-linear trajectories of temperature through time by the use of higher-degree polynomial terms or non-parametric smoothing splines, but the inconvenience comes from not being able to easily compare models among sites (insert refs here). Both groups of models can accommodate serially correlated error structures, which is often the cause for much criticism due to their effect on the uncertainty of the trend estimates (insert refs here). For example, Generalized Least Squares (GLS; yielding estimates of linear trends) and Generalized Additive Mixed Models (GAMM; non-linear fitting with no trend estimate provided) can both capture various degrees of serial autocorrelation (insert refs here). Although our exploratory analysis assessed two parameterizations of each of the model groups, we opted to proceed here with a GLS equipped with a second-order autoregressive AR(2) correlation structure (cite: Wood, 2006), which is similar to that used by the IPCC (IPCC, 2013). The IPCC uses an AR(1) error term, but our analysis shows that AR(2) is better suited to our data. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended data sets would affect the model’s ability to detect trends --- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
+The selection of the appropriate model can greatly influence the ability to detect trends \citet{Franzke2012}. Two broad approaches are widely used in climate change research \citep{IPCC2013}. The first group of models estimates linear trends, and although linearity may not reflect reality (\emph{i.e.} trends are very frequently non-linear), these models do provide the convenience of producing an easy to understand decadal trend (\si{\degreeCelsius}~dec$^{-1}$) (insert refs here). The other group accommodates non-linear trajectories of temperature through time by the use of higher-degree polynomial terms or non-parametric smoothing splines, but the inconvenience comes from not being able to easily compare models among sites (insert refs here). Both groups of models can accommodate serially correlated error structures, which is often the cause for much criticism due to their effect on the uncertainty of the trend estimates (insert refs here). For example, Generalized Least Squares (GLS; yielding estimates of linear trends) and Generalized Additive Mixed Models (GAMM; non-linear fitting with no trend estimate provided) can both capture various degrees of serial autocorrelation (insert refs here). Although our exploratory analysis assessed two parameterizations of each of the model groups, we opted to proceed here with a GLS equipped with a second-order autoregressive AR(2) correlation structure (cite: Wood, 2006), which is similar to that used by the IPCC \citep{IPCC2013}. The IPCC uses an AR(1) error term, but our analysis shows that AR(2) is better suited to our data. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended data sets would affect the model’s ability to detect trends --- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
 
 \emph{AJS: I will insert the equation here...}
 
@@ -249,11 +250,11 @@ Brown, O.~B., P.~J. Minnett, R.~Evans, E.~Kearns, K.~Kilpatrick, A.~Kumar,
   Temperature Algorithm Algorithm Theoretical Basis Document Version 2.0}.
   \textit{University of Miami}, 31\,098--33\,149.
 
-\bibitem[{Cleveland et~al.(1990)Cleveland, Cleveland, McRae,, and
-  Terpenning}]{Cleveland1990}
-Cleveland, R.~B., W.~S. Cleveland, J.~E. McRae, and I.~Terpenning, 1990: {STL:
-  A seasonal-trend decomposition procedure based on loess}. \textit{Journal of
-  Official Statistics}, \textbf{6~(1)}, 3--73.
+% \bibitem[{Cleveland et~al.(1990)Cleveland, Cleveland, McRae,, and
+%   Terpenning}]{Cleveland1990}
+% Cleveland, R.~B., W.~S. Cleveland, J.~E. McRae, and I.~Terpenning, 1990: {STL:
+%   A seasonal-trend decomposition procedure based on loess}. \textit{Journal of
+%   Official Statistics}, \textbf{6~(1)}, 3--73.
 
 \bibitem[{Cliff et~al.(1988)Cliff, Dudley,, and Davis}]{Cliff1988}
 Cliff, G., S.~F.~J. Dudley, and B.~Davis, 1988: {Sharks caught in the
@@ -279,10 +280,19 @@ Grant, O.~M., L.~Tronina, J.~C. Ramalho, C.~{Kurz Besson}, R.~Lobo-Do-Vale,
   extreme drought event with chronic rainfall reduction}. \textit{Journal of
   Experimental Botany}, \textbf{61~(15)}, 4361--4371, \doi{10.1093/jxb/erq239}.
 
-\bibitem[{Hoenig and Heisey(2001)Hoenig, and Heisey}]{Hoenig2001}
-Hoenig, J.~M., and D.~M. Heisey, 2001: {The abuse of power: The pervasive
-  fallacy of power calculations for data analysis}. \textit{The American
-  Statistician}, \textbf{55~(1)}, 19--24, \doi{10.1198/000313001300339897}.
+% \bibitem[{Hoenig and Heisey(2001)Hoenig, and Heisey}]{Hoenig2001}
+% Hoenig, J.~M., and D.~M. Heisey, 2001: {The abuse of power: The pervasive
+%   fallacy of power calculations for data analysis}. \textit{The American
+%   Statistician}, \textbf{55~(1)}, 19--24, \doi{10.1198/000313001300339897}.
+
+\bibitem[{Stocker et~al.(2013)Stocker, Qin, Plattner, Tignor, Allen, Boschung,
+  Nauels, Xia, Bex, and Midgley}]{IPCC2013}
+Stocker, T., Qin, D., Plattner, G.~K., Tignor, M., Allen, S.~K., Boschung, J.,
+  Nauels, A., Xia, Y., Bex, V., Midgley, P.~M. (Eds.), 2013. {Climate change
+  2013: the physical science basis: Working Group I contribution to the Fifth
+  Assessment Report of the Intergovernmental Panel on Climate Change}.
+  Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA. 
+  \doi{10.1017/CBO9781107415324.008}
 
 \bibitem[{Hutchings et~al.(2009)}]{Hutchings2009}
 Hutchings, L., and Coauthors, 2009: {The Benguela Current: An ecosystem of four
@@ -306,9 +316,9 @@ Martin, M., and Coauthors, 2012: {Group for High Resolution Sea Surface
   multi-product ensemble (GMPE)}. \textit{Deep Sea Research Part II: Topical
   Studies in Oceanography}, \textbf{77-80}, 21--30.
 
-\bibitem[{Oksanen et~al.(2015)}]{vegan}
-Oksanen, J., and Coauthors, 2015: \textit{{vegan: Community Ecology Package}}.
-  \urlprefix\url{http://cran.r-project.org/package=vegan}.
+% \bibitem[{Oksanen et~al.(2015)}]{vegan}
+% Oksanen, J., and Coauthors, 2015: \textit{{vegan: Community Ecology Package}}.
+%   \urlprefix\url{http://cran.r-project.org/package=vegan}.
 
 \bibitem[{{R Core Team}(2013)}]{R}
 {R Core Team}, 2013: \textit{{R: A Language and Environment for Statistical
@@ -361,34 +371,52 @@ Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
   distribution modelling}. \textit{Global Ecology and Biogeography},
   \textbf{21~(2)}, 272--281.
 
-\bibitem[{Wickham(2009)}]{ggplot2}
-Wickham, H., 2009: \textit{ggplot2: Elegant graphics for data analysis}.
-  Springer New York, \urlprefix\url{http://had.co.nz/ggplot2/book}.
+% \bibitem[{Wickham(2009)}]{ggplot2}
+% Wickham, H., 2009: \textit{ggplot2: Elegant graphics for data analysis}.
+%   Springer New York, \urlprefix\url{http://had.co.nz/ggplot2/book}.
 
 \end{thebibliography}
 
 %
 %==============================================================================
 \emph{RWS: This will be drastically changed or removed.}
+
 \begin{table}[ht]
-\caption{\small The lowest, median and highest values for the variables relevant to this study. Time series deeper than 10 metres or shorter than 3 years were not included in these results. Values with precision greater than \SI{0.01}{\degreeCelsius} were rounded to save space.}
-\label{range-table}
+\caption{\small The mean values (±sd) of the length, initial sd of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (se) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes have on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}.
+\label{table01}
 \centering
-\tiny
-\begin{tabular}{lccccccc}
-\hline
- type & depth & length & NA\% & mean & SD & $\Delta T$ & \emph{R}\textsuperscript{2} \\
- \hline
-  all & 0, 0, 10 & 36, 258, 475 & 0.0, 1.7, 50.2 & 11.7, 20.9, 24.27 & 0.2, 0.4, 1.3 & -7.23, 0.1, 3.5 & 0.00, 0.10, 0.81 \\
-  west & 0, 0, 9 & 37, 192, 466 & 0.0, 4.7, 50.2 & 11.7, 13.3, 16.57 & 0.3, 0.5, 0.8 & -7.23, 0.1, 1.4 & 0.00, 0.20, 0.81 \\
-  south & 0, 0, 10 & 46, 196.5, 475 & 0.0, 4.0, 34.7 & 15.5, 17.3, 18.4 & 0.4, 0.7, 1.3 & -5, 0.2, 2.58 & 0.00, 0.14, 0.56 \\
-  east & 0, 0, 10 & 36, 396, 408 & 0.0, 1.0, 49.4 & 17.73, 21.9, 24.27 & 0.2, 0.4, 1 & -0.7, 0.1, 3.5 & 0.00, 0.06, 0.81 \\
-  new & 0, 2, 10 & 37, 68, 133 & 0.0, 4.3, 14.5 & 12.25, 16.98, 24.27 & 0.32, 0.48, 0.72 & -7.23, -0.49, 2.58 & 0.02, 0.25, 0.81 \\
-  old & 0, 5, 10 & 50, 173, 225 & 0.0, 8.0, 22.8 & 11.7, 17.2, 18 & 0.4, 0.7, 1 & -5.0, 0.2, 1.2 & 0.00, 0.06, 0.52 \\
-  thermo & 0, 0, 0 & 36, 396, 475 & 0.0, 1.3, 50.2 & 12.1, 21, 23.1 & 0.2, 0.4, 1.3 & -1.9, 0.1, 3.5 & 0.00, 0.10, 0.81 \\
+\begin{tabular}{lrrrrr}
   \hline
-  \end{tabular}
+  Added slope & length ± sd & initial sd ± sd & \emph{p} of trend ± sd & \% difference ± sd & se of the trend ± sd \\ 
+  \hline
+  0.00\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.86 ± 0.13 &      NA       & 2.51e^{-3} ± 2.40e^{-3} \\ 
+  0.05\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.76 ± 0.16 & 0.86 ± 145.41 & 2.51e^{-3} ± 2.40e^{-3} \\ 
+  0.10\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.62 ± 0.23 & 0.43 ± 72.71 & 2.51e^{-3} ± 2.40e^{-3} \\ 
+  0.15\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.48 ± 0.26 & 0.27 ± 48.45 & 2.51e^{-3} ± 2.40e^{-3} \\ 
+  0.20\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.55 ± 0.43 & 0.37 ± 0.28 & 0.20 ± 36.34 & 2.51e^{-3} ± 2.40e^{-3} \\ 
+   \hline
+\end{tabular}
 \end{table}
+
+% \begin{table}[ht]
+% \caption{\small The lowest, median and highest values for the variables relevant to this study. Time series deeper than 10 metres or shorter than 3 years were not included in these results. Values with precision greater than \SI{0.01}{\degreeCelsius} were rounded to save space.}
+% \label{range-table}
+% \centering
+% \tiny
+% \begin{tabular}{lccccccc}
+% \hline
+%  type & depth & length & NA\% & mean & SD & $\Delta T$ & \emph{R}\textsuperscript{2} \\
+%  \hline
+%   all & 0, 0, 10 & 36, 258, 475 & 0.0, 1.7, 50.2 & 11.7, 20.9, 24.27 & 0.2, 0.4, 1.3 & -7.23, 0.1, 3.5 & 0.00, 0.10, 0.81 \\
+%   west & 0, 0, 9 & 37, 192, 466 & 0.0, 4.7, 50.2 & 11.7, 13.3, 16.57 & 0.3, 0.5, 0.8 & -7.23, 0.1, 1.4 & 0.00, 0.20, 0.81 \\
+%   south & 0, 0, 10 & 46, 196.5, 475 & 0.0, 4.0, 34.7 & 15.5, 17.3, 18.4 & 0.4, 0.7, 1.3 & -5, 0.2, 2.58 & 0.00, 0.14, 0.56 \\
+%   east & 0, 0, 10 & 36, 396, 408 & 0.0, 1.0, 49.4 & 17.73, 21.9, 24.27 & 0.2, 0.4, 1 & -0.7, 0.1, 3.5 & 0.00, 0.06, 0.81 \\
+%   new & 0, 2, 10 & 37, 68, 133 & 0.0, 4.3, 14.5 & 12.25, 16.98, 24.27 & 0.32, 0.48, 0.72 & -7.23, -0.49, 2.58 & 0.02, 0.25, 0.81 \\
+%   old & 0, 5, 10 & 50, 173, 225 & 0.0, 8.0, 22.8 & 11.7, 17.2, 18 & 0.4, 0.7, 1 & -5.0, 0.2, 1.2 & 0.00, 0.06, 0.52 \\
+%   thermo & 0, 0, 0 & 36, 396, 475 & 0.0, 1.3, 50.2 & 12.1, 21, 23.1 & 0.2, 0.4, 1.3 & -1.9, 0.1, 3.5 & 0.00, 0.10, 0.81 \\
+%   \hline
+%   \end{tabular}
+% \end{table}
 
 %
 %==============================================================================
