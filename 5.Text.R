@@ -118,6 +118,8 @@ gls_df <- gls_df %>%
 gls_df <- gls_df%>%
   group_by(index) %>%
   mutate(na_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
+gls_df <- data.frame(gls_df)
+
 # Remove rows with missing data
 gls_df_no_0 <- gls_df %>% 
   filter(DT_real != 0.00)
@@ -172,10 +174,10 @@ ptrend_vs_NA <- ptrend_vs_NA[,c(3,20:21)] %>%
 
 # Create a grouping column so that the correlation by missing percent can be calculated
 
-# Correlation between abs(DT_perc) vs. se_trend
+# Correlation between p_trend vs. %NA controlling for %NA
 ptrend_vs_NA <- gls_df_no_0 %>%
   filter(prec == "prec0001") %>% 
-  group_by(na_group)
+  # group_by(na_group) %>% 
   group_by(DT) %>% 
   mutate(r2 = cor(p_trend, na_perc)) %>% 
   mutate(p = as.numeric(p_trend, na_perc)[3])
@@ -190,6 +192,38 @@ ptrend_vs_NA <- ptrend_vs_NA[,c(3,20:21)] %>%
 ## Effect of decadal trend steepness on trend estimation
 
 ## Effect of measurement precision on trend estimation
+prec_results_table <- gls_df[,c(3:8,11,13,17:19)] %>%
+  group_by(DT, prec) %>%
+  mutate(sd_mean = mean(sd_initial)) %>% 
+  mutate(sd_sd = sd(sd_initial)) %>%
+  mutate(p_trend_mean = mean(p_trend)) %>% 
+  mutate(p_trend_sd = sd(p_trend)) %>%
+  mutate(DT_perc_mean = mean(DT_perc)) %>% 
+  mutate(DT_perc_sd = sd(DT_perc)) %>% 
+  mutate(se_trend_mean = mean(se_trend)) %>% 
+  mutate(se_trend_sd = sd(se_trend))
+prec_results_table <- prec_results_table[c(1:2,12:19)] %>% 
+  unique()
+save(prec_results_table, file = "data/prec_results_table.Rdata")
+
+prec_range_results_table <- prec_results_table %>% 
+  group_by(DT) %>% 
+  mutate(sd_mean = range(sd_mean)[2]-range(sd_mean)[1]) %>% 
+  mutate(sd_sd = range(sd_sd)[2]-range(sd_sd)[1]) %>%
+  mutate(p_trend_mean = range(p_trend_mean)[2]-range(p_trend_mean)[1]) %>% 
+  mutate(p_trend_sd = range(p_trend_sd)[2]-range(p_trend_sd)[1]) %>%
+  mutate(DT_perc_mean = range(DT_perc_mean)[2]-range(DT_perc_mean)[1]) %>% 
+  mutate(DT_perc_sd = range(DT_perc_sd)[2]-range(DT_perc_sd)[1]) %>% 
+  mutate(se_trend_mean = range(se_trend_mean)[2]-range(se_trend_mean)[1]) %>% 
+  mutate(se_trend_sd = range(se_trend_sd)[2]-range(se_trend_sd)[1])
+  # No one "prec" provides the best fit, but "prec05" is always the worst
+
+prec_range_results_table <- prec_range_results_table[c(1,3:10)] %>% 
+  unique()
+
+# Manually assign best fitting "prec" as piping isn't working
+prec_range_results_table$best <- c(NA, "prec01", "prec001", "prec01", "prec0001")
+save(prec_range_results_table, file = "data/prec_range_results_table.Rdata")
 
 ## Effect instrument type on trend detection
 

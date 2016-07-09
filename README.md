@@ -2,16 +2,18 @@
 All of the files used to produce "Effects of Natural Variability of Seawater Temperature, Time Series Length, Decadal Trend, and Instrument Precision on the Ability to Detect Temperature Trends"
 
 ## File description
-* The text of the paper may be found in "Trend_Analysis.tex"
-* The code used to create the meta-data and statistics referenced in the text may be found under their corresponding section and subsection headers in the file "text.R"
-* The code used to perform the full analyses of the paper may be found in "trend_analysis.R"
-* The code used to create the tables seen in the paper may be found in "tables.R"
-* The code used to create the figures seen in the paper may be found in "figures.R"
+* The text of the paper may be found in "/LaTeX/Trend_Analysis.tex"
+* The code used to create the meta-data and statistics referenced in the text may be found under their corresponding section and subsection headers in the file "5.Text.R"
+* The code used to prepare the monthly data for their modelling may be found in "1.Data_assembly.R"
+* The code used to fit the models may be found in "2.Model_fitting.R"
+* The code used to create the figures seen in the paper may be found in "3.Figures.R"
+* The code used to create the tables seen in the paper may be found in "4.Tables.R"
+* The code used to perform the analyses for the stats referenced in the paper may be found in "5.Text.R" under the corresponding sub-headers
 * The "/data" folder contains the raw data used in the analyses as well as their output
-* The "/func" folder contains several custom made functions used in the analyses
-* The "/graph" folder contains the files necessary to create maps, a custom ggplot2 theme, as well as the output of "figures.R"
-* The "/setupParams" folder contains the site list of the SACTN
-* Several other files found in the root folder are used to compile the "Trend_Analysis.tex"
+* The "/func" folder contains custom made functions used in the analyses
+* The "/graph" folder contains the files necessary to create maps, as well as the output of "3.Figures.R"
+* The "/setupParams" folder contains the site list of the SACTN and a custom ggplot2 theme
+* The "/LaTeX" folder contains the files used to compile "/LaTeX/Trend_Analysis.tex", the body of the text
 
 ## 2016/07/05
 * Added the basic files required to run all analyses and write up the results for publication.
@@ -27,3 +29,9 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 * Added the file "tables.R".
 * The code for several more figures added to "figures.R"
 
+## 2016/07/08
+* Beginning of results section edited
+
+## 2016/07/09
+* Created "/LaTeX" folder
+* Compiled document for first time

@@ -8,7 +8,7 @@
 
 #############################################################################
 ## 1. Load all packages required for the analyses
-# library(zoo)
+library(zoo)
 library(ggplot2)
 library(xtable)
 library(reshape2)
@@ -77,7 +77,6 @@ results_table <- gls_df[,c(3:8,11,13,16)] %>%
   mutate(se_trend_mean = mean(se_trend)) %>% 
   mutate(se_trend_sd = sd(se_trend))
 
-  
 results_table <- results_table[c(1,10:19)] %>% 
   unique()
 save(results_table, file = "data/results_table.Rdata")
