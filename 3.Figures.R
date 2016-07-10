@@ -120,21 +120,21 @@ map <- SA +
   annotate("text", label = "Agulhas", x = 31.6, y = -31.6, size = 3.0, angle = 53) +
   # Landmass
   annotate("text", label = "South\nAfrica", x = 24.00, y = -31.00, size = 7, angle = 0) +
-  geom_point(data = sites, aes(lon, lat, shape = type), colour = "black", size = 3.5) +
-  geom_point(data = sites, aes(lon, lat, shape = type), colour = "white", size = 2.0) +
+  geom_point(data = sites, aes(lon, lat), colour = "black", size = 3.5) +
+  geom_point(data = sites, aes(lon, lat), colour = "white", size = 2.0) +
   # scale_colour_grey(breaks = c("new", "old", "thermo"),
   #                   label = c("new", "old", "thermo")) +
-  guides(shape = guide_legend("Type", override.aes = list(size = 2.5, colour = "black"))) +
-  labs(title = NULL, x = NULL, y = NULL) +
-  theme(legend.key = element_blank())
+  # guides(shape = guide_legend("Type", override.aes = list(size = 2.5, colour = "black"))) +
+  labs(title = NULL, x = NULL, y = NULL) #+
+  # theme(legend.key = element_blank())
 map
 
 ##########################################################################
 ### 7. Create figure01
 
 ## Combine the two maps to create one inset map
-pdf("graph/figure01.pdf", width = 8, height = 4, pointsize = 6) # Set PDF dimensions
-vp1 <- viewport(x = -0.01, y = 0.05, w = 0.25, h = 0.25, just = c("left", "bottom")) # Africa
+pdf("graph/SA_sites.pdf", width = 8, height = 5, pointsize = 6) # Set PDF dimensions
+vp1 <- viewport(x = -0.00, y = 0.05, w = 0.25, h = 0.25, just = c("left", "bottom")) # Africa
 vp2 <- viewport(x = 1.0, y = 1.0, w = 1.00, h = 1.00, just = c("right", "top"))  # South Africa
 print(map, vp = vp2)
 print(africa, vp = vp1)
@@ -249,7 +249,7 @@ dat %>%
   scale_x_continuous(name = expression(paste("Actual trend (", degree, "C/dec)"))) +
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C/dec)")),
                      breaks = c(-0.2, 0, 0.05, 0.1, 0.15, 0.2, 0.4)) +
-  scale_colour_distiller(name = "Time series length", palette = "Spectral") +
+  scale_colour_distiller(name = "Time series length (months)", palette = "Spectral") +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
 ggsave("graph/all_plt1_no_interp_natural.pdf", plot = last_plot(), width = 7, height = 4.5, units = "in")
 
@@ -358,9 +358,9 @@ SACTN_sub2 <- as.data.frame(SACTN_sub2)
 
 ## Load the modelled data and add the index and type columns
 # The interpolated data
-# load("data/gls_fitted_full_interp_grown.RData")
-# gls_df_interp <- gls_df
-# gls_df_interp$index <- as.factor(paste(gls_df_interp$site, gls_df_interp$src, sep = "/ "))
+load("data/gls_fitted_full_interp_grown.RData")
+gls_df_interp <- gls_df
+gls_df_interp$index <- as.factor(paste(gls_df_interp$site, gls_df_interp$src, sep = "/ "))
 # gls_df_interp$type <- NA
 # gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
 # gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
@@ -371,11 +371,11 @@ gls_df_non <- gls_df; rm(gls_df)
 
 ## Subset gls_fitted_full_interp_grown results by max(year_index) and Prec0.001 # Or just use a "natural" data frame
 # The interpolated data
-# gls_df_interp <- gls_df_interp %>%
-#   group_by(site, src) %>%
-#   # filter(DT == "DT020") %>%
-#   filter(prec == "prec0001") %>%
-#   filter(year_index == max(year_index))
+gls_df_interp <- gls_df_interp %>%
+  group_by(site, src) %>%
+  # filter(DT == "DT020") %>%
+  filter(prec == "prec0001") #%>%
+  filter(year_index == max(year_index))
 
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%

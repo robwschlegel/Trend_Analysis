@@ -16,17 +16,17 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 * The "/LaTeX" folder contains the files used to compile "/LaTeX/Trend_Analysis.tex", the body of the text
 
 ## 2016/07/05
-* Added the basic files required to run all analyses and write up the results for publication.
+* Added the basic files required to run all analyses and write up the results for publication
 
 ## 2016/07/06
-* Effects of linear interpolation of missing monthly values analysed.
-* The relevant code in "trend_analysis.R" changed so that NA values are no longer interpolated or dropped.
+* Effects of linear interpolation of missing monthly values analysed
+* The relevant code in "trend_analysis.R" changed so that NA values are no longer interpolated or dropped
 
 ## 2016/07/07
-* GLS model re-run without linear interpolation.
-* Removed the file "func/detrendFunc.R" as this analysis is now performed directly in "trend_analysis.R".
-* Results and Discussion sections in "Trend_analysis.R" outlined with relevant information for completion. 
-* Added the file "tables.R".
+* GLS model re-run without linear interpolation
+* Removed the file "func/detrendFunc.R" as this analysis is now performed directly in "trend_analysis.R"
+* Results and Discussion sections in "Trend_analysis.R" outlined with relevant information for completion
+* Added the file "tables.R"
 * The code for several more figures added to "figures.R"
 
 ## 2016/07/08
@@ -38,3 +38,9 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 * Results section nearly finished
 * Compiled document for first time
 * All figures used in "/LatEX/Trend_analysis.R" added to "/LaTeX" folder
+
+## 2016/07/10
+* Populated minor correction to model results to all figures
+* Minor updates to abstract, intro and methods
+* Added results of analysis of length vs precision to the results section
+* Discussion section is now a complete rough draft

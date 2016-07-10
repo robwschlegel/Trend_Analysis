@@ -86,46 +86,88 @@ length(levels(SACTN_full_grown_no_interp$index2)) # 1680
 #############################################################################
 ### 5. Results
 
-## table01
-
-## Intro
-
-## Magnitude of decadal trend determined by GLS
 # Load model results
 load("data/gls_fitted_full_nointerp_natural.RData")
+gls_df_natural <- gls_df; rm(gls_df)
 # Add "type" column
 # Load the data that has percent NA and type columns to add them to the GLS data frame
 load("data/SACTN_sub2.Rdata")
 colnames(SACTN_sub2)[8] <- "na_perc"
 SACTN_sub2 <- as.data.frame(SACTN_sub2)
 # Add the type column
-gls_df$index <- as.factor(paste(gls_df$site, gls_df$src, sep = "/ "))
-gls_df$type <- NA
-gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
-gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
-gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
+gls_df_natural$index <- as.factor(paste(gls_df_natural$site, gls_df_natural$src, sep = "/ "))
+# gls_df_natural$type <- NA
+# gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
+# gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
+# gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
 # Add "DT_real" column as numeric values
-gls_df$DT_real <- NA
-gls_df$DT_real[gls_df$DT == "DT000"] <- 0.00
-gls_df$DT_real[gls_df$DT == "DT005"] <- 0.05
-gls_df$DT_real[gls_df$DT == "DT010"] <- 0.10
-gls_df$DT_real[gls_df$DT == "DT015"] <- 0.15
-gls_df$DT_real[gls_df$DT == "DT020"] <- 0.20
+gls_df_natural$DT_real <- NA
+gls_df_natural$DT_real[gls_df_natural$DT == "DT000"] <- 0.00
+gls_df_natural$DT_real[gls_df_natural$DT == "DT005"] <- 0.05
+gls_df_natural$DT_real[gls_df_natural$DT == "DT010"] <- 0.10
+gls_df_natural$DT_real[gls_df_natural$DT == "DT015"] <- 0.15
+gls_df_natural$DT_real[gls_df_natural$DT == "DT020"] <- 0.20
+
 # Calculate "DT_perc", the percentage different between the real DT and the modelled DT
-gls_df <- gls_df %>% 
+gls_df_natural <- gls_df_natural %>% 
   mutate(DT_perc = ((DT_real-DT_model)/DT_real)*100)
 # Add NA%
-gls_df <- gls_df%>%
+gls_df_natural <- gls_df_natural%>%
   group_by(index) %>%
   mutate(na_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
-gls_df <- data.frame(gls_df)
+gls_df_natural <- data.frame(gls_df_natural)
 
 # Remove rows with missing data
-gls_df_no_0 <- gls_df %>% 
+gls_df_natural_no_0 <- gls_df_natural %>% 
   filter(DT_real != 0.00)
 
+## Intro
+# Quantify the effect on DT_perc of: length, DT, SD_initial, NA, precision
+  # Use linear models as this more broadly measures the relationship between the variables
+  # Not using min and max values as these are only two data points and could be misrepresentative
+
+# Length #
+# ggplot(data=gls_df_natural_no_0[,c(13,17)], aes(x = length, y=abs(DT_perc)))+ # Visualise test
+#   geom_point() +
+#   geom_smooth(method = "lm")
+(max(gls_df_natural_no_0$length) * coef(lm(abs(abs(DT_perc))~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$length) * coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1])
+  # -112.14% is the spread of DT accuracy imposed by the natural length range in the dataset
+
+# DT #
+(max(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1])
+  # -71.66% range
+
+# sd_initial #
+# ggplot(data=gls_df_natural_no_0[,c(7,17)], aes(x = sd_initial, y=abs(DT_perc)))+ # Visualise test
+#   geom_point() +
+#   geom_smooth(method = "lm")
+(max(gls_df_natural_no_0$sd_initial) * coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$sd_initial) * coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[1])
+  # -14.84% range
+    # Admittedly, a linear relationship isn't the best description
+
+# NA% #
+(max(gls_df_natural_no_0$na_perc) * coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$na_perc) * coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[1])
+  # 12.84% range
+
+# Precision #
+  # Add "DT_real" column as numeric values
+gls_df_natural_no_0_precision <- gls_df_natural_no_0
+gls_df_natural_no_0_precision$prec_real <- NA
+gls_df_natural_no_0_precision$prec_real[gls_df_natural_no_0$prec == "prec0001"] <- 0.001
+gls_df_natural_no_0_precision$prec_real[gls_df_natural_no_0$prec == "prec001"] <- 0.01
+gls_df_natural_no_0_precision$prec_real[gls_df_natural_no_0$prec == "prec01"] <- 0.1
+gls_df_natural_no_0_precision$prec_real[gls_df_natural_no_0$prec == "prec05"] <- 0.5
+  # Run analysis
+(max(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1]) - (min(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1])
+  # -0.20% range
+# ggplot(data = gls_df_natural_no_0_precision[,c(17,19)], 
+#        aes(x = prec_real, y=abs(DT_perc)))+ # Visualise test
+#   geom_point() +
+#   geom_smooth(method = "lm")
+
+## Magnitude of decadal trend determined by GLS
 # Correlation between abs(DT_perc) vs. SD_initial
-DT_vs_SD <- gls_df_no_0 %>%
+DT_vs_SD <- gls_df_natural_no_0 %>%
   filter(prec == "prec0001") %>% 
   group_by(DT) %>% 
   mutate(r2 = cor(abs(DT_perc), sd_initial)) %>% 
@@ -137,14 +179,14 @@ DT_vs_SD <- DT_vs_SD[,c(3,20:21)] %>%
 ## Significance p-value of the model fit
 
 # Number of significant trends
-length(gls_df$p_trend) # 1680 modelled fits
-length(gls_df$p_trend[gls_df$p_trend <= 0.05])
-gls_df[gls_df$p_trend <= 0.05,]
+length(gls_df_natural$p_trend) # 1680 modelled fits
+length(gls_df_natural$p_trend[gls_df_natural$p_trend <= 0.05])
+gls_df_natural[gls_df_natural$p_trend <= 0.05,]
 
 ## Error associated with trend estimate
 
 # Correlation between abs(DT_perc) vs. se_trend
-DT_vs_SE <- gls_df_no_0 %>%
+DT_vs_SE <- gls_df_natural_no_0 %>%
   filter(prec == "prec0001") %>% 
   group_by(DT) %>% 
   mutate(r2 = cor(abs(DT_perc), se_trend)) %>% 
@@ -156,14 +198,14 @@ DT_vs_SE <- DT_vs_SE[,c(3,20:21)] %>%
 ## Effect of % missing values on trends estimation
 
 # Count of time series missing X%
-length(levels(droplevels(gls_df$index[gls_df$na_perc < 1]))) #25
-length(levels(droplevels(gls_df$index[gls_df$na_perc < 5]))) #70-25=45
-length(levels(droplevels(gls_df$index[gls_df$na_perc < 10]))) #80-70=10
-length(levels(droplevels(gls_df$index[gls_df$na_perc < 15]))) #84
-mean(gls_df$na_perc) # 2.65
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$na_perc < 1]))) #25
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$na_perc < 5]))) #70-25=45
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$na_perc < 10]))) #80-70=10
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$na_perc < 15]))) #84
+mean(gls_df_natural$na_perc) # 2.65
 
 # Correlation between p_trend vs. %NA
-ptrend_vs_NA <- gls_df_no_0 %>%
+ptrend_vs_NA <- gls_df_natural_no_0 %>%
   filter(prec == "prec0001") %>% 
   group_by(DT) %>% 
   mutate(r2 = cor(p_trend, na_perc)) %>% 
@@ -175,7 +217,7 @@ ptrend_vs_NA <- ptrend_vs_NA[,c(3,20:21)] %>%
 # Create a grouping column so that the correlation by missing percent can be calculated
 
 # Correlation between p_trend vs. %NA controlling for %NA
-ptrend_vs_NA <- gls_df_no_0 %>%
+ptrend_vs_NA <- gls_df_natural_no_0 %>%
   filter(prec == "prec0001") %>% 
   # group_by(na_group) %>% 
   group_by(DT) %>% 
@@ -192,7 +234,7 @@ ptrend_vs_NA <- ptrend_vs_NA[,c(3,20:21)] %>%
 ## Effect of decadal trend steepness on trend estimation
 
 ## Effect of measurement precision on trend estimation
-prec_results_table <- gls_df[,c(3:8,11,13,17:19)] %>%
+prec_results_table <- gls_df_natural[,c(3:8,11,13,17:19)] %>%
   group_by(DT, prec) %>%
   mutate(sd_mean = mean(sd_initial)) %>% 
   mutate(sd_sd = sd(sd_initial)) %>%
@@ -227,7 +269,7 @@ save(prec_range_results_table, file = "data/prec_range_results_table.Rdata")
 
 ## Pay-off between length and prec05
 # First visualise data
-gls_df_no_0 %>% 
+gls_df_natural_no_0 %>% 
   group_by(DT, prec) %>% 
   ggplot(aes(x = length, y = abs(DT_perc))) +
   geom_point() +
@@ -246,7 +288,7 @@ lm_fun <- function(df) {
 }
 
 # Calculate relationship of DT_perc with length for all DTs and precisions
-mod_lm <- dlply(gls_df_no_0, .(DT, prec), .progress = "text", .parallel = FALSE, lm_fun)
+mod_lm <- dlply(gls_df_natural_no_0, .(DT, prec), .progress = "text", .parallel = FALSE, lm_fun)
 lm_df <- ldply(mod_lm, data.frame, .progress = "text")
   ## The results are very interesting but I will need to take a look at them with fresh eyes
 ggplot(lm_df, aes(x = intercept, y = slope)) +

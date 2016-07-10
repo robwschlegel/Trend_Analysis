@@ -41,6 +41,13 @@
 \efloatseparator
  
 \begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figure07}
+\caption[\small The minimal effect of rounding from]{The minimal effect of rounding from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} may be seen in the panel on the right. The panel on the left shows that rounding from a precision of \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has a more appreciable effect.}
+\label{figure07}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
 \centering \includegraphics[width=0.7\textwidth]{figureA}
 \caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
 \label{figureA}
