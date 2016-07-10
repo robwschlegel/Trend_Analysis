@@ -309,5 +309,14 @@ lm_df <- lm_df %>%
 #############################################################################
 ### 6. Discussion
 
+# Mean length of themo vs UTR time series
+gls_df_natural$type <- NA
+gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
+gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "UTR"
+gls_df_natural$type[gls_df_natural$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "UTR"
+
+mean(gls_df_natural$length[gls_df_natural$type == "thermo"]) # 349
+mean(gls_df_natural$length[gls_df_natural$type == "UTR"]) # 167
+
 #############################################################################
 ### 7. Conclussion
