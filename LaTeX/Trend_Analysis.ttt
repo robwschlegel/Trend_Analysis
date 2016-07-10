@@ -1,12 +1,12 @@
 \begin{table}[ht]
-\caption{\small The mean values ($\pm$SD) of the length, initial sd of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (SE) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes have on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}}.
+\caption{\small The mean values ($\pm$SD) of the length, initial SD of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (SE) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes has on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}}.
 \label{table01}
 \centering
 \begin{tabular}{lccccc}
   \hline
-  added slope ({\degreeCelsius}~dec$^{-1}$) & \emph{p} of trend & \% difference & SE of trend \\
+  added slope (\SI{}{\degreeCelsius~dec^{-1}}) & \emph{p}-value of trend & \% difference & SE of trend \\
   \hline
-  0.00 & 0.86$\pm 0.13$ &      NA       & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
+  0.00 & 0.86$\pm 0.13$ &      NA       & 2.51e$^{-3}$$\pm 2.40$e$^{-3}$ \\
   0.05 & 0.76$\pm 0.16$ & 0.86$\pm 145.41$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
   0.10 & 0.62$\pm 0.23$ & 0.43$\pm 72.71$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
   0.15 & 0.48$\pm 0.26$ & 0.27$\pm 48.45$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\

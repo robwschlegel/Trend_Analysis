@@ -1,4 +1,5 @@
-\documentclass{ametsoc}
+%\documentclass[twocol]{ametsoc}
+\documentclass[]{ametsoc}
 \usepackage[]{graphicx}
 \usepackage{alltt}
 \usepackage{siunitx}
@@ -366,14 +367,14 @@ Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
 %
 %==============================================================================
 \begin{table}[ht]
-\caption{\small The mean values ($\pm$SD) of the length, initial sd of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (SE) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes have on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}}.
+\caption{\small The mean values ($\pm$SD) of the length, initial SD of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (SE) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes has on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}}.
 \label{table01}
 \centering
 \begin{tabular}{lccccc}
   \hline
-  added slope ({\degreeCelsius}~dec$^{-1}$) & \emph{p} of trend & \% difference & SE of trend \\
+  added slope (\SI{}{\degreeCelsius~dec^{-1}}) & \emph{p}-value of trend & \% difference & SE of trend \\
   \hline
-  0.00 & 0.86$\pm 0.13$ &      NA       & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
+  0.00 & 0.86$\pm 0.13$ &      NA       & 2.51e$^{-3}$$\pm 2.40$e$^{-3}$ \\
   0.05 & 0.76$\pm 0.16$ & 0.86$\pm 145.41$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
   0.10 & 0.62$\pm 0.23$ & 0.43$\pm 72.71$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
   0.15 & 0.48$\pm 0.26$ & 0.27$\pm 48.45$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
@@ -412,19 +413,19 @@ Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
 
 \begin{figure}
 \centering \includegraphics[width=01.0\textwidth]{figure02}
-\caption[\small The effect of length on the ability of a model to accurately detect the trend within a time series]{The effect of length on the ability of a model to accurately detect the trend within a time series.}
+\caption[\small The effect of time series length on the ability of the GLS model to accurately detect the trend added to a time series]{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box-and-whisker plots show the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data points and their colors are scaled according to the length of the time seies.}
 \label{figure02}
 \end{figure}
 
 \begin{figure}
 \centering \includegraphics[width=01.0\textwidth]{figure03}
-\caption[\small The relationship between the length of a time series and the standard error (SE) of the modelled trend]{The relationship between the length of a time series and the standard error (SE) of the modelled trend.}
+\caption[\small The relationship between time series length and the standard error (SE) of the modelled trend]{The relationship between the length of a time series, the size of the modeled trend and its the standard error (SE). Each individual line shows the modeled trend for one of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 years in length to the maximum duration available for the site.}
 \label{figure03}
 \end{figure}
 
 \begin{figure}
 \centering \includegraphics[width=0.8\textwidth]{figure04}
-\caption[\small The effect the natural variation found within a time series has on the significance of the modelled trend]{The effect the natural variation found within a time series has on the significance of the modelled trend. Also shown via size of dots is the intereaction of length on these variables.}
+\caption[\small The effect of the natural variation of a time series on the significance of the modelled trend]{The effect of the natural variation of a time series on the significance of the modelled trends estimated by the GLS. The size of the symbols are scaled proportionally to the time series length, with longer time series shown as larger circles.}
 \label{figure04}
 \end{figure}
 
@@ -436,7 +437,7 @@ Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
 
 \begin{figure}
 \centering \includegraphics[width=0.7\textwidth]{figure06}
-\caption[\small The relationship between \texttt{NA}\% amd the significance of a fitted trend]{The relationship between \texttt{NA}\% amd the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The effect of missing data on a models ability to detect a larger decadal trend is initially neglibile, but becomes significant as greater amounts of data are missing.}
+\caption[\small The relationship between \%\texttt{NA} and the significance of a fitted trend]{The relationship between \%\texttt{NA} and the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The the fitted lines and 95\% confidence intervals represent each of the five decadal trends assessed. }
 \label{figure06}
 \end{figure}
 
