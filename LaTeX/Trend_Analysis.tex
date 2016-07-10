@@ -17,16 +17,18 @@
 
 \affiliation{Department of Biodiversity and Conservation Biology, University of the Western Cape, Bellville, Republic of South Africa}
 
-\email{wiederweiter@gmail.com}
+\email{3503570@myuwc.ac.za}
 
 %
 %==============================================================================
-\abstract{In South Africa 129 \emph{in situ} temperature time series of 1 to 43 years are used for investigations of the thermal characteristics of coastal seawater. They are comprised of temperature recordings at precisions ranging from \SIrange{0.5}{0.001}{\degreeCelsius} and collected with handheld thermometers or underwater temperature recorders (UTRs). Using the naturally occurring range of seasonal signals, variability and temperature trends for 84 of these time series, the length, decadal trend and data precision of each time series were systematically varied before fitting generalized least squares (GLS) models to study the effect these variables have on trend detection. We determined that low instrument precision has less effect on the ability of a model to detect trends within a time series than do the length, variance or the decadal trend itself, with length contributing the most to trend detection. We found that time series at least 20 years in length may be used tentatively for climate change research, but that time series >30 years in length are preferable. The implication is that long-running thermometer time series in this dataset, and others around the world, are more useful for decadal scale climate change studies than the shorter, more precise UTR time series.}
+\abstract{In South Africa 129 \emph{in situ} temperature time series of 1 to 43 years are used for investigations of the thermal characteristics of coastal seawater. They are comprised of temperature recordings at precisions ranging from \SIrange{0.5}{0.001}{\degreeCelsius} and collected with handheld thermometers or underwater temperature recorders (UTRs). Using the naturally occurring range of seasonal signals, variability and temperature trends for 84 of these time series, the length, decadal trend and data precision of each time series were systematically varied before fitting generalized least squares (GLS) models to study the effect these variables have on trend detection. We determined that low instrument precision has less effect on the ability of a model to detect trends within a time series than do the length, variance or the decadal trend itself, with length contributing the most to trend detection. We found that time series at least 20 years in length may be used tentatively for climate change research, but that time series \textgreater 30 years in length are preferable. The implication is that long-running thermometer time series in this dataset, and others around the world, are more useful for decadal scale climate change studies than the shorter, more precise UTR time series.}
 
 % AJS: At the same length, which is most useful: thermometer or UTR recordings?
 % RWS: Given everything I've learned of instrument precision and the results of these analyses, I would say they are the same. I was going to say so in the abstract but decided against it. I need to perform an investigation into this by comparing closeness of fit to DT_model and DT with varying length against the different types. I think thermo's may actually be better....
 
-\emph{We need to say something at the end about things we did not study, which may be more important i.t.o. trend detection -- instrumental drift. There is also the aspect of accuracy that can/should be mentioned, and although (given a stable instrument without drift) can yield reliable, useful and precise trend estimates, can nevertheless be off in regards to know the real temperature.}
+% RWS: The abstract may need to be changed as we have shown that 0.5C precision may actually have a greater effect on the accuracy of a time series than variance.
+
+% \emph{We need to say something at the end about things we did not study, which may be more important i.t.o. trend detection -- instrumental drift. There is also the aspect of accuracy that can/should be mentioned, and although (given a stable instrument without drift) can yield reliable, useful and precise trend estimates, can nevertheless be off in regards to know the real temperature.}
 
 %==============================================================================
 \begin{document}
@@ -34,7 +36,7 @@
 \maketitle
 
 \section{Introduction}
-The roughly ~3,000 km of South Africa's coastline is bordered by the Benguela and Agulhas currents \citep[e.g.][]{Roberts2005,Hutchings2009}, which, in combination with other nearshore processes, affect the country's marine coastal ecosystems \citep{Santos2012a}. A thorough understanding of these coastal processes is provided by several physical variables, of which temperature is one of the main determinants \citep[e.g.][]{Blanchette2008, Tittensor2010, Couce2012}. In order to ensure a true representation of organisms' biological thermal limits, nearshore temperatures must be accurately recorded and monitored. Some sources warn of the pitfalls in doing so \emph{RWS: Add references here showing which sources say using SST for the coast is inappropriate}, and a study by \citet{Smit2013} showed that SST data have a warm bias as large as \SI{6}{\degreeCelsius} when compared to coastal \emph{in situ} data. Nevertheless, a widespread approach in coastal ecological research is to use satellite and/or model-generated temperature data as representation of the sea surface temperature (SST) along coastlines \citep[e.g.][]{Blanchette2008, Broitman2008a, Tyberghein2012}, because apparently the dangers of applying gridded SSTs to the coast are not widely known or in many places in the world there simply are no suitable \emph{in situ} coastal temperature time series available. It is for this reason that we strongly recommended the use of \emph{in situ} data to support research conducted within 400 m from the shoreline.
+The roughly 3,000 km of South Africa's coastline is bordered by the Benguela and Agulhas currents \citep[e.g.][]{Roberts2005,Hutchings2009}, which, in combination with other nearshore processes, affect the country's marine coastal ecosystems \citep{Santos2012a}. A thorough understanding of these coastal processes is provided by several physical variables, of which temperature is one of the main determinants \citep[e.g.][]{Blanchette2008, Tittensor2010, Couce2012}. In order to ensure a true representation of organisms' biological thermal limits, nearshore temperatures must be accurately recorded and monitored. Some sources warn of the pitfalls in doing so \emph{RWS: Add references here showing which sources say using SST for the coast is inappropriate}, and a study by \citet{Smit2013} showed that SST data have a warm bias as large as \SI{6}{\degreeCelsius} when compared to coastal \emph{in situ} data. Nevertheless, a widespread approach in coastal ecological research is to use satellite and/or model-generated temperature data as representation of the sea surface temperature (SST) along coastlines \citep[e.g.][]{Blanchette2008, Broitman2008a, Tyberghein2012}, because apparently the dangers of applying gridded SSTs to the coast are not widely known or in many places in the world there simply are no suitable \emph{in situ} coastal temperature time series available. It is for this reason that we strongly recommended the use of \emph{in situ} data to support research conducted within 400 m from the shoreline.
 
 Where records of \emph{in situ} coastal seawater temperature do exist, the reliability of many of these datasets that could be used in place of the remotely-sensed SST data remains to be verified. Users of SST data benefit from it being refined through a number of well documented validation and quality control processes \citep[e.g.][]{Reynolds1994, Brown1999, Martin2012}, whereas the standards and methods with which local \emph{in situ} data from a single dataset are collected and refined may differ greatly. For example, there are currently seven organizations and/or governmental departments (hereafter referred to as bodies) contributing coastal seawater temperature data to the South African Coastal Temperature Network (SACTN). These bodies use different methods and instruments to collect their data as no national standard has been set. One consequence of this methodological disparity is that two thirds of the data were sampled with hand-held thermometers that are manually recorded at a data precision of \SI{0.5}{\degreeCelsius}, as opposed to the current generation of Underwater Temperature Recorders (UTRs) with an instrument precision of up to \SI{0.001}{\degreeCelsius}. If these \emph{in situ} data are to be used together \emph{in lieu} of the satellite-based SST data, it is important that the characteristics of the contributing data sources are understood in terms of their ability to yield useful, reliable and accurate long-term measurements for use in climate change studies.
 
@@ -59,14 +61,14 @@ The thermometer data are recorded manually and saved in an aggregated location a
 \subsection{Data Management}
 Each of the seven bodies contributing data to this study have their own method of data formatting. Steps are being taken towards a national standard as we move towards replacing all the thermometer recordings with UTR devices; however, as of the writing of this article, one does not yet exist. Data from each organization were formatted to a project-wide comma-separated values (CSV) format with consistent column headers before any statistical analyses were performed. This allowed for the same methodology to be used across the entire dataset, ensuring consistent analysis. Before analysing the data they were scanned for any values above \SI{35}{\degreeCelsius} or below \SI{0}{\degreeCelsius}. These data points were changed to \texttt{NA}, meaning `not available', before including them in the SACTN dataset.
 
-All analyses and data management performed in this paper were conducted with R version 3.3.1 (2016-06-21) \citep{R}. The script and data used to conduct the analyses and create the tables and figures in this paper may be found at https://github.com/schrob040/Trend_Analysis.
+All analyses and data management performed in this paper were conducted with R version 3.3.1 (2016-06-21) \citep{R}. The script and data used to conduct the analyses and create the tables and figures in this paper may be found at https://github.com/schrob040/Trend\_Analysis.
 
 Any time series with a temporal precision greater than one day were averaged into daily values before being aggregated into the SACTN. A series of additional checks were then performed (e.g. removing long stretches in the time series without associated temperature recordings) and time series shorter than five calendar years or collected at depths greater than 10 m were removed. At the time of this analysis, this daily dataset consisted of 84 time series, consisting of 819,499 days of data; these data were then binned further to the 26,924 monthly temperature values available for use in this study.
 
 \subsection{Systematic Analysis of Time Series}
-We used the 84 time series simply for their variance properties (comprised of seasonal, interannual, decadal and ‘noise’ components), which reflect that of the thermal environment naturally present along the ~3,000 km of South African coastline. Unknown linear trends that may have been present in each time series were removed prior to the ensuing analysis by applying an ordinary least squares regression and keeping the detrended residuals. In doing so we avoided the need to simulate a series of synthetic time series, whose variance components may not have been fully representative of that naturally present in coastal waters. These detrended time series represent a range of time scales, from 72 to 519 months in duration.
+We used the 84 time series simply for their variance properties (comprised of seasonal, interannual, decadal and ‘noise’ components), which reflect that of the thermal environment naturally present along the roughly 3,000 km of South African coastline. Unknown linear trends that may have been present in each time series were removed prior to the ensuing analysis by applying an ordinary least squares regression and keeping the detrended residuals. In doing so we avoided the need to simulate a series of synthetic time series, whose variance components may not have been fully representative of that naturally present in coastal waters. These detrended time series represent a range of time scales, from 72 to 519 months in duration.
 
-To each of the 84 detrended time series we artificially added linear decadal trends of \SIrange{0.00}{0.20}{\degreeCelsius}~dec$^{-1}$). In other words, we now had time series that captured the natural thermal variabilities around the coast, but with their decadal trends known \emph{a priori}. The range of decadal trends was selected based around the global average of \SI{0.124}{\degreeCelsius} from \citet{Kennedy2011} and used in \citet{IPCC2013}. Furthermore, in order to replicate the instrumental precision of the instruments used to collect these time series, we rounded each of these (84 time series \texttimes{} 5 decadal trends) to four levels of precision: \SI{0.5}{\degreeCelsius}, \SI{0.1}{\degreeCelsius}, \SI{0.01}{\degreeCelsius} and \SI{0.001}{\degreeCelsius}. Consequently, we had a pool of 1,680 time series with which to work.
+To each of the 84 detrended time series we artificially added linear decadal trends of \SIrange{0.00}{0.20}{\degreeCelsius}~dec$^{-1}$). In other words, we now had time series that captured the natural thermal variabilities around the coast, but with their decadal trends known \emph{a priori}. The range of decadal trends was selected based around the global average of \SI{0.124}{\degreeCelsius} from \citet{Kennedy2011} and used in \citet{IPCC2013}. Furthermore, in order to replicate the instrumental precision of the instruments used to collect these time series, we rounded each of these (84 time series $\times 5$ decadal trends) to four levels of precision: \SI{0.5}{\degreeCelsius}, \SI{0.1}{\degreeCelsius}, \SI{0.01}{\degreeCelsius} and \SI{0.001}{\degreeCelsius}. Consequently, we had a pool of 1,680 time series with which to work.
 
 To gain further insight into the effect of time series length on trend detection, each time series was first shortened to a minimum length of 5 years, starting in January so that the timing of the seasonal signal for each time series would be equitable. After fitting the model (see below) to the all 1,680 of the shortened time series, the next year of data for each time series was added and the models fitted again. This process was iterated until the full length of each time series was attained. For example, if a time series consisted of 12 full years of data, it would require 160 models (8 iterations of increasing length plus 5 decadal trends plus 4 levels of precision); similarly, 720 models would be applied to a 40 year time series. Considering the 84 time series available, the total number of individual models required to capture each combination of variables quickly increased to 36,220.
 
@@ -75,30 +77,30 @@ In order to deal with missing values (\texttt{NA}) that were present in some of 
 Our approach of fitting models to each of the semi-artificial time series that we generated allowed us to study the effect that the relevant variables (time series length, natural variability, added slope and level of measurement precision) has on the ability of the time series model to faithfully detect the decadal thermal trend, which was known \emph{a priori}. The primary results of interest in these analyses were the significance (\emph{p}-value) of the model fit, the accuracy of the decadal trend determined by the GLS model as well as the error associated with the trend estimate.
 
 \subsection{Time series model}
-The selection of the appropriate model can greatly influence the ability to detect trends \citet{Franzke2012} and two broad approaches are widely used in climate change research \citep{IPCC2013}. The first group of models estimates linear trends, and although linearity may not reflect reality (\emph{i.e.} trends are very frequently non-linear), these models do provide the convenience of producing an easy to understand decadal trend (\si{\degreeCelsius}~dec$^{-1}$) \citep{Wilks2006}. The other group accommodates non-linear trajectories of temperature through time by the use of higher-degree polynomial terms or non-parametric smoothing splines, but the inconvenience comes from not being able to easily compare models among sites (insert refs here). Both groups of models can accommodate serially correlated error structures, which is often the cause for much criticism due to their effect on the uncertainty of the trend estimates (insert refs here). For example, Generalized Least Squares (GLS; yielding estimates of linear trends) and Generalized Additive Mixed Models (GAMM; non-linear fitting with no trend estimate provided) can both capture various degrees of serial autocorrelation (insert refs here). Although our exploratory analysis assessed two parameterizations of each of the model groups, we opted to proceed here with a GLS equipped with a second-order autoregressive AR(2) correlation structure \citep{Wood2006}, which is similar to that used by the IPCC \citep{IPCC2013}. The IPCC uses an AR(1) error term, but our analysis shows that AR(2) is better suited to our data. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended data sets would affect the model’s ability to detect trends -- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
+The selection of the appropriate model can greatly influence the ability to detect trends \citet{Franzke2012} and two broad approaches are widely used in climate change research \citep{IPCC2013}. The first group of models estimates linear trends, and although linearity may not reflect reality (\emph{i.e.} trends are very frequently non-linear), these models do provide the convenience of producing an easy to understand decadal trend (e.g. \SI{0.10}{\degreeCelsius}~dec$^{-1}$) \citep{Wilks2006}. The other group accommodates non-linear trajectories of temperature through time by the use of higher-degree polynomial terms or non-parametric smoothing splines, but the inconvenience comes from not being able to easily compare models among sites (insert refs here). Both groups of models can accommodate serially correlated error structures, which is often the cause for much criticism due to their effect on the uncertainty of the trend estimates (insert refs here). For example, Generalized Least Squares (GLS; yielding estimates of linear trends) and Generalized Additive Mixed Models (GAMM; non-linear fitting with no trend estimate provided) can both capture various degrees of serial autocorrelation (insert refs here). Although our exploratory analysis assessed two parameterizations of each of the model groups, we opted to proceed here with a GLS equipped with a second-order autoregressive AR(2) correlation structure \citep{Wood2006}, which is similar to that used by the IPCC \citep{IPCC2013}. The IPCC uses an AR(1) error term, but our analysis shows that AR(2) is better suited to our data. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended data sets would affect the model’s ability to detect trends -- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
 
 \emph{AJS: I will insert the equation here...}
 
 \section{Results}
 The range of statistical properties derived from the monthly dataset, which are relevant to the aims of this study, may be seen in Table \ref{table01}. These \emph{a priori} statistical properties of the time series greatly influence the GLS to produce reliable estimates for the known trends that we added to the data, at a wide range of significance levels (\emph{p}-value), but these and other outcomes vary in a systematic manner. Important variables influential in affecting the GLS model include: the i) initial SD of the time series (after detrending but prior to adding artificial slopes); ii) time series length; iii) the magnitude of the added decadal trend; iv) the measurement precision; v) the amount of missing values in the time series (hereafter referred to as \%\texttt{NA}); and vi) the type of instrument used to collect the data.
-\emph{RWS: Need to mention here something about the normal distribution of the data and show "all_plt1.pdf"}
 \emph{AJS: Would you please arrange the vars i-v, above, in order of decreasing importance?}
 \emph{RWS: I will once they have all been quantified. Currently it is: i) length; ii) DT; iii) SD; iv) NA; v) type. But this may change.}
 
 \subsection{Factors affecting the detection of decadal trends by GLS}
-As would be expected, the magnitude of the decadal trend estimated by the GLS increases in direct proportion to the decadal trend which we added \emph{a priori}. What is especially noteworthy in this analysis is that time series of longer duration more often result in trend estimates converging with the actual trend than those that are shorter (fig: all_plt1_no_interp_natural.pdf). This effect is most evident from around 30 years. Furthermore, how well the model trend estimate converges with the actual trend is also very visible in the error estimate associated with the estimate of the trend (fig: all_plt2_no_interp_gro.pdf): models fitted to short time series will always have greater trends with larger standard errors (SE) compared to longer ones. The strength of this correlation is \emph{r} = 0.56 (\emph{p} <0.001) and it remains virtually unchanged as the added decadal trend increases. The \emph{p}-value of the fitted models also vary in relation to time series duration and to the steepness of the decadal trend added to the data (fig: all_plt4_no_interp_natural.pdf). It is usually the longer time series equipped with steeper decadal trends that are able to produce model fits with estimated trends that are statistically significant. Note, however, that this \emph{p}-value tests the null hypothesis that the estimated trend is no different from \si{0}{\degreeCelsius}~dec$^{-1}$ at \emph{p} \leq 0.05), and \emph{not} that the slope is not different from the added trend. Taken together, these outcomes show that although our GLS model can very often result in trend estimates that \emph{approach} the true trend, it is seldom that those estimates are statistically significant in the sense that the estimated trends differ statistically from \si{0}{\degreeCelsius}~dec$^{-1}$.
+As would be expected, the magnitude of the decadal trend estimated by the GLS increases in direct proportion to the decadal trend which we added \emph{a priori}. What is especially noteworthy in this analysis is that time series of longer duration more often result in trend estimates converging with the actual trend than those that are shorter (Figure \ref{figure02}). This effect is most evident from around 30 years. Furthermore, how well the model trend estimate converges with the actual trend is also very visible in the error estimate associated with the estimate of the trend (Figure \ref{figure03}): models fitted to short time series will always have greater trends with larger standard errors (SE) compared to longer ones. The strength of this correlation is \emph{r} = 0.56 (\emph{p} \textless 0.001) and it remains virtually unchanged as the added decadal trend increases. The \emph{p}-value of the fitted models also vary in relation to time series duration and to the steepness of the decadal trend added to the data (Fiigure \ref{figure04}). It is usually the longer time series equipped with steeper decadal trends that are able to produce model fits with estimated trends that are statistically significant. Note, however, that this \emph{p}-value tests the null hypothesis that the estimated trend is no different from \SI{0}{\degreeCelsius}~dec$^{-1}$ at \emph{p} $\leq 0.05$), and \emph{not} that the slope is not different from the added trend. Taken together, these outcomes show that although our GLS model can very often result in trend estimates that \emph{approach} the true trend, it is seldom that those estimates are statistically significant in the sense that the estimated trends differ statistically from \SI{0}{\degreeCelsius}~dec$^{-1}$.
 
-The variance of the detrended data is another variable that can affect model fitting, but its only systematic influence concerns the SE of the trend estimate. Here, it acts in a manner that is entirely consistent across all \emph{a priori} trends (fig: all_plt7_no_interp_grown.pdf). What we see is that as the variance of the data increases (represented here as standard deviation, SD) the SE of the slope estimates increases too. Moreover, it does so disproportionately more for time series of shorter duration. Again, as we have seen with the estimated trend that converges to the true trend around 30 years, so too does the initial SD of the data cease to be important in time series of around 3 decades in length.
+The variance of the detrended data is another variable that can affect model fitting, but its only systematic influence concerns the SE of the trend estimate. Here, it acts in a manner that is entirely consistent across all \emph{a priori} trends (Figure \ref{figure05}). What we see is that as the variance of the data increases (represented here as standard deviation, SD) the SE of the slope estimates increases too. Moreover, it does so disproportionately more for time series of shorter duration. Again, as we have seen with the estimated trend that converges to the true trend around 30 years, so too does the initial SD of the data cease to be important in time series of around 3 decades in length.
 
-The number of \%\texttt{NA} permitted in any of our time series was limited to 15\% per time series. Twenty-five of the 84 time series have fewer than 1\%\texttt{NA}. An additional 45 time series have up to 5\%\texttt{NA}, 10 have up to 10\%\texttt{NA} and 4 have up to 15\%\emph{NA}. The mean number of \texttt{NA} for the data is 2.65\%. The relationship between \%\texttt{NA} and the \emph{p}-value of the models is shown in Figure X (fig: non_NA_perc.pdf). At 2.5\% or fewer \texttt{NA} their presence does not have any discernible effect on resultant \emph{p}-values. Progressively increasing the number of \texttt{NA}s above 5\%, however, leads to a drastic improvement of models fitted to series with no or gently increasing decadal trends (these generally have very large \emph{p}-values indicative of very poor fits), and a significant deterioration of models fitted to data with steep decadal trends (for these data, the model generally fits better at low numbers of \%\emph{NA}s, as suggested by the greater number \emph{p}-values that approach 0.05). In other words, the inclusion of missing values results in time series with no added decadal trend to veer away from \si{0}{\degreeCelsius}~dec$^{-1}$ towards a situation where they may erroneously appear to display a trend. On the other hand, time series that do indeed have decadal trends tend to produce fits that are not significantly different from \si{0}{\degreeCelsius}~dec$^{-1}$.
+The number of \%\texttt{NA} permitted in any of our time series was limited to 15\% per time series. Twenty-five of the 84 time series have fewer than 1\%\texttt{NA}. An additional 45 time series have up to 5\%\texttt{NA}, 10 have up to 10\%\texttt{NA} and 4 have up to 15\%\emph{NA}. The mean number of \texttt{NA} for the data is 2.65\%. The relationship between \%\texttt{NA} and the \emph{p}-value of the models is shown in Figure \ref{figure06}. At 2.5\% or fewer \texttt{NA} their presence does not have any discernible effect on resultant \emph{p}-values. Progressively increasing the number of \texttt{NA}s above 5\%, however, leads to a drastic improvement of models fitted to series with no or gently increasing decadal trends (these generally have very large \emph{p}-values indicative of very poor fits), and a significant deterioration of models fitted to data with steep decadal trends (for these data, the model generally fits better at low numbers of \%\emph{NA}s, as suggested by the greater number \emph{p}-values that approach 0.05). In other words, the inclusion of missing values results in time series with no added decadal trend to veer away from \SI{0}{\degreeCelsius}~dec$^{-1}$ towards a situation where they may erroneously appear to display a trend. On the other hand, time series that do indeed have decadal trends tend to produce fits that are not significantly different from \SI{0}{\degreeCelsius}~dec$^{-1}$.
 
-Regarding the effect that the level of measurement precision has on the GLS models, we see in Figure X (fig: correlations_new.pdf) that decreasing the precision from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} has an undetectable effect on any differences in the modeled trends. The Root Mean Square Error (RMSE) between the slopes estimated from \SI{0.001}{\degreeCelsius} and \SI{0.01}{\degreeCelsius} data is 0.001. The correspondence between the slopes estimated for data reported at \SI{0.5}{\degreeCelsius} compared to that at \SI{0.001}{\degreeCelsius} decreases to a RMSE of 0.03.
+Regarding the effect that the level of measurement precision has on the GLS models, we see in Figure X (fig: correlations-new.pdf) that decreasing the precision from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} has an undetectable effect on any differences in the modeled trends. The Root Mean Square Error (RMSE) between the slopes estimated from \SI{0.001}{\degreeCelsius} and \SI{0.01}{\degreeCelsius} data is 0.001. The correspondence between the slopes estimated for data reported at \SI{0.5}{\degreeCelsius} compared to that at \SI{0.001}{\degreeCelsius} decreases to a RMSE of 0.03.
 
-% AJS: I must a bit into the Methods to talk about the RMSE thing...
+% AJS: I must add a bit into the Methods to talk about the RMSE thing...
 
-The effect of decreasing data measurement precision from \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has almost no appreciable effect on any of the measures of variance presented in this study. The effect of measurement precision on the accuracy of the modeled slope, however, becomes very pronounced going from \SI{0.1}{\degreeCelsius} to \SI{0.5}{\degreeCelsius}. This effect is exacerbated when a smaller decadal is added. For example, with a trend of \si{0.05}{\degreeCelsius}~dec$^{-1}$ added to the data, the mean accuracy of models fitted to data with a precision \SI{0.1}{\degreeCelsius} is only -0.14\% different from the actual slope; however, the accuracy of the fitted trend at a precision of \SI{0.5}{\degreeCelsius} is 10.81\% off, for a range in accuracy of 10.95\%. This range decreases to 6.44\% with \si{0.10}{\degreeCelsius}~dec$^{-1}$, 2.24\% at \si{0.15}{\degreeCelsius}~dec$^{-1}$ and increases slighlty to 2.30\% at \si{0.20}{\degreeCelsius}~dec$^{-1}$. A precision of \SI{0.5}{\degreeCelsius} always provides clearly less accurate modeled trends than at higher precisions; however, the current analysis offered no one precision that consistently provides the most accurate estimate of the trends. This may however become determinable in an analysis of synthetic data with variance structures that are manipulated in a more consistent manner.
+The effect of decreasing data measurement precision from \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has almost no appreciable effect on any of the measures of variance presented in this study. The effect of measurement precision on the accuracy of the modeled slope, however, becomes very pronounced going from \SI{0.1}{\degreeCelsius} to \SI{0.5}{\degreeCelsius}. This effect is exacerbated when a smaller decadal is added. For example, with a trend of \SI{0.05}{\degreeCelsius}~dec$^{-1}$ added to the data, the mean accuracy of models fitted to data with a precision \SI{0.1}{\degreeCelsius} is only -0.14\% different from the actual slope; however, the accuracy of the fitted trend at a precision of \SI{0.5}{\degreeCelsius} is 10.81\% off, for a range of 10.95\% between the most and least accurate mean values. This range decreases to 6.44\% with \SI{0.10}{\degreeCelsius}~dec$^{-1}$, 2.24\% at \SI{0.15}{\degreeCelsius}~dec$^{-1}$ and increases slighlty to 2.30\% at \SI{0.20}{\degreeCelsius}~dec$^{-1}$. A precision of \SI{0.5}{\degreeCelsius} always provides clearly less accurate modeled trends than at higher precisions; however, the current analysis offered no one precision that consistently provides the most accurate estimate of the trends. This may however become determinable in an analysis of synthetic data with variance structures that are manipulated in a more consistent manner.
 
-% AJS: In the above paragraph, I don't know what this means: ``for a range in accuracy of 10.95\%. This range decreases to 6.44\% with \si{0.10}{\degreeCelsius}~dec$^{-1}$, 2.24\% at \si{0.15}{\degreeCelsius}~dec$^{-1}$ and increases slighlty to 2.30\% at \si{0.20}{\degreeCelsius}~dec$^{-1}$.'' What range?
+% AJS: In the above paragraph, I don't know what this means: ``for a range in accuracy of 10.95\%. This range decreases to 6.44\% with \SI{0.10}{\degreeCelsius}~dec$^{-1}$, 2.24\% at \SI{0.15}{\degreeCelsius}~dec$^{-1}$ and increases slighlty to 2.30\% at \SI{0.20}{\degreeCelsius}~dec$^{-1}$.'' What range?
+% RWS: I changed it a bit, does it help?
 
 An analysis with a large number of variables as shown here is bound to have a medley of complex interactions between the various statistics being measured; however, much of the range seen in the results of the GLS models can be well explained by the influence of one independent variable, or two operating in concert, as we have shown above.
 
@@ -107,6 +109,8 @@ An analysis with a large number of variables as shown here is bound to have a me
 %...there is a large difference in mean lengths between the new and old UTR data and the thermometer data. It is therefore important to measure the effect length has on the other results given above so as to not cause undue bias towards the usefulness of the much longer thermometer data.
 % To determine the effect length of a time series had on the statistics seen in Table \ref{table01}, the relationship between these values and length of each time series was fitted to a simple linear model. It was found that the positive relationship was significant (\emph{p}\num{< 0.XX}) with an \emph{R}\textsuperscript{2} of 0.XX. \emph{RWS: Repeat for each statistic.} These relationships are shown in Figure \ref{figure02} etc.
 % When questioning which types of data produce larger ranges of $\Delta T$ values (with larger rates of linearity) from time series under 10 years, we see that the range of $\Delta T$ (\emph{R}\textsuperscript{2}) values for thermometer data at \SI{-1.9}{\degreeCelsius}~dec$^{-1}$ (0.28) to \SI{3.5}{\degreeCelsius}~dec$^{-1}$ (0.69) is similar to those for the old UTR data with a range from \SI{-5.0}{\degreeCelsius}~dec$^{-1}$ (0.52) to \SI{0.4}{\degreeCelsius}~dec$^{-1}$ (0.7); however, the new UTR data have by far the largest range from \SI{-7.233}{\degreeCelsius}~dec$^{-1}$ (0.81) to \SI{2.576}{\degreeCelsius}~dec$^{-1}$ (0.29). These very large $\Delta T$ and \emph{R}\textsuperscript{2} values serve as a strong example of the necessity for longer time series.
+
+%\emph{RWS - The relationship between DT_perc and length, controlling for DT and precision have been calculated and are at the bottom of "r.Text.R". I still need to fully interpret them and write them up. They are very interesting though!
 
 \section{Discussion}
 
@@ -117,9 +121,9 @@ An analysis with a large number of variables as shown here is bound to have a me
 % The primary research questions to duiscuss:
 % * the effect of variance on the other variables
 % * the effect NA% has on the other variables
-% * the effect of length on the other variables (i.e. 1. the model trend converging to the actual trend [all_plt2.pdf]; 2. the ratio of the actual trend to the model trend and SE of fit [all_plt6.pdf]; 3. the effect of initial SD and length on the SE of the model trend [all_plt7.pdf])
-% * the effect of different decadal trends on the other variables (these are incorporated into all_plt2.pdf, all_plt6.pdf and all_plt7.pdf).
-% * the effect of different precisions on the other variables [correlations_new.pdf] and the correlation and RMSE values.
+% * the effect of length on the other variables (i.e. 1. the model trend converging to the actual trend [all-plt2.pdf]; 2. the ratio of the actual trend to the model trend and SE of fit [all-plt6.pdf]; 3. the effect of initial SD and length on the SE of the model trend [all-plt7.pdf])
+% * the effect of different decadal trends on the other variables (these are incorporated into all-plt2.pdf, all-plt6.pdf and all-plt7.pdf).
+% * the effect of different precisions on the other variables [correlations-new.pdf] and the correlation and RMSE values.
 % * the effect of different instrument types, controlling for all other dependent and independent variables
 
 % * the effect of variance on the other variables
@@ -128,17 +132,17 @@ When the largest SD of \SI{1.3}{\degreeCelsius} was applied to the time series i
 % * the effect NA% has on the other variables
 That there is a significant relationship between the significance of the detected trend and the NA\% of time series in this study. Interestingly, the amount of missing data in a time series affects the behavior of the GLS model differently. Furthermore, if the missing data are linearly interpolated this effect becomes even more pronounced. This means that linear interpolation is not an acceptable method of filling in missing data in a time series analysis and should be avoided where possible.
 
-% * the effect of length on the other variables (i.e. 1. the model trend converging to the actual trend [all_plt2.pdf]; 2. the ratio of the actual trend to the model trend and SE of fit [all_plt6.pdf]; 3. the effect of initial SD and length on the SE of the model trend [all_plt7.pdf])
+% * the effect of length on the other variables (i.e. 1. the model trend converging to the actual trend [all-plt2.pdf]; 2. the ratio of the actual trend to the model trend and SE of fit [all-plt6.pdf]; 3. the effect of initial SD and length on the SE of the model trend [all-plt7.pdf])
 \emph{RWS: This para must be altered to discuss how short time series affect the models ability to detect the given DT.}
 The time series analysis was applies to time series as short as 5 years at the risk of producing more erratic values in order to analyse as many of the time series in the dataset as possible. The smaller \emph{n} for these time series allows any short-term phenomena to have a larger impact on the detected decadal change than in the longer time series, which may give the illusion that some of the shorter time series are showing very significant results in terms of decadal change. For example, the largest $\Delta T$ (\emph{R}\textsuperscript{2}) values at either end of the spectrum for time series at or under 10 years in length are \SI{3.5}{\degreeCelsius}~dec$^{-1}$ (0.69) and \SI{-7.233}{\degreeCelsius}~dec$^{-1}$ (0.81). The highest \emph{R}\textsuperscript{2} value for any time series at or under 10 years is 0.81. These extrapolated decadal trend values could not to be sustained over a long period as almost any point in the ocean would freeze over in only 40 years at \SI{-7.233}{\degreeCelsius}~dec$^{-1}$! Not all short time series have large $\Delta T$ (\emph{R}\textsuperscript{2}) values; indeed, the lowest $\Delta T$ (\emph{R}\textsuperscript{2}) value for time series under 10 years is \SI{0.0}{\degreeCelsius}~dec$^{-1}$ (0.00). The mean and median values for $\Delta T$ from time series under 10 years are \SI{0.08}{\degreeCelsius}~dec$^{-1}$ and \SI{0.25}{\degreeCelsius}~dec$^{-1}$.
 \emph{AJS: Above the trend data are reported at two levels of precision... I think you need a statement somewhere near the start of the section here, or in the Results section, saying that the more precise reporting is for the UTR data while the lower precision trends were only provided for the other data. Or something like that... It looks weird when there is three decimal places some times, and only one other times.}
 
 The fact that the time series under 10 years in this study tend to have higher \emph{R}\textsuperscript{2} and lower \emph{p}-values may seem to suggest that they would be at least as useful for climate change research as the longer time series; however this is not true. This is because the length variable has a non-linear influence on the \emph{R}\textsuperscript{2} and \emph{p}-values of a time series. Whereas these values are almost always strongest within the first 10 years of a time series, the size of the decadal trends detected in these short time series are dubious in that such a strong signal would most likely not perpetuate for long in one direction and would therefore only be an artefact of the short length of the times series. This is an important consideration as many studies use \emph{in situ} time series that are shorter than 10 years when relating temperature to other biotic or abiotic variables. It should go without saying that to calculate a decadal trend in a time series, more than 10 years of data would be required. The size of the outliers calculated from these shorter time series reaffirms that wisdom.
 
-% * the effect of different decadal trends on the other variables (these are incorporated into all_plt2.pdf, all_plt6.pdf and all_plt7.pdf).
+% * the effect of different decadal trends on the other variables (these are incorporated into all-plt2.pdf, all-plt6.pdf and all-plt7.pdf).
 A bit of text here...
 
-% * the effect of different precisions on the other variables [correlations_new.pdf] and the correlation and RMSE values.
+% * the effect of different precisions on the other variables [correlations-new.pdf] and the correlation and RMSE values.
 A bit of text here...
 
 % * the effect of different instrument types, controlling for all other dependent and independent variables
@@ -171,25 +175,23 @@ We draw several key conclusions:
 \item Decreasing the precision of measurements to greater than \SI{0.1}{\degreeCelsius} has almost no appreciable effect on a time series ability to detect a long term trend, provided that the reported effect size matches the level of precision by the instruments.
 \end{enumerate}
 
-We understand that time series of >30 years may be exceedingly rare. Therefore, while we move forward as a scientific community investigating the issues of climate change, the increasing length and continuity of any current and future time series must be ensured in order to construct and maintain a clear understanding of the trends in changing temperature that are occurring throughout Earth's oceans.
+We understand that time series of \textgreater 30 years may be exceedingly rare. Therefore, while we move forward as a scientific community investigating the issues of climate change, the increasing length and continuity of any current and future time series must be ensured in order to construct and maintain a clear understanding of the trends in changing temperature that are occurring throughout Earth's oceans.
 
 %
 %==============================================================================
 
 \acknowledgments
-The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for contributing all of the raw data used in this study. Without it, this article and the SACTN would not be possible. This research was supported by NRF Grant (CPRR14072378735). The authors report no financial conflicts of interests. The data and analyses used in this paper may be found at https://github.com/schrob040/Trend_Analysis.
+The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for contributing all of the raw data used in this study. Without it, this article and the SACTN would not be possible. This research was supported by NRF Grant (CPRR14072378735). The authors report no financial conflicts of interests. The data and analyses used in this paper may be found at https://github.com/schrob040/Trend\_Analysis.
 
 %
 %==============================================================================
 
 \appendix[A]
 \appendixtitle{Effects of linear interpolation}
-Blurb here about linear unterpolation effects....
-(cite: the figures showing the effect)
+Blurb here about linear unterpolation effects.... Figure \ref{figureA}.
 
 %
 %==============================================================================
-\emph{RWS: This still needs substantial editing as many power and STL references have been removed, and several new modelling references have been added.}
 \begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -326,7 +328,7 @@ Smit, A.~J., M.~Roberts, R.~J. Anderson, F.~Dufois, S.~F.~J. Dudley, T.~G.
   remotely-sensed data sets around the coast of South Africa}. \textit{PLoS
   ONE}, \textbf{8~(12)}, \doi{10.1371/journal.pone.0081944}.
 
-\bibitem[{Stocker et~al.(2013)Stocker, Qin, Plattner, Tignor, Allen, Boschung,
+\bibitem[{IPCC(2013)Stocker, Qin, Plattner, Tignor, Allen, Boschung,
   Nauels, Xia, Bex, and Midgley}]{IPCC2013}
 Stocker, T., D.~Qin, G.~K. Plattner, M.~Tignor, S.~K. Allen, J.~Boschung,
   A.~Nauels, Y.~Xia, V.~Bex, and P.~M. Midgley (Eds.), 2013. {Climate change
@@ -352,7 +354,7 @@ Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
 Wilks, D.~S., 2006: {Statistical Methods in the Atmospheric Sciences, 2nd edition}.
   Elsevier, Philadelphia, 627 pp.
 
-\bibitem[{Wood(2006)}{Wood2006}
+\bibitem[{Wood(2006)}]{Wood2006}
 Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
   and Hall/CRC, Boca Raton, Florida, 410 pp.
 
@@ -364,21 +366,19 @@ Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
 
 %
 %==============================================================================
-\emph{RWS: This will be drastically changed or removed.}
-
 \begin{table}[ht]
-\caption{\small The mean values (±sd) of the length, initial sd of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (se) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes have on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}.
+\caption{\small The mean values ($\pm sd$) of the length, initial sd of the time series, the significance (\emph{p}) of the detected trends, the percentage difference between the slope added \emph{a prori} and the modelled slope (\% difference) as well as the standard error (se) around the detected trend from the 84 time series used in this study. Rows show the effect increasing size of added slopes have on the results. Values shown here were derived only from the data rounded to a precision of \SI{0.001}{\degreeCelsius}}.
 \label{table01}
 \centering
-\begin{tabular}{lrrrrr}
+\begin{tabular}{lccccc}
   \hline
-  Added slope & length ± sd & initial sd ± sd & \emph{p} of trend ± sd & \% difference ± sd & se of the trend ± sd \\
+  added slope & \emph{p} of trend & \% difference & se of trend \\
   \hline
-  0.00\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.86 ± 0.13 &      NA       & 2.51e^{-3} ± 2.40e^{-3} \\
-  0.05\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.76 ± 0.16 & 0.86 ± 145.41 & 2.51e^{-3} ± 2.40e^{-3} \\
-  0.10\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.62 ± 0.23 & 0.43 ± 72.71 & 2.51e^{-3} ± 2.40e^{-3} \\
-  0.15\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.54 ± 0.43 & 0.48 ± 0.26 & 0.27 ± 48.45 & 2.51e^{-3} ± 2.40e^{-3} \\
-  0.20\si{\degreeCelsius}~dec$^{-1}$ & 320.52 ± 116.14 & 1.55 ± 0.43 & 0.37 ± 0.28 & 0.20 ± 36.34 & 2.51e^{-3} ± 2.40e^{-3} \\
+  \SI{0.00}{\degreeCelsius}~dec$^{-1}$ & 0.86$\pm 0.13$ &      NA       & 2.51e$^{-3}$$\pm 2.40$e$^{-3}$ \\
+  \SI{0.05}{\degreeCelsius}~dec$^{-1}$ & 0.76$\pm 0.16$ & 0.86$\pm 145.41$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
+  \SI{0.10}{\degreeCelsius}~dec$^{-1}$ & 0.62$\pm 0.23$ & 0.43$\pm 72.71$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
+  \SI{0.15}{\degreeCelsius}~dec$^{-1}$ & 0.48$\pm 0.26$ & 0.27$\pm 48.45$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
+  \SI{0.20}{\degreeCelsius}~dec$^{-1}$ & 0.37$\pm 0.28$ & 0.20$\pm 36.34$ & 2.51e$^{-3}$$\pm 2.40e$$^{-3}$ \\
    \hline
 \end{tabular}
 \end{table}
@@ -411,32 +411,49 @@ Wood, S., 2006: {Generalized Additive Models: An Introduction with R}. Chapman
 \label{figure01}
 \end{figure}
 
-\emph{RWS - No longer showing coastal classification.}
-% \begin{figure}
-% \centering \includegraphics[width=1.0\textwidth]{figure02}
-% \caption[\small Coastal allocation of time series from nonmetric multidimensional scaling and hierarchical cluster analysis]{Coastal allocation of time series from nonmetric multidimensional scaling and hierarchical cluster analysis.}
-% \label{figure02}
-% \end{figure}
+\begin{figure}
+\centering \includegraphics[width=01.0\textwidth]{figure02}
+\caption[\small The effect of length on the ability of a model to accurately detect the trend within a time series]{The effect of length on the ability of a model to accurately detect the trend within a time series.}
+\label{figure02}
+\end{figure}
 
-\emph{RWS - No longer power analysis results. THis figure could be replaced by a box and whisker plot showing the normal distribution of the data.}
-% \begin{figure}
-% \centering \includegraphics[width=0.66\textwidth]{figure03}
-% \caption[\small Boxplots showing the range of lengths required for each subgroup to expect results from a time series analysis with a power of 0.80 or 0.90]{Boxplots showing the range of lengths required for each subgroup to expect results from a time series analysis with a power of 0.80 or 0.90. The median length required for each subgroup is denoted here with thick vertical bars. The ends of the boxplots show the 25th and 75th percentiles. The 95th percentile is shown as text to the left of each boxplot as they distort the range of the \emph{x}-axis. The \emph{n} values listed to the left of each subgroup shows how many time series were drawn on to calculate the statistics for the corresponding boxplots.}
-% \label{figure03}
-% \end{figure}
+\begin{figure}
+\centering \includegraphics[width=01.0\textwidth]{figure03}
+\caption[\small The relationship between the length of a time series and the standard error (SE) of the modelled trend]{The relationship between the length of a time series and the standard error (SE) of the modelled trend.}
+\label{figure03}
+\end{figure}
 
-\emph{RWS - To be replaced with a new figure.}
-% \begin{figure}
-% \centering \includegraphics[width=0.66\textwidth]{figure04}
-% \caption[\small The effect varying length has on the goodness of fit (\emph{R}\textsuperscript{2}) and significance (\emph{p}) of a linear model fitted to a time time series]{The effect varying length has on the goodness of fit (\emph{R}\textsuperscript{2}) and significance (\emph{p}) of a linear model fitted to a time time series. The number of time series available (\emph{n}) at length 36 months and then for every 60 month interval thereafter for each sub group shown in black in each panel. The median \emph{R}\textsuperscript{2} values are shown as series of dots whose shade shows the median \emph{p} value for that month. \emph{p} values less than 0.05 are shown as black dots, \emph{p} values under 0.10 as grey dots and \emph{p} values greater than 0.10 shown as white dots. The grey ribbon surrounding the dot plot shows the range (5th to 95th percentile) of the \emph{R}\textsuperscript{2} values from each time series for each new month.}
-% \label{figure04}
-% \end{figure}
+\begin{figure}
+\centering \includegraphics[width=0.8\textwidth]{figure04}
+\caption[\small The effect the natural variation found within a time series has on the significance of the modelled trend]{The effect the natural variation found within a time series has on the significance of the modelled trend. Also shown via size of dots is the intereaction of length on these variables.}
+\label{figure04}
+\end{figure}
 
-\emph{RWS - To be replaced with a new figure.}
-% \begin{figure}
-% \centering \includegraphics[width=0.66\textwidth]{figure05}
-% \caption[\small The effect changes in the SD variable has on the goodness of fit (\emph{R}\textsuperscript{2}) and significance (\emph{p}) of a simple linear model fitted to a time series]{The effect changes in the SD variable has on the goodness of fit (\emph{R}\textsuperscript{2}) and significance (\emph{p}) of a simple linear model fitted to a time series. The number of time series (\emph{n}) used to calculate the effect of varying standard deviation (SD) for each subgroup shown in black in the top right of the corresponding panel. The dots show the median \emph{R}\textsuperscript{2} value for all time series within the corresponding subgroup with the given SD value as seen on the x-axis while the grey ribbon shows the 5th to 95th percentiles for the corresponding point. The colour of each point shows the median \emph{p} value with the same scale as Figure \ref{figure04}.}
-% \label{figure05}
-% \end{figure}
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figure05}
+\caption[\small The relationship between the effect of initial SD on the SE of a modelled trend]{The relationship between the effect of the initial SD of a time series on the SE of a modelled trend, controlled for by the length of the time series.}
+\label{figure05}
+\end{figure}
+
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figure06}
+\caption[\small The relationship between \texttt{NA}\% amd the significance of a fitted trend]{The relationship between \texttt{NA}\% amd the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The effect of missing data on a models ability to detect a larger decadal trend is initially neglibile, but becomes significant as greater amounts of data are missing.}
+\label{figure06}
+\end{figure}
+
+% RWS - Unsuccesful attempt at adding correct Appendix notation
+% \newcommand{\beginsupplement}{%
+%         \setcounter{table}{0}
+%         \renewcommand{\thetable}{A\arabic{table}}%
+%         \setcounter{figure}{0}
+%         \renewcommand{\thefigure}{A\arabic{figure}}%
+%      }
+% \beginsupplement
+
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figureA}
+\caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
+\label{figureA}
+\end{figure}
 
 \end{document}

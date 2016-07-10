@@ -34,4 +34,7 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 
 ## 2016/07/09
 * Created "/LaTeX" folder
+* Completed several more meta-analyses for results
+* Results section nearly finished
 * Compiled document for first time
+* All figures used in "/LatEX/Trend_analysis.R" added to "/LaTeX" folder

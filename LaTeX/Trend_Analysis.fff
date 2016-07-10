@@ -1,0 +1,49 @@
+\begin{figure}
+\centering \includegraphics[width=1.0\textwidth]{figure01}
+\caption[\small Location and instrument types used to sample each time series available for use in this study]{Location and instrument types used to sample each time series available for use in this study. In the legend, `new' shows the underwater temperature recorder (UTR) time series that were recorded entirely with the newer UTRs that have a high precision of \SI{0.001}{\degreeCelsius}, `old' refers to UTR time series that were recorded, at least in part, with older UTRs and have data with precisions lower than \SI{0.001}{\degreeCelsius}. The `thermo' label shows the location of the thermometer time series.}
+\label{figure01}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=01.0\textwidth]{figure02}
+\caption[\small The effect of length on the ability of a model to accurately detect the trend within a time series]{The effect of length on the ability of a model to accurately detect the trend within a time series.}
+\label{figure02}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=01.0\textwidth]{figure03}
+\caption[\small The relationship between the length of a time series and the standard error (SE) of the modelled trend]{The relationship between the length of a time series and the standard error (SE) of the modelled trend.}
+\label{figure03}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=0.8\textwidth]{figure04}
+\caption[\small The effect the natural variation found within a time series has on the significance of the modelled trend]{The effect the natural variation found within a time series has on the significance of the modelled trend. Also shown via size of dots is the intereaction of length on these variables.}
+\label{figure04}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figure05}
+\caption[\small The relationship between the effect of initial SD on the SE of a modelled trend]{The relationship between the effect of the initial SD of a time series on the SE of a modelled trend, controlled for by the length of the time series.}
+\label{figure05}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figure06}
+\caption[\small The relationship between \texttt{NA}\% amd the significance of a fitted trend]{The relationship between \texttt{NA}\% amd the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The effect of missing data on a models ability to detect a larger decadal trend is initially neglibile, but becomes significant as greater amounts of data are missing.}
+\label{figure06}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{figureA}
+\caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
+\label{figureA}
+\end{figure}
+\efloatseparator
+ 

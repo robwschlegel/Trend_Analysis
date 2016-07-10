@@ -225,7 +225,44 @@ prec_range_results_table <- prec_range_results_table[c(1,3:10)] %>%
 prec_range_results_table$best <- c(NA, "prec01", "prec001", "prec01", "prec0001")
 save(prec_range_results_table, file = "data/prec_range_results_table.Rdata")
 
-## Effect instrument type on trend detection
+## Pay-off between length and prec05
+# First visualise data
+gls_df_no_0 %>% 
+  group_by(DT, prec) %>% 
+  ggplot(aes(x = length, y = abs(DT_perc))) +
+  geom_point() +
+  geom_line() +
+  geom_smooth(se = FALSE, method = "lm") +
+  facet_grid(prec~DT)
+
+# Set linear model for use
+lm_fun <- function(df) {
+    model <- lm(abs(DT_perc)~length, data = df)
+    stats <- data.frame(
+        intercept = round(as.numeric(coef(model)[1]), 4),
+        slope= round(as.numeric(coef(model)[2]), 4)
+      )
+    return(stats)
+}
+
+# Calculate relationship of DT_perc with length for all DTs and precisions
+mod_lm <- dlply(gls_df_no_0, .(DT, prec), .progress = "text", .parallel = FALSE, lm_fun)
+lm_df <- ldply(mod_lm, data.frame, .progress = "text")
+  ## The results are very interesting but I will need to take a look at them with fresh eyes
+ggplot(lm_df, aes(x = intercept, y = slope)) +
+  geom_point(aes(colour = DT, shape = prec)) +
+  geom_line(aes(colour = DT))
+  ## The effect of DT on the relationship between length and DT_perc appears very significant
+  ## The effect of prec05 also appears significantly different from the other precisions
+  ## Also, the effect of DT on the aforementioned relationship appears oddly linear
+    ## What could that mean?
+
+# Calculate when each pairing would allow the modelled slope to become the same as the real slope
+lm_df <- lm_df %>% 
+  mutate(bingo = intercept/slope)
+  # This may not be the best way to measure this...
+    # Perhaps calculating when the slope first enters a 90% CI range would be better...
+
 
 #############################################################################
 ### 6. Discussion
