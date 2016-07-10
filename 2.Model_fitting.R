@@ -73,7 +73,7 @@ gls_fun <- function(df) {
 }
 
 # add year_index and remove prec if grown data are used
-system.time(mod_gls <- dlply(mod, .(site, src, DT, year_index), .progress = "text",
+system.time(mod_gls <- dlply(mod, .(site, src, DT, year_index, prec), .progress = "text",
                              .parallel = TRUE, gls_fun))
 # timing
 # Progress disabled when using parallel plyr
@@ -94,8 +94,9 @@ gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type
 gls_df$type[gls_df$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
 # Correct "sd_initial" column to show the sd before the slope was added
 gls_df <- gls_df %>% 
-  group_by(site, src, index, year_index) %>% 
-  mutate(sd_initial = sd_initial[DT == "DT000"])
+  group_by(site, src, index, year_index, prec) %>% 
+  mutate(sd_initial = sd_initial[DT == "DT000"]) %>% 
+  as_tibble()
 
 ht(gls_df)
 save(gls_df, file = "data/gls_fitted_full_nointerp_grown.RData")
