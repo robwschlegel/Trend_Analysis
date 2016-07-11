@@ -1,0 +1,1050 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ins",
+				"insituDaily_v3.4.RData"
+			],
+			[
+				"as.li",
+				"as.list\t{base}"
+			],
+			[
+				"smooth",
+				"smoothPercentile"
+			],
+			[
+				"smoot",
+				"smoothPercentile"
+			],
+			[
+				"join",
+				"joinAcrossGaps"
+			],
+			[
+				"climatolo",
+				"climatologyPeriod"
+			],
+			[
+				"intensit",
+				"intensity_max"
+			],
+			[
+				"intensi",
+				"intensity_max"
+			],
+			[
+				"event",
+				"event.summary"
+			],
+			[
+				"clim",
+				"clim_end"
+			],
+			[
+				"clim_",
+				"clim_start"
+			],
+			[
+				"mhw",
+				"mhw_relSeas"
+			],
+			[
+				"seas",
+				"seas_climYear"
+			],
+			[
+				"inde",
+				"index_start"
+			],
+			[
+				"tSeries",
+				"tSeries2"
+			],
+			[
+				"mhw_relSeas_",
+				"mhw_relSeas_end"
+			],
+			[
+				"tseries",
+				"tSeries2"
+			],
+			[
+				"drop",
+				"droplevels"
+			],
+			[
+				"as.POS",
+				"as.POSIXct"
+			],
+			[
+				"as.Po",
+				"as.POSIXct"
+			],
+			[
+				"Drop",
+				"Dropbox"
+			],
+			[
+				"temp",
+				"tempssa_v3"
+			],
+			[
+				"annual",
+				"annualSD"
+			],
+			[
+				"ann",
+				"annualMean"
+			],
+			[
+				"insi",
+				"insituClim_v3.2"
+			],
+			[
+				"insitu",
+				"insituMonthly_v3.2"
+			],
+			[
+				"white",
+				"weighted.mean"
+			],
+			[
+				"black",
+				"black"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Primary Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Choose Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					"Primary Quick Build"
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					"Choose Quick Build"
+				],
+				[
+					"Packages/User/LaTeX.sublime-build",
+					"Clean up Files"
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				"Primary Quick Build"
+			]
+		],
+		[
+			[
+				[
+					"Packages/SublimeKnitr/knitr-Markdown (mod).sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeKnitr/knitr-Markdown (mod).sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/SublimeKnitr/knitr-Markdown (mod).sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/knitr/knitr-Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/knitr/knitr-Markdown.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Markdown Preview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					""
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					"Pandown: PDF"
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					"Pandown: Plain Text"
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					"Pandown: LaTeX"
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					"Pandown: Word Document"
+				],
+				[
+					"Packages/Pandown/Pandown HTML.sublime-build",
+					"Pandown: Rich Text (RTF)"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Native Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: JSON"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Plain Text"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Markdown"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: reStructuredText"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: XHTML 1"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: HTML 5"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: LaTeX"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: LaTeX - PDF"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: LaTeX Beamer Slideshow"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: LaTeX Beamer Slideshow - PDF"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: ConTeXt"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Groff Man"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: MediaWiki Markup"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Textile"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Emacs Org-Mode"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: GNU Texinfo"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: DocBook XML"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: OpenDocument XML"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: OpenOffice Document"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Word Document"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: EPUB Book"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: EPUB3"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: FictionBooks 2"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: AsciiDoc"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Slidy HTML/JS Slideshow"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Slideous HTML/JS Slideshow"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: DZSlides HTML5/JS Slideshow"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: S5 HTML/JS Slideshow"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Rich Text (RTF)"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Markdown with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: reStructuredText with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: LaTeX with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Beamer with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: XHTML 1 with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: HTML5 with Literate Haskell"
+				],
+				[
+					"Packages/Pandown/Pandown Markdown.sublime-build",
+					"Pandown: Reveal.js Slideshow"
+				]
+			],
+			[
+				"Packages/knitr/knitr-Markdown.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 370.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"bui",
+				"Build: New Build System"
+			],
+			[
+				"Send",
+				"SendText+: Choose Program"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git ",
+				"Git: Stash Changes"
+			],
+			[
+				"git add",
+				"Git (SideBarGit): Add & Commit & Push…"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"quic",
+				"Git: Quick Commit"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commi",
+				"Git: Quick Commit"
+			],
+			[
+				"INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pu",
+				"Git: Pull Current Branch"
+			],
+			[
+				"git qui",
+				"Git: Quick Commit"
+			],
+			[
+				"git comm",
+				"Git: Quick Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"g",
+				"Git: Delete Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"gi",
+				"Git: Pull"
+			],
+			[
+				"gis",
+				"Git: Status"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"gin",
+				"Git: Init"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git psu",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git: pul",
+				"Git (SideBarGit): Pull"
+			],
+			[
+				"r-box",
+				"R-Box Application"
+			],
+			[
+				"r-",
+				"R-Box Application"
+			],
+			[
+				"repl r",
+				"SublimeREPL: R"
+			],
+			[
+				"repl R",
+				"SublimeREPL: R"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"REPL R",
+				"SublimeREPL: R"
+			],
+			[
+				"R",
+				"R-Box Application"
+			],
+			[
+				"R-",
+				"R-Box Application"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Enhance",
+				"Set Syntax: Enhanced-R"
+			],
+			[
+				"Enhan",
+				"Set Syntax: Enhanced-R"
+			],
+			[
+				"REPL",
+				"SublimeREPL: R"
+			],
+			[
+				"R-bo",
+				"R-Box Application"
+			],
+			[
+				"R-Box",
+				"R-Box Application"
+			],
+			[
+				"R-B",
+				"R-Box Application"
+			],
+			[
+				"Enhanced",
+				"Set Syntax: Enhanced-R Console"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/LaTeX.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/Trend_Analysis/LaTeX/Trend_Analysis.tex",
+		"/Users/ajsmit/Dropbox/Reviews/Diversity and Distributions 25 March 2016",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/LaTeX Beamer.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/RWSandAJS_v2/RWSandAJS_AMS_hand_edited.tex",
+		"/Users/ajsmit/Dropbox/Research/Research_questions/SACTN meeting, 14 June 2016.mdown",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/testing/MHW_theme.R",
+		"/Users/ajsmit/Dropbox/repos/packages/RmarineHeatWaves/NEWS.md",
+		"/Users/ajsmit/.Rprofile",
+		"/Users/ajsmit/Dropbox/Proposals/FBIP Framework 2016/Project Information.mdown",
+		"/Users/ajsmit/.bash_profile",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/R-comment-1.sublime-snippet",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/R-comment-2.sublime-snippet",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/testing/marineHeatWaves.R",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/R Extended.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/marineHeatWaves_plots.R",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/testTemp.R",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/scratch.R",
+		"/Library/Frameworks/R.framework/Versions/3.2/Resources/library/vegan/doc/intro-vegan.Rnw",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/marineHeatWaves.R",
+		"/Library/Frameworks/R.framework/Versions/3.1/Resources/library/xts/api_example/man/checkOrder.Rd",
+		"/Library/Frameworks/R.framework/Versions/3.1/Resources/library/Biobase/Code/man/get@PKGNAME@.Rd",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/python/marineHeatWaves/marineHeatWaves.py",
+		"/Users/ajsmit/Dropbox/repos/MHW/LaTeX/Schlegel_et_al_old.tex",
+		"/Users/ajsmit/Desktop/download_nc.R",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/graphs/eventsPlots.R",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/MHWs_thoughts.md",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/SendTextPlus/SendText+.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/SendText+.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/R-Box.sublime-settings",
+		"/Users/ajsmit/Dropbox/Kelp_data/Janine/Scatterplots_AJS.R",
+		"/private/etc/bashrc",
+		"/private/etc/bashrc_Apple_Terminal",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/graphs/time_series_plots.R",
+		"/Users/ajsmit/Dropbox/Research/Saibu/Species_metal_concs.R",
+		"/Users/ajsmit/Dropbox/Kelp_data/Janine/Scatterplots.R",
+		"/Users/ajsmit/.zshrc",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/GutterColor.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/red.tmTheme",
+		"/Library/Frameworks/R.framework/Versions/3.2/Resources/library/rmarkdown/rmarkdown/templates/tufte_handout/skeleton/skeleton.Rmd",
+		"/Library/Frameworks/R.framework/Versions/3.2/Resources/library/rmarkdown/rmarkdown/templates/tufte_handout/resources/tufte-handout.cls",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/ts_analysis.R",
+		"/Users/ajsmit/Dropbox/repos/Seaweed/Seaweed_doc_v2.Rnw",
+		"/Users/ajsmit/Dropbox/Kelp_data/honoursAnalyses.R",
+		"/Users/ajsmit/Downloads/Scatterplots_AJS.R",
+		"/Library/Frameworks/R.framework/Versions/3.2/Resources/library/rmarkdown/rmarkdown/templates/tufte_handout/template.yaml",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/ts_analysis.Rmd",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/derivFun.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/tsDiagGamm.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/RWSandAJS.Rnw",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/ts_random.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/time_series_random_comp/ajs_template2.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/setupParams/theme.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/load/loadKZNSB_v3.4.R",
+		"/Users/ajsmit/.bashrc",
+		"/Users/ajsmit/Dropbox/Reviews/NRF - Laura Blamey/LK Blamey, GM Branch and KE Reaugh-Flower (2010) T",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/.Rprofile",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/RWSandAJS.tex",
+		"/Users/ajsmit/Dropbox/repos/marine_heat_waves/marineHeatWaves/build/lib/marineHeatWaves.py",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/agutmpl.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/TODO",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/SI_degrC.sublime-snippet",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/SI_degrC.sublime",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/Paper_from_Chapter_2.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/Paper_from_Chapter_2.Rnw",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/agu_paper.log",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/agu_paper.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/Chapter_2.Rnw",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/LaTeX (Knitr).sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/LaTeXing.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/untitled.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/Chapter_2.tex",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/insitu_meta_v3.3.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/insitu_virtual_powerAnalyses_v3.3.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/Figure_1_v3.2.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/func/statsFunc.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/Figure_2_v3.2_update.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/load/loadMUR_v3.3.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/func/FuncTemplate.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/flowChart_v3.3.txt",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/R-comment.sublime-snippet",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/load/loadALL.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/Figure_2_v3.2.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/political_borders.R",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/.git/config",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/clusters.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/prep/merge2Clim_insitu_v3.2.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/insitu_boxPlots_v3.2.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/interp_lowres_v3.2.R",
+		"/Users/ajsmit/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/EA2CC9EF-8C1C-4992-8003-E17A6EB96F63/WhatsApp Chat: Karin Smit.txt",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/interp_hires_v3.2.R",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/tempssa_v3.0.sublime-project",
+		"/Users/ajsmit/Dropbox/repos/SA_Seaweed/data/seaweeds/AJ temp data May 2014 12 month.docx",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/func/loadFunc.R",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/Enhanced-R.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/stats/ninoR2_4months.csv",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/func/slice2cube-MUR.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/ordinations.R",
+		"/Users/ajsmit/Dropbox/repos/Lipids/lipid_current.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/coords_to_extract/FTapia_interp_dists_v3.2.R",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/ajsmit/Library/Application Support/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/graph/MUR_bathy_plot.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/func/Colour_palettes.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/proc/insitu_stats_v3.3.R",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/WOA05_75m.ncl",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/WOA09_75m.ncl",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/in_situ_site_interpolation.ncl",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/AVHRR_vs_in_situ.ncl",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/WOA09_vs_in_situ.ncl",
+		"/Users/ajsmit/Dropbox/repos/tempssa_v3.0/ncl/interp_script.ncl",
+		"/Volumes/OCEANDAT/MUR/daily/opendapL4_mod.py",
+		"/Volumes/NO NAME/Growth.txt",
+		"/Users/ajsmit/.profile",
+		"/Users/ajsmit/Library/Application Support/BBEdit/Color Schemes/Solarized Light.bbcolors"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"trends",
+			"quantile",
+			"-MAY-",
+			"-JUNE-",
+			"bw",
+			"red",
+			"#===============================================================================",
+			"Option",
+			"tSeries",
+			"na.approx",
+			"protoEvents",
+			"shade",
+			"exceed",
+			"s1",
+			"ind1",
+			"ex1",
+			"f1",
+			"ser1",
+			"tt",
+			"tSeries1",
+			"tSeries2",
+			"events",
+			"tSeries2$temp",
+			"stop_date",
+			"start_date",
+			"index_start",
+			"index",
+			"Australia",
+			" = ",
+			"intensity_relThresh",
+			"relThresh <-",
+			"eventsList,",
+			"\"intensity\"",
+			"intensity",
+			" <- ",
+			"start",
+			"stopDate",
+			"startDate",
+			"r3",
+			"tSeries2$events",
+			"$events",
+			"events",
+			"exceed",
+			"eventsNoGaps",
+			"events",
+			"protoEvents",
+			"protoEvent",
+			"gaps",
+			"events",
+			"gap.rng",
+			"event.rng",
+			"events",
+			"i]",
+			"gap",
+			"exceedance",
+			"s1",
+			"ind1",
+			"ex1",
+			"event",
+			"events",
+			"gap",
+			"l2",
+			"s2",
+			"ind2",
+			"r2",
+			"tSeries2",
+			"gap",
+			"ind",
+			"r",
+			"out",
+			"stretch",
+			"eventNo",
+			"exceed_bool",
+			"region",
+			"notout",
+			"out",
+			"l",
+			"s",
+			"r",
+			"exceed_bool",
+			"in",
+			"out",
+			"ind",
+			"r",
+			"tSeries",
+			"tSeries1",
+			"tSeries",
+			"r$",
+			"r",
+			" ",
+			"clim_fin",
+			"clim_strt",
+			"clim_end",
+			"clim_start",
+			"pad",
+			"y",
+			"x",
+			"    ",
+			"   ",
+			"  ",
+			"plants",
+			"soil1a",
+			"HOME",
+			"WC",
+			"mhwMoWC",
+			"eas",
+			"threshRel",
+			"tab",
+			"expression",
+			"date",
+			"gamm2",
+			"ts.df",
+			"gamm1",
+			"year(date)",
+			"month(date)",
+			"gamm1",
+			"theme",
+			"font",
+			"gray80",
+			"gra",
+			"gray40",
+			"cyan4",
+			"blue",
+			"red",
+			"gray",
+			"gray20",
+			"2",
+			"black"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"date_stop",
+			"date_start",
+			"\\cite",
+			"\\si{\\degree}",
+			" \\si{\\degree}",
+			" $\\geq$",
+			"$\\geq$",
+			"$\\Delta T$",
+			"ncfiles",
+			"fall",
+			"ncfiles",
+			"fall"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 104.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 104.0
+	},
+	"output.git-commit":
+	{
+		"height": 108.0
+	},
+	"output.git-init":
+	{
+		"height": 108.0
+	},
+	"output.git-pull":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/SublimeKnitr/knitr-Markdown (mod).sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"proc/interp_hires_v3.2.R"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/repos/tempssa_v3.0/tempssa_v3.0.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
