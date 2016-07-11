@@ -127,11 +127,13 @@ gls_df_natural_no_0 <- gls_df_natural %>%
   # Not using min and max values as these are only two data points and could be misrepresentative
 
 # Length #
-# ggplot(data=gls_df_natural_no_0[,c(13,17)], aes(x = length, y=abs(DT_perc)))+ # Visualise test
-#   geom_point() +
-#   geom_smooth(method = "lm")
+ggplot(data=gls_df_natural_no_0[,c(13,17)], aes(x = length, y=abs(DT_perc)))+ # Visualise test
+  geom_point() +
+  geom_smooth(method = "lm")
 (max(gls_df_natural_no_0$length) * coef(lm(abs(abs(DT_perc))~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$length) * coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1])
   # -112.14% is the spread of DT accuracy imposed by the natural length range in the dataset
+
+predict(gls_df_natural_no_0, lm(abs(abs(DT_perc))~length))
 
 # DT #
 (max(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1])
@@ -160,10 +162,10 @@ gls_df_natural_no_0_precision$prec_real[gls_df_natural_no_0$prec == "prec05"] <-
   # Run analysis
 (max(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1]) - (min(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1])
   # -0.20% range
-# ggplot(data = gls_df_natural_no_0_precision[,c(17,19)], 
-#        aes(x = prec_real, y=abs(DT_perc)))+ # Visualise test
-#   geom_point() +
-#   geom_smooth(method = "lm")
+ggplot(data = gls_df_natural_no_0_precision[,c(17,19)],
+       aes(x = prec_real, y=abs(DT_perc)))+ # Visualise test
+  geom_point() +
+  geom_smooth(method = "lm")
 
 ## Magnitude of decadal trend determined by GLS
 # Correlation between abs(DT_perc) vs. SD_initial
@@ -292,8 +294,8 @@ mod_lm <- dlply(gls_df_natural_no_0, .(DT, prec), .progress = "text", .parallel 
 lm_df <- ldply(mod_lm, data.frame, .progress = "text")
   ## The results are very interesting but I will need to take a look at them with fresh eyes
 ggplot(lm_df, aes(x = intercept, y = slope)) +
-  geom_point(aes(colour = DT, shape = prec)) +
-  geom_line(aes(colour = DT))
+  geom_point(aes(colour = DT, shape = prec)) #+
+  # geom_line(aes(colour = DT))
   ## The effect of DT on the relationship between length and DT_perc appears very significant
   ## The effect of prec05 also appears significantly different from the other precisions
   ## Also, the effect of DT on the aforementioned relationship appears oddly linear
@@ -301,6 +303,7 @@ ggplot(lm_df, aes(x = intercept, y = slope)) +
 
 # Calculate when each pairing would allow the modelled slope to become the same as the real slope
 lm_df <- lm_df %>% 
+  
   mutate(bingo = intercept/slope)
   # This may not be the best way to measure this...
     # Perhaps calculating when the slope first enters a 90% CI range would be better...
