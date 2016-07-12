@@ -44,3 +44,6 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 * Minor updates to abstract, intro and methods
 * Added results of analysis of length vs precision to the results section
 * Discussion section is now a complete rough draft
+
+## 2016/07/11
+* Discussion section smoothed out
