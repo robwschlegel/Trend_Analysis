@@ -1,13 +1,13 @@
 \begin{figure}
 \centering \includegraphics[width=7.5cm]{figure01}
-\caption[\small The location of each time series available for use in this study]{The location of each time series available for use in this study.}
+\caption[\small The location of the 129 time series available for use in this study]{The location of the 129 time series available for use in this study. The 84 time series used are shown as solid white circles and those not used are shown as opaque.}
 \label{figure01}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
 \centering \includegraphics[width=7.5cm]{figure00}
-\caption[\small Box and whisker plots of the base 84 time series]{Box and whisker plots of the base 84 time series used in this study after dterending but before changing the length, adding a decadal trend or rounding the data.}
+\caption[\small Box and whisker plots of the base 84 time series]{Box and whisker plots of the base 84 time series used in this study after detrending but before changing the length, adding a decadal trend or rounding the data.}
 \label{figure00}
 \end{figure}
 \efloatseparator
@@ -55,9 +55,9 @@
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=7.5cm]{figureA}
-\caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
-\label{figureA}
+\centering \includegraphics[width=7.5cm]{figureA1}
+\appendcaption{A1}{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
+\label{figureA1}
 \end{figure}
 \efloatseparator
  

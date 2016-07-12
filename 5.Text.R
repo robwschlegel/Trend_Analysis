@@ -152,8 +152,8 @@ gls_df_natural_no_0 <- gls_df_natural %>%
 ## Create model to be used on the data
 
 # Testing...
-df <- gls_df_natural_no_0 %>% 
-  filter(DT == "DT010", prec == "prec01", coast == "sc")
+# df <- gls_df_natural_no_0 %>% 
+#   filter(DT == "DT010", prec == "prec01", coast == "sc")
 
 # Set model for use with: "length", "DT_real", "sd_initial", "na_perc", "prec_real"
 variable.effects <- function(df) {
@@ -223,8 +223,12 @@ variable.effects <- function(df) {
 }
 
 # Calculate relationship of DT_perc with length for all DTs and precisions
-mod_vars <- dlply(gls_df_natural_no_0, .(DT, prec, coast), .progress = "text", .parallel = FALSE, variable.effects)
+  # Change the grouping variables in the following line to change how the interactions of variables are viewed
+mod_vars <- dlply(gls_df_natural_no_0[gls_df_natural_no_0$DT == "DT010",], .(DT, round_any(sd_initial,0.5), prec), .progress = "text", .parallel = FALSE, variable.effects)
 vars_df <- ldply(mod_vars, data.frame, .progress = "text")
+vars_df_sub <- vars_df %>% 
+  filter(var == "length")
+
 save(vars_df, file = "data/vars_df_all.Rdata")
 
 # Visualise the trend lines

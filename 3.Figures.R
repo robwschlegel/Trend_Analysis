@@ -30,8 +30,13 @@ source("setupParams/themes.R") # The ggplot theme used for all figures
 #############################################################################
 ### 3. Load the site list and spatial data used for the map
 
+## The site data
+load("data/SACTN_sub2.Rdata")
 ## The site list
 sites <- read.csv("setupParams/site_list_v4.0.csv")
+sites$index <- as.factor(paste(sites$site, sites$src, sep = "/ "))
+# Subset to the 84 time series used
+sites_sub <- sites[sites$index %in% levels(SACTN_sub2$index),]
 
 ## Coastline of African Continent
 load("graph/africa_coast.RData")
@@ -107,8 +112,12 @@ map <- SA +
   annotate("text", label = "Agulhas", x = 31.6, y = -31.6, size = 3.0, angle = 53) +
   # Landmass
   annotate("text", label = "South\nAfrica", x = 24.00, y = -31.00, size = 7, angle = 0) +
-  geom_point(data = sites, aes(lon, lat), colour = "black", size = 3.5) +
-  geom_point(data = sites, aes(lon, lat), colour = "white", size = 2.0) +
+  # The unused stations
+  geom_point(data = sites, aes(lon, lat), colour = "black", size = 3.5, alpha = 0.3) +
+  geom_point(data = sites, aes(lon, lat), colour = "white", size = 2.0, alpha = 0.3) +
+  # The used stations
+  geom_point(data = sites_sub, aes(lon, lat), colour = "black", size = 3.5) +
+  geom_point(data = sites_sub, aes(lon, lat), colour = "white", size = 2.0) +
   # scale_colour_grey(breaks = c("new", "old", "thermo"),
   #                   label = c("new", "old", "thermo")) +
   # guides(shape = guide_legend("Type", override.aes = list(size = 2.5, colour = "black"))) +
