@@ -1,54 +1,61 @@
 \begin{figure}
-\centering \includegraphics[width=1.0\textwidth]{figure01}
-\caption[\small Location and instrument types used to sample each time series available for use in this study]{Location and instrument types used to sample each time series available for use in this study. In the legend, `new' shows the underwater temperature recorder (UTR) time series that were recorded entirely with the newer UTRs that have a high precision of \SI{0.001}{\degreeCelsius}, `old' refers to UTR time series that were recorded, at least in part, with older UTRs and have data with precisions lower than \SI{0.001}{\degreeCelsius}. The `thermo' label shows the location of the thermometer time series.}
+\centering \includegraphics[width=7.5cm]{figure01}
+\caption[\small The location of each time series available for use in this study]{The location of each time series available for use in this study.}
 \label{figure01}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=01.0\textwidth]{figure02}
-\caption[\small The effect of time series length on the ability of the GLS model to accurately detect the trend added to a time series]{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box-and-whisker plots show the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data points and their colors are scaled according to the length of the time seies.}
+\centering \includegraphics[width=7.5cm]{figure00}
+\caption[\small Box and whisker plots of the base 84 time series]{Box and whisker plots of the base 84 time series used in this study after dterending but before changing the length, adding a decadal trend or rounding the data.}
+\label{figure00}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering \includegraphics[width=7.5cm]{figure02}
+\caption[\small The effect of time series length on the ability of the GLS model to accurately detect the trend added to a time series]{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box-and-whisker plots show the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data points and their colors are scaled according to the length of the time series.}
 \label{figure02}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=01.0\textwidth]{figure03}
+\centering \includegraphics[width=7.5cm]{figure03}
 \caption[\small The relationship between time series length and the standard error (SE) of the modelled trend]{The relationship between the length of a time series, the size of the modeled trend and its the standard error (SE). Each individual line shows the modeled trend for one of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 years in length to the maximum duration available for the site.}
 \label{figure03}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=0.8\textwidth]{figure04}
+\centering \includegraphics[width=7.5cm]{figure04}
 \caption[\small The effect of the natural variation of a time series on the significance of the modelled trend]{The effect of the natural variation of a time series on the significance of the modelled trends estimated by the GLS. The size of the symbols are scaled proportionally to the time series length, with longer time series shown as larger circles.}
 \label{figure04}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=0.7\textwidth]{figure05}
+\centering \includegraphics[width=7.5cm]{figure05}
 \caption[\small The relationship between the effect of initial SD on the SE of a modelled trend]{The relationship between the effect of the initial SD of a time series on the SE of a modelled trend, controlled for by the length of the time series.}
 \label{figure05}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=0.7\textwidth]{figure06}
+\centering \includegraphics[width=7.5cm]{figure06}
 \caption[\small The relationship between \%\texttt{NA} and the significance of a fitted trend]{The relationship between \%\texttt{NA} and the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The the fitted lines and 95\% confidence intervals represent each of the five decadal trends assessed. }
 \label{figure06}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=0.7\textwidth]{figure07}
+\centering \includegraphics[width=7.5cm]{figure07}
 \caption[\small The minimal effect of rounding from]{The minimal effect of rounding from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} may be seen in the panel on the right. The panel on the left shows that rounding from a precision of \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has a more appreciable effect.}
 \label{figure07}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
-\centering \includegraphics[width=0.7\textwidth]{figureA}
+\centering \includegraphics[width=7.5cm]{figureA}
 \caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
 \label{figureA}
 \end{figure}

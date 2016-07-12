@@ -1,5 +1,5 @@
-\documentclass[twocol]{ametsoc}
-% \documentclass[]{ametsoc}
+%\documentclass[twocol]{ametsoc}
+\documentclass[]{ametsoc}
 \usepackage[]{graphicx}
 \usepackage{alltt}
 \usepackage{siunitx}
@@ -38,7 +38,7 @@
 \maketitle
 
 \section{Introduction}
-The roughly 3,000 km of South Africa's coastline is bordered by the Benguela and Agulhas currents \citep[e.g.][]{Roberts2005,Hutchings2009}, which, in combination with other nearshore processes, affect the country's marine coastal ecosystems \citep{Santos2012a}. A thorough understanding of these coastal processes is provided by several physical variables, of which temperature is one of the main determinants \citep[e.g.][]{Blanchette2008, Tittensor2010, Couce2012}. In order to ensure a true representation of organisms' biological thermal limits, nearshore temperatures must be accurately recorded and monitored. Some sources warn of the pitfalls in doing so \emph{RWS: Add references here showing which sources say using SST for the coast is inappropriate}, and a study by \citet{Smit2013} showed that SST data have a warm bias as large as \SI{6}{\degreeCelsius} when compared to coastal \emph{in situ} data. Nevertheless, a widespread approach in coastal ecological research is to use satellite and/or model-generated temperature data as representation of the sea surface temperature (SST) along coastlines \citep[e.g.][]{Blanchette2008, Broitman2008a, Tyberghein2012}, because apparently the dangers of applying gridded SSTs to the coast are not widely known or in many places in the world there simply are no suitable \emph{in situ} coastal temperature time series available. It is for this reason that we strongly recommended the use of \emph{in situ} data to support research conducted within 400 m from the shoreline.
+The roughly 3,000 km of South Africa's coastline is bordered by the Benguela and Agulhas currents \citep[e.g.][]{Roberts2005,Hutchings2009}, which, in combination with other nearshore processes, affect the country's marine coastal ecosystems \citep{Santos2012a}. A thorough understanding of these coastal processes is provided by several physical variables, of which temperature is one of the main determinants \citep[e.g.][]{Blanchette2008, Tittensor2010, Couce2012}. In order to ensure a true representation of organisms' biological thermal limits, nearshore temperatures must be accurately recorded and monitored. Some sources warn of the pitfalls in doing so \emph{RWS: Add references here showing which sources say using SST for the coast is inappropriate}, and a study by \citet{Smit2013} showed that SST data have a warm bias as large as \SI{6}{\degreeCelsius} when compared to coastal \emph{in situ} data. Nevertheless, a widespread approach in coastal ecological research is to use satellite and/or model-generated temperature data as a representation of the sea surface temperature (SST) along coastlines \citep[e.g.][]{Blanchette2008, Broitman2008a, Tyberghein2012}, because apparently the dangers of applying gridded SSTs to the coast are not widely known or in many places in the world there simply are no suitable \emph{in situ} coastal temperature time series available. It is for this reason that we strongly recommended the use of \emph{in situ} data to support research conducted within 400 m from the shoreline.
 
 Where records of \emph{in situ} coastal seawater temperature do exist, the reliability of many of these datasets that could be used in place of the remotely-sensed SST data remains to be verified. Users of SST data benefit from it being refined through a number of well documented validation and quality control processes \citep[e.g.][]{Reynolds1994, Brown1999, Martin2012}, whereas the standards and methods with which local \emph{in situ} data from a single dataset are collected and refined may differ greatly. For example, there are currently seven organizations and/or governmental departments (hereafter referred to as bodies) contributing coastal seawater temperature data to the South African Coastal Temperature Network (SACTN). These bodies use different methods and instruments to collect their data as no national standard has been set. One consequence of this methodological disparity is that two thirds of the data were sampled with hand-held thermometers that are manually recorded at a data precision of \SI{0.5}{\degreeCelsius}, as opposed to the current generation of Underwater Temperature Recorders (UTRs) with an instrument precision of down to \SI{0.001}{\degreeCelsius}. If these \emph{in situ} data are to be used together \emph{in lieu} of the satellite-based SST data, it is important that the characteristics of the contributing data sources are understood in terms of their ability to yield useful, reliable and accurate long-term measurements for use in climate change studies.
 
@@ -49,7 +49,7 @@ The study provides a better understanding of some of the determinants of a time 
 \section{Methods}
 
 \subsection{Data Sources}
-Our study lies within the political borders of South Africa's coastline. The location of each point of collection appears in Figure \ref{figure01}. Of the 129 time series used, 43 are recorded with UTRs and the other 86 with hand-held mercury thermometers. The oldest currently running time series began on January 1st, 1972; there are 11 total time series that started in the 70s, 53 more started in the 80s, 34 began in the 90s, 18 in the 00s and 13 in the current decade.
+Our study lies within the political borders of South Africa's coastline. The location of each point of collection appears in Figure \ref{figure01}. Of these 129 time series, 43 are recorded with UTRs and the other 86 with hand-held mercury thermometers. The oldest currently running time series began on January 1st, 1972; there are 11 total time series that started in the 70s, 53 more started in the 80s, 34 began in the 90s, 18 in the 00s and 13 in the current decade.
 
 The data are collected using two different methods and a variety of instruments. Hand-held mercury thermometers (which are being phased out in favor of alcohol thermometers or electronic instruments) are used in some instances at the shoreline, and represent seawater temperatures at the surface. At other places, predominantly along the country's east coast, data are collected with glass thermometers from small boats at the location of shark nets along the coast \citep{Cliff1988}. Whereas both types of thermometers allow for a measurement precision of \SI{0.1}{\degreeCelsius}, the recordings are written down at a precision of \SI{0.5}{\degreeCelsius}. Data at other localities are collected using delayed-mode instruments that are permanently moored shallower than 10 m, but generally very close to the surface below the low-water spring tide level.
 
@@ -91,6 +91,8 @@ $$w_{t} \sim \mathrm{iid}~N(0,\sigma^{2})$$
 This is similar to that of the IPCC, although the latter uses an AR(1) error term. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended data sets would affect the models' ability to detect trends -- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
 
 \section{Results}
+The resultant residual values from the base 84 dterended time series may be seen in Figure \ref{figure00}.
+
 Important variables affecting the accuracy of the slope detected by the GLS model, in decreasing order, are: i) time series length; ii) the size of the added decadal trend; iii) initial SD of the time series (after detrending but prior to adding artificial slopes); iv) the amount of \texttt{NA}; and iv) measurement precision. These variables influence the model fits in a systematic manner.
 
 As would be expected, the size of the decadal trend estimated by the GLS increases in direct proportion to the decadal trend which we added and therefore knew \emph{a priori}. What is especially noteworthy in this analysis is that time series of longer duration more often result in trend estimates converging with the actual trend than those of shorter length (Figure \ref{figure02}). This effect is most evident from around 30 years. Furthermore, how well the estimated model trend converges with the actual trend is also very visible in the standard error (SE) of the trend estimate (Figure \ref{figure03}): models fitted to short time series will always have modeled trends with larger SE compared to longer ones. The strength of this correlation is \emph{r}~=~0.56 (\emph{p}~\textless~0.001) and it remains virtually unchanged as the added decadal trend increases. The \emph{p}-value of the fitted models also vary in relation to time series duration and to the steepness of the added decadal trend (Figure \ref{figure04}). It is usually the longer time series equipped with steeper decadal trends that are able to produce model fits with estimated trends that are statistically significant. Note, however, that this \emph{p}-value tests the null hypothesis that the estimated trend is no different from \SI{0}{\degreeCelsius}~dec$^{-1}$ at \emph{p} $\leq 0.05$, and \emph{not} that the slope is not different from the added trend. Taken together, these outcomes show that although our GLS model can very often result in trend estimates that \emph{approach} the true trend, it is seldom that those estimates are statistically significant in the sense that the estimated trends differ statistically from \SI{0}{\degreeCelsius}~dec$^{-1}$.
@@ -181,8 +183,8 @@ The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for cont
 \appendixtitle{Effects of linear interpolation}
 Blurb here about linear unterpolation effects.... Figure \ref{figureA}. \emph{RWS - THis figure still needs to be updated to the current standard. It is still a rough draft.}
 
-\bibliographystyle{ametsoc2014}
-\bibliography{references}
+% \bibliographystyle{ametsoc2014} % RWS -  This line prevents my computer from compiling the document
+\bibliography{references} % RWS - The references do not populate...
 % %
 % %==============================================================================
 % \begin{thebibliography}{23}
@@ -366,8 +368,14 @@ Blurb here about linear unterpolation effects.... Figure \ref{figureA}. \emph{RW
 \end{figure}
 
 \begin{figure}
+\centering \includegraphics[width=7.5cm]{figure00}
+\caption[\small Box and whisker plots of the base 84 time series]{Box and whisker plots of the base 84 time series used in this study after dterending but before changing the length, adding a decadal trend or rounding the data.}
+\label{figure00}
+\end{figure}
+
+\begin{figure}
 \centering \includegraphics[width=7.5cm]{figure02}
-\caption[\small The effect of time series length on the ability of the GLS model to accurately detect the trend added to a time series]{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box-and-whisker plots show the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data points and their colors are scaled according to the length of the time seies.}
+\caption[\small The effect of time series length on the ability of the GLS model to accurately detect the trend added to a time series]{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box-and-whisker plots show the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data points and their colors are scaled according to the length of the time series.}
 \label{figure02}
 \end{figure}
 
