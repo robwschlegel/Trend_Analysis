@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.2)  12 JUL 2016 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.2)  12 JUL 2016 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,8 +753,20 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
  [2]
 
-Package natbib Warning: Citation `pinheiro2006mixed' on page 3 undefined on inp
-ut line 79.
+Package natbib Warning: Citation `IPCC2013' on page 3 undefined on input line 7
+0.
+
+
+Package natbib Warning: Citation `IPCC2013' on page 3 undefined on input line 7
+9.
+
+
+Package natbib Warning: Citation `Wilks2006' on page 3 undefined on input line 
+79.
+
+
+Package natbib Warning: Citation `Wood2006' on page 3 undefined on input line 7
+9.
 
 [3]
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9.85> not available
@@ -788,52 +800,169 @@ Underfull \hbox (badness 2726) in paragraph at lines 175--176
 \OT1/ptm/m/n/9.85 and anal-y-ses used in this pa-per may be found at
  []
 
-[7] <figure01.pdf, id=36, 578.16pt x 361.35pt>
+(./Trend_Analysis.bbl
+Underfull \hbox (badness 7133) in paragraph at lines 14--20
+\OT1/ptm/m/n/8 K. E. K. Heady, and B. R. Broit-man, 2008: Bio-geo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--20
+\OT1/ptm/m/n/8 graph-i-cal pat-terns of rocky in-ter-tidal com-mu-ni-ties along
+
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 14--20
+\OT1/ptm/m/n/8 the Pa-cific coast of North Amer-ica. \OT1/ptm/m/it/8 Jour-nal o
+f Bio-geog-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--20
+\OT1/ptm/m/it/8 ra-phy\OT1/ptm/m/n/8 , \OT1/ptm/b/n/8 35 (9)\OT1/ptm/m/n/8 , 15
+93--1607, URL $http : / / onlinelibrary . wiley .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--20
+\OT1/ptm/m/n/8 com / doi / 10 . 1111 / j . 1365-[]2699 . 2008 . 01913 . x / ful
+lpapers3 :
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 23--28
+[]\OT1/ptm/m/n/8 Broitman, B. R., N. Mieszkowska, B. Hel-muth, and C. A.
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 23--28
+\OT1/ptm/m/n/8 Blanchette, 2008: Cli-mate and re-cruit-ment of rocky shore
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 23--28
+\OT1/ptm/m/n/8 in-ter-tidal in-ver-te-brates in the east-ern North At-lantic. \
+OT1/ptm/m/it/8 Ecol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+\OT1/ptm/m/it/8 ogy\OT1/ptm/m/n/8 , \OT1/ptm/b/n/8 89 (11 Suppl)\OT1/ptm/m/n/8 
+, S81----90, URL $http : / / eutils . ncbi .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+\OT1/ptm/m/n/8 nlm . nih . gov / entrez / eutils / elink . fcgi ? dbfrom = pubm
+ed\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+[]\OT1/ptm/m/n/8 id = 19097486\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 & []retmode = 
+ref\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 & []cmd = prlinkspapers3 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
+\OT1/ptm/m/n/8 www . optics . marine . usf . edu / references / atbd\OMS/ztmcm/
+m/n/8 fn[] [] \OT1/ptm/m/n/8 mod25 . pdfpapers3 :
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 78--85
+\OT1/ptm/m/n/8 surface tem-per-a-ture ob-ser-va-tions mea-sured in situ since 1
+850,
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 78--85
+\OT1/ptm/m/n/8 part 1: mea-sure-ment and sam-pling un-cer-tain-ties. \OT1/ptm/m
+/it/8 Jour-nal of
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 78--85
+\OT1/ptm/m/it/8 Geo-phys-i-cal Re-search At-mo-spheres\OT1/ptm/m/n/8 , \OT1/ptm
+/b/n/8 116\OT1/ptm/m/n/8 , URL $http : / / appconv .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--85
+\OT1/ptm/m/n/8 meto^^Nce . gov . uk / hadsst3 / part\OMS/ztmcm/m/n/8 fn[] [] \O
+T1/ptm/m/n/8 1\OMS/ztmcm/m/n/8 fn[] [] \OT1/ptm/m/n/8 ^^Lginline . pdfpapers3 :
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--99
+\OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S096706451200
+0616papers3 :
+ []
+
+[7]
+Underfull \hbox (badness 2762) in paragraph at lines 124--130
+[]\OT1/ptm/m/n/8 Santos, F., M. Gomez-Gesteira, M. De-Cas-tro, and I. Al-varez,
+
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 124--130
+\OT1/ptm/m/n/8 2012: Dif-fer-ences in coastal and oceanic SST trends due to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--130
+\OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S027843431100
+375Xpapers3 :
+ []
+
+) <figure01.pdf, id=36, 578.16pt x 361.35pt>
 File: figure01.pdf Graphic file (type pdf)
  <use figure01.pdf>
-Package pdftex.def Info: figure01.pdf used on input line 361.
+Package pdftex.def Info: figure01.pdf used on input line 363.
 (pdftex.def)             Requested size: 213.39566pt x 133.37209pt.
 
 <figure02.pdf, id=37, 505.89pt x 325.215pt>
 File: figure02.pdf Graphic file (type pdf)
  <use figure02.pdf>
-Package pdftex.def Info: figure02.pdf used on input line 367.
+Package pdftex.def Info: figure02.pdf used on input line 369.
 (pdftex.def)             Requested size: 213.39566pt x 137.18484pt.
 
 <figure03.pdf, id=38, 578.16pt x 144.54pt>
 File: figure03.pdf Graphic file (type pdf)
  <use figure03.pdf>
-Package pdftex.def Info: figure03.pdf used on input line 373.
+Package pdftex.def Info: figure03.pdf used on input line 375.
 (pdftex.def)             Requested size: 213.39566pt x 53.34883pt.
 
 <figure04.pdf, id=39, 361.35pt x 505.89pt>
 File: figure04.pdf Graphic file (type pdf)
  <use figure04.pdf>
-Package pdftex.def Info: figure04.pdf used on input line 379.
+Package pdftex.def Info: figure04.pdf used on input line 381.
 (pdftex.def)             Requested size: 213.39566pt x 298.75812pt.
 
 <figure05.pdf, id=40, 289.08pt x 505.89pt>
 File: figure05.pdf Graphic file (type pdf)
  <use figure05.pdf>
-Package pdftex.def Info: figure05.pdf used on input line 385.
+Package pdftex.def Info: figure05.pdf used on input line 387.
 (pdftex.def)             Requested size: 213.39566pt x 373.44185pt.
 
 <figure06.pdf, id=41, 722.7pt x 433.62pt>
 File: figure06.pdf Graphic file (type pdf)
  <use figure06.pdf>
-Package pdftex.def Info: figure06.pdf used on input line 391.
+Package pdftex.def Info: figure06.pdf used on input line 393.
 (pdftex.def)             Requested size: 213.39566pt x 128.03589pt.
 
 <figure07.pdf, id=42, 433.62pt x 216.81pt>
 File: figure07.pdf Graphic file (type pdf)
  <use figure07.pdf>
-Package pdftex.def Info: figure07.pdf used on input line 397.
+Package pdftex.def Info: figure07.pdf used on input line 399.
 (pdftex.def)             Requested size: 213.39566pt x 106.69766pt.
 
 <figureA.pdf, id=43, 722.7pt x 578.16pt>
 File: figureA.pdf Graphic file (type pdf)
  <use figureA.pdf>
-Package pdftex.def Info: figureA.pdf used on input line 412.
+Package pdftex.def Info: figureA.pdf used on input line 414.
 (pdftex.def)             Requested size: 213.39566pt x 170.71451pt.
 
 
@@ -850,11 +979,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 12432 strings out of 493089
- 249726 string characters out of 6134842
- 278135 words of memory out of 5000000
- 15736 multiletter control sequences out of 15000+600000
- 84687 words of font info for 195 fonts, out of 8000000 for 9000
+ 12433 strings out of 493089
+ 249720 string characters out of 6134842
+ 281041 words of memory out of 5000000
+ 15732 multiletter control sequences out of 15000+600000
+ 85109 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,13n,39p,10395b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -870,7 +999,7 @@ exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on Trend_Analysis.pdf (10 pages, 934539 bytes).
+Output written on Trend_Analysis.pdf (10 pages, 936103 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
