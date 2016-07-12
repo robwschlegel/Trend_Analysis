@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \renewcommand{\UrlFont}{\rmfamily}
@@ -60,6 +60,10 @@ Grant, O.~M., L.~Tronina, J.~C. Ramalho, C.~{Kurz Besson}, R.~Lobo-Do-Vale,
   drought on leaf physiology of Quercus suber L. trees: Comparison of an
   extreme drought event with chronic rainfall reduction}. \textit{Journal of
   Experimental Botany}, \textbf{61~(15)}, 4361--4371, \doi{10.1093/jxb/erq239}.
+
+\bibitem[{Hartmann et~al.(2013)}]{IPCC2013supp}
+Hartmann, D., and Coauthors, 2013: Observations: Atmosphere and surface
+  supplementary material. in: Climate change 2013: The physical science basis.
 
 \bibitem[{Hutchings et~al.(2009)}]{Hutchings2009}
 Hutchings, L., and Coauthors, 2009: {The Benguela Current: An ecosystem of four
@@ -124,6 +128,11 @@ Roberts, M.~J., 2005: {Chokka squid (Loligo vulgaris reynaudii) abundance
   and the early life cycle}. \textit{ICES Journal of Marine Science},
   \textbf{62~(1)}, 33--55, \doi{10.1016/j.icesjms.2004.10.002}.
 
+\bibitem[{Santer et~al.(2008)}]{Santer2008}
+Santer, B.~D., and Coauthors, 2008: Consistency of modelled and observed
+  temperature trends in the tropical troposphere. \textit{International Journal
+  of Climatology}, \textbf{28~(13)}, 1703--1722.
+
 \bibitem[{Santos et~al.(2012)Santos, Gomez-Gesteira, DeCastro,, and
   Alvarez}]{Santos2012a}
 Santos, F., M.~Gomez-Gesteira, M.~DeCastro, and I.~Alvarez, 2012: {Differences
@@ -140,6 +149,13 @@ Scherrer, D., and C.~K{\"{o}}rner, 2010: {Infra-red thermometry of alpine
   Biology}, \textbf{16~(9)}, 2602--2613,
   \doi{10.1111/j.1365-2486.2009.02122.x}.
 
+\bibitem[{Scinocca et~al.(2010)Scinocca, Stephenson, Bailey, Austin
+  et~al.}]{Scinocca2010}
+Scinocca, J., D.~B. Stephenson, T.~C. Bailey, J.~Austin, and Coauthors, 2010:
+  Estimates of past and future ozone trends from multimodel simulations using a
+  flexible smoothing spline methodology. \textit{Journal of Geophysical
+  Research: Atmospheres}, \textbf{115~(D3)}.
+
 \bibitem[{Smit et~al.(2013)Smit, Roberts, Anderson, Dufois, Dudley, Bornman,
   Olbers,, and Bolton}]{Smit2013}
 Smit, A.~J., M.~Roberts, R.~J. Anderson, F.~Dufois, S.~F.~J. Dudley, T.~G.
@@ -147,6 +163,12 @@ Smit, A.~J., M.~Roberts, R.~J. Anderson, F.~Dufois, S.~F.~J. Dudley, T.~G.
   dataset for biogeographical studies: Large biases between in situ and
   remotely-sensed data sets around the coast of South Africa}. \textit{PLoS
   ONE}, \textbf{8~(12)}, \doi{10.1371/journal.pone.0081944}.
+
+\bibitem[{Stocker et~al.(2013)}]{Stocker2013}
+Stocker, T., and Coauthors, 2013: \textit{IPCC, 2013: climate change 2013: the
+  physical science basis. Contribution of working group I to the fifth
+  assessment report of the intergovernmental panel on climate change}.
+  Cambridge University Press.
 
 \bibitem[{Tittensor et~al.(2010)Tittensor, Mora, Jetz, Lotze, Ricard, Berghe,,
   and Worm}]{Tittensor2010}
@@ -162,6 +184,14 @@ Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
   distribution modelling}. \textit{Global Ecology and Biogeography},
   \textbf{21~(2)}, 272--281,
   \urlprefix\url{papers3://publication/uuid/56E29A48-EEAD-42C8-8CE1-CB01FDFB7BDE}.
+
+\bibitem[{Von~Storch(1999)}]{vonStorch1999}
+Von~Storch, H., 1999: Misuses of statistical analysis in climate research.
+  \textit{Analysis of Climate Variability}, Springer, 11--26.
+
+\bibitem[{Wilks(2011)}]{Wilks2011}
+Wilks, D.~S., 2011: \textit{Statistical methods in the atmospheric sciences},
+  Vol. 100. Academic press.
 
 \bibitem[{Wood(2006)}]{Wood2006}
 Wood, S., 2006: \textit{Generalized additive models: an introduction with R}.

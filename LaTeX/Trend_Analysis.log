@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.2)  12 JUL 2016 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.17)  12 JUL 2016 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Trend_Analysis.tex
 (./Trend_Analysis.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
 (./ametsoc.cls
 \c@section=\count79
 \c@subsection=\count80
@@ -168,9 +168,9 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count99
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+(/usr/local/texlive/texmf-local/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -262,37 +262,37 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2015/03/01 v5547 L3 programming layer (loader) 
+Package: expl3 2015/07/30 v5724 L3 programming layer (loader) 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2015/03/01 v5547 L3 programming layer (code) 
-L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
-L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
+Package: expl3 2015/07/30 v5724 L3 programming layer (code) 
+L3 Module: l3bootstrap 2015/07/30 v5721 L3 Bootstrap code
+L3 Module: l3names 2015/07/28 v5705 L3 Namespace for primitives
 L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
 L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
-L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
-L3 Module: l3str 2015/03/01 v5545 L3 Strings
-L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
-L3 Module: l3int 2015/02/21 v5529 L3 Integers
+L3 Module: l3tl 2015/07/14 v5659 L3 Token lists
+L3 Module: l3str 2015/07/14 v5659 L3 Strings
+L3 Module: l3seq 2015/07/24 v5681 L3 Sequences and stacks
+L3 Module: l3int 2015/07/14 v5659 L3 Integers
 \c_max_int=\count114
 \l_tmpa_int=\count115
 \l_tmpb_int=\count116
 \g_tmpa_int=\count117
 \g_tmpb_int=\count118
-L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
-L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
+L3 Module: l3quark 2015/07/14 v5659 L3 Quarks
+L3 Module: l3prg 2015/07/30 v5722 L3 Control structures
 \g__prg_map_int=\count119
 L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
 L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
 L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
 L3 Module: l3msg 2015/02/26 v5537 L3 Messages
-L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
+L3 Module: l3file 2015/07/30 v5714 L3 File and I/O operations
 \l_iow_line_count_int=\count120
 \l__iow_target_count_int=\count121
 \l__iow_current_line_int=\count122
 \l__iow_current_word_int=\count123
 \l__iow_current_indentation_int=\count124
-L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
+L3 Module: l3skip 2015/07/14 v5659 L3 Dimensions and skips
 \c_zero_dim=\dimen123
 \c_max_dim=\dimen124
 \l_tmpa_dim=\dimen125
@@ -305,16 +305,16 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \l_tmpb_skip=\skip55
 \g_tmpa_skip=\skip56
 \g_tmpb_skip=\skip57
-\c_zero_muskip=\muskip12
-\c_max_muskip=\muskip13
-\l_tmpa_muskip=\muskip14
-\l_tmpb_muskip=\muskip15
-\g_tmpa_muskip=\muskip16
-\g_tmpb_muskip=\muskip17
-L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
+L3 Module: l3keys 2015/07/26 v5684 L3 Key-value interfaces
 \g__keyval_level_int=\count125
 \l_keys_choice_int=\count126
-L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
+L3 Module: l3fp 2015/07/09 v5652 L3 Floating points
 \c__fp_leading_shift_int=\count127
 \c__fp_middle_shift_int=\count128
 \c__fp_trailing_shift_int=\count129
@@ -351,7 +351,7 @@ L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
 \l__coffin_display_x_dim=\dimen137
 \l__coffin_display_y_dim=\dimen138
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
+L3 Module: l3candidates 2015/07/22 v5677 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen139
 \l__box_bottom_dim=\dimen140
 \l__box_left_dim=\dimen141
@@ -368,23 +368,24 @@ L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
 \l__coffin_top_corner_dim=\dimen151
 \l__coffin_scaled_total_height_dim=\dimen152
 \l__coffin_scaled_width_dim=\dimen153
+L3 Module: l3luatex 2015/06/30 v5646 L3 Experimental LuaTeX-specific functions
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
+File: l3unicode-data.def 2015/07/20 v-1 L3 Unicode data
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2015/03/01 v5544 L3 Experimental driver: PDF mode
+File: l3pdfmode.def 2015/06/30 v5646 L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count136
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
+Package: xparse 2015/07/28 v5700 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count137
 \l__xparse_m_args_int=\count138
 \l__xparse_mandatory_args_int=\count139
 \l__xparse_processor_int=\count140
 \l__xparse_v_nesting_int=\count141
 )
-Package: siunitx 2015/01/21 v2.6e A comprehensive (SI) units package
+Package: siunitx 2015/07/17 v2.6h A comprehensive (SI) units package
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
@@ -395,7 +396,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \backup@length=\skip59
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2015/07/28 v5700 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
 \l__siunitx_tmp_box=\box70
@@ -444,122 +445,126 @@ Variant \prop_get:NVNTF already defined; not changing it on line 382
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7176.
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7184.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPostPower with sig. 'mm' on line 7179.
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7187.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7182.
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7190.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrePower with sig. 'mm' on line 7185.
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7193.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIQualifier with sig. 'mm' on line 7188.
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7196.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7191.
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7199.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7194.
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7202.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7209.
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7217.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \num with sig. 'om' on line 7217.
+. Defining command \num with sig. 'om' on line 7225.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7225.
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7233.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numrange with sig. 'omm' on line 7233.
+. Defining command \numrange with sig. 'omm' on line 7241.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7244.
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7252.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIrange with sig. 'ommm' on line 7255.
+. Defining command \SIrange with sig. 'ommm' on line 7263.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SI with sig. 'omom' on line 7266.
+. Defining command \SI with sig. 'omom' on line 7274.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \sisetup with sig. 'm' on line 7269.
+. Defining command \sisetup with sig. 'm' on line 7277.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tablenum with sig. 'om' on line 7281.
+. Defining command \tablenum with sig. 'om' on line 7289.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \si with sig. 'om' on line 7292.
+. Defining command \si with sig. 'om' on line 7300.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7339.
+. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7347.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
-. 7341.
+. 7349.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7343.
+. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7351.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7345.
+. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7353.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
-. 7347.
+. 7355.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7348.
+. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7356.
 .................................................
 \g__file_internal_ior=\read1
-) (./Trend_Analysis.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex))) (./Trend_Analysis.aux)
 \openout1 = `Trend_Analysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -640,8 +645,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-basic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
-File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
+File: siunitx-abbreviations.cfg 2015/07/17 v2.6h siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count165
 LaTeX Font Info:    Calculating math sizes for size <9.85> on input line 36.
@@ -741,7 +750,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/Users/ajsmit/Library/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex
+.map}
 
 
 ]
@@ -751,12 +761,8 @@ Missing character: There is no ˜ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [2]
 
-Package natbib Warning: Citation `Wilks2006' on page 3 undefined on input line 
-79.
-
-[3]
+[2] [3]
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9.85> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 96.
  [4]
@@ -842,65 +848,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
 \OT1/ptm/m/n/8 nlm . nih . gov / entrez / eutils / elink . fcgi ? dbfrom = pubm
-ed\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 &
+ed{\&}id =
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
-[]\OT1/ptm/m/n/8 id = 19097486\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 & []retmode = 
-ref\OMS/ztmcm/m/n/8 fn \OT1/ptm/m/n/8 & []cmd = prlinkspapers3 :
+\OT1/ptm/m/n/8 19097486{\&}retmode = ref{\&}cmd = prlinkspapers3 : / / publicat
+ion /
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--37
-\OT1/ptm/m/n/8 www . optics . marine . usf . edu / references / atbd\OMS/ztmcm/
-m/n/8 fn[] [] \OT1/ptm/m/n/8 mod25 . pdfpapers3 :
+\OT1/ptm/m/n/8 / / www . optics . marine . usf . edu / references / atbd{\ _ }m
+od25 . pdfpapers3 :
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 83--90
+Underfull \hbox (badness 1281) in paragraph at lines 87--94
 \OT1/ptm/m/n/8 surface tem-per-a-ture ob-ser-va-tions mea-sured in situ since 1
 850,
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 83--90
+Underfull \hbox (badness 2351) in paragraph at lines 87--94
 \OT1/ptm/m/n/8 part 1: mea-sure-ment and sam-pling un-cer-tain-ties. \OT1/ptm/m
 /it/8 Jour-nal of
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 83--90
+Underfull \hbox (badness 2111) in paragraph at lines 87--94
 \OT1/ptm/m/it/8 Geo-phys-i-cal Re-search At-mo-spheres\OT1/ptm/m/n/8 , \OT1/ptm
 /b/n/8 116\OT1/ptm/m/n/8 , URL $http : / / appconv .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
-\OT1/ptm/m/n/8 meto^^Nce . gov . uk / hadsst3 / part\OMS/ztmcm/m/n/8 fn[] [] \O
-T1/ptm/m/n/8 1\OMS/ztmcm/m/n/8 fn[] [] \OT1/ptm/m/n/8 ^^Lginline . pdfpapers3 :
-
+Underfull \hbox (badness 10000) in paragraph at lines 87--94
+\OT1/ptm/m/n/8 meto^^Nce . gov . uk / hadsst3 / part{\ _ }1{\ _ }^^Lginline . p
+dfpapers3 :
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 98--104
+Underfull \hbox (badness 10000) in paragraph at lines 102--108
 \OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S096706451200
 0616papers3 :
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 129--135
+Underfull \hbox (badness 2762) in paragraph at lines 138--144
 []\OT1/ptm/m/n/8 Santos, F., M. Gomez-Gesteira, M. De-Cas-tro, and I. Al-varez,
 
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 129--135
+Underfull \hbox (badness 1360) in paragraph at lines 138--144
 \OT1/ptm/m/n/8 2012: Dif-fer-ences in coastal and oceanic SST trends due to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--135
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
 \OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S027843431100
 375Xpapers3 :
  []
@@ -952,28 +957,23 @@ File: figureA.pdf Graphic file (type pdf)
  <use figureA.pdf>
 Package pdftex.def Info: figureA.pdf used on input line 414.
 (pdftex.def)             Requested size: 213.39566pt x 170.71451pt.
+ [8 <./figure01.pdf> <./figure02.pdf>] [9 <./figure03.pdf> <./figure04.pdf> <./
+figure05.pdf> <./figure06.pdf>] [10
 
-
-Package natbib Warning: There were undefined citations.
-
-[8 <./figure01.pdf> <./figure02.pdf> <./figure03.pdf>] [9 <./figure04.pdf> <./f
-igure05.pdf> <./figure06.pdf>] [10
-
- <./figure07.pdf> <./figureA.pdf>]
-(./Trend_Analysis.aux)
+ <./figure07.pdf> <./figureA.pdf>] (./Trend_Analysis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 12437 strings out of 493089
- 249796 string characters out of 6134842
- 282089 words of memory out of 5000000
- 15736 multiletter control sequences out of 15000+600000
- 85109 words of font info for 197 fonts, out of 8000000 for 9000
+ 13063 strings out of 493091
+ 257705 string characters out of 6134964
+ 283478 words of memory out of 5000000
+ 16354 multiletter control sequences out of 15000+600000
+ 84687 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,13n,39p,10395b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,42p,10395b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
@@ -987,7 +987,7 @@ exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on Trend_Analysis.pdf (10 pages, 936426 bytes).
+Output written on Trend_Analysis.pdf (10 pages, 937206 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
