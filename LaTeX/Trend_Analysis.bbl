@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \renewcommand{\UrlFont}{\rmfamily}
@@ -66,6 +66,11 @@ Hutchings, L., and Coauthors, 2009: {The Benguela Current: An ecosystem of four
   components}. \textit{Progress in Oceanography}, \textbf{83~(1-4)}, 15--32,
   \doi{10.1016/j.pocean.2009.07.046},
   \urlprefix\url{http://dx.doi.org/10.1016/j.pocean.2009.07.046}.
+
+\bibitem[{IPCC(2013)}]{IPCC2013}
+IPCC, 2013: Ipcc, 2013: climate change 2013: the physical science basis.
+  contribution of working group i to the fifth assessment report of the
+  intergovernmental panel on climate change.
 
 \bibitem[{Karl et~al.(2015)}]{Karl2015}
 Karl, T.~R., and Coauthors, 2015: {Possible artifacts of data biases in the
@@ -157,5 +162,9 @@ Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
   distribution modelling}. \textit{Global Ecology and Biogeography},
   \textbf{21~(2)}, 272--281,
   \urlprefix\url{papers3://publication/uuid/56E29A48-EEAD-42C8-8CE1-CB01FDFB7BDE}.
+
+\bibitem[{Wood(2006)}]{Wood2006}
+Wood, S., 2006: \textit{Generalized additive models: an introduction with R}.
+  CRC press.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.2)  12 JUL 2016 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.2)  12 JUL 2016 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,20 +753,8 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
  [2]
 
-Package natbib Warning: Citation `IPCC2013' on page 3 undefined on input line 7
-0.
-
-
-Package natbib Warning: Citation `IPCC2013' on page 3 undefined on input line 7
-9.
-
-
 Package natbib Warning: Citation `Wilks2006' on page 3 undefined on input line 
 79.
-
-
-Package natbib Warning: Citation `Wood2006' on page 3 undefined on input line 7
-9.
 
 [3]
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9.85> not available
@@ -870,49 +858,49 @@ m/n/8 fn[] [] \OT1/ptm/m/n/8 mod25 . pdfpapers3 :
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 78--85
+Underfull \hbox (badness 1281) in paragraph at lines 83--90
 \OT1/ptm/m/n/8 surface tem-per-a-ture ob-ser-va-tions mea-sured in situ since 1
 850,
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 78--85
+Underfull \hbox (badness 2351) in paragraph at lines 83--90
 \OT1/ptm/m/n/8 part 1: mea-sure-ment and sam-pling un-cer-tain-ties. \OT1/ptm/m
 /it/8 Jour-nal of
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 78--85
+Underfull \hbox (badness 2111) in paragraph at lines 83--90
 \OT1/ptm/m/it/8 Geo-phys-i-cal Re-search At-mo-spheres\OT1/ptm/m/n/8 , \OT1/ptm
 /b/n/8 116\OT1/ptm/m/n/8 , URL $http : / / appconv .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--85
+Underfull \hbox (badness 10000) in paragraph at lines 83--90
 \OT1/ptm/m/n/8 meto^^Nce . gov . uk / hadsst3 / part\OMS/ztmcm/m/n/8 fn[] [] \O
 T1/ptm/m/n/8 1\OMS/ztmcm/m/n/8 fn[] [] \OT1/ptm/m/n/8 ^^Lginline . pdfpapers3 :
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--99
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 98--104
 \OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S096706451200
 0616papers3 :
  []
 
-[7]
-Underfull \hbox (badness 2762) in paragraph at lines 124--130
+
+Underfull \hbox (badness 2762) in paragraph at lines 129--135
 []\OT1/ptm/m/n/8 Santos, F., M. Gomez-Gesteira, M. De-Cas-tro, and I. Al-varez,
 
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 124--130
+Underfull \hbox (badness 1360) in paragraph at lines 129--135
 \OT1/ptm/m/n/8 2012: Dif-fer-ences in coastal and oceanic SST trends due to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--130
+Underfull \hbox (badness 10000) in paragraph at lines 129--135
 \OT1/ptm/m/n/8 / / linkinghub . elsevier . com / retrieve / pii / S027843431100
 375Xpapers3 :
  []
@@ -979,10 +967,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 12433 strings out of 493089
- 249720 string characters out of 6134842
- 281041 words of memory out of 5000000
- 15732 multiletter control sequences out of 15000+600000
+ 12437 strings out of 493089
+ 249796 string characters out of 6134842
+ 282089 words of memory out of 5000000
+ 15736 multiletter control sequences out of 15000+600000
  85109 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,13n,39p,10395b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -999,7 +987,7 @@ exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on Trend_Analysis.pdf (10 pages, 936103 bytes).
+Output written on Trend_Analysis.pdf (10 pages, 936426 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
