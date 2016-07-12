@@ -22,19 +22,6 @@ library(tidyr)
 library(tibble)
 library(doMC); doMC::registerDoMC(cores = 4)
 
-# library(tseries)
-# library(zoo)
-# library(vegan)
-# library(xtable)
-# library(FNN)
-# library(gridExtra)
-# library(grid)
-# library(lubridate)
-# library(pwr)
-# library(nlme)
-# library(mgcv)
-# library(dplyr)
-# 
 #############################################################################
 ### 2. Load all functions etc. found in other scripts
 source("func/scaleBarFunc.R") # A custom ggplot function that creates a very snazy scale bar
