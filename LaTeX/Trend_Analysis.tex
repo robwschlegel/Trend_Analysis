@@ -179,7 +179,7 @@ The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for cont
 %
 %==============================================================================
 
-\appendix[A]
+\appendix
 \appendixtitle{Effects of linear interpolation}
 Blurb here about linear unterpolation effects.... Figure \ref{figureA}. \emph{RWS - THis figure still needs to be updated to the current standard. It is still a rough draft.}
 
@@ -409,18 +409,9 @@ Blurb here about linear unterpolation effects.... Figure \ref{figureA}. \emph{RW
 \label{figure07}
 \end{figure}
 
-% RWS - Unsuccesful attempt at adding correct Appendix notation
-% \newcommand{\beginsupplement}{%
-%         \setcounter{table}{0}
-%         \renewcommand{\thetable}{A\arabic{table}}%
-%         \setcounter{figure}{0}
-%         \renewcommand{\thefigure}{A\arabic{figure}}%
-%      }
-% \beginsupplement
-
 \begin{figure}
 \centering \includegraphics[width=7.5cm]{figureA}
-\caption[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
+\appendcaption{1}[\small Similar to Figure \ref{figure06}, this figure shows the effect missing data have on]{Similar to Figure \ref{figure06}, this figure shows the effect missing data have on the significance of the slopes detected by GLS however; the missing values in the time series have been filled here via linear interpolation. The effect this has on the significance of the modeled trends is both immediate and dramatic. The behaviour of the quantity of interpolated data also differs from the effect of data left simply as \texttt{NA}. At lower levels of interpolation, missing data actually aid in the fitting of a more significant trend line. This phenomena reverses around 5\%\texttt{NA} when the relationship becomes negative, meaning that as the amount of interpolated data increase, the significance of the fitted trend decrereases.}
 \label{figureA}
 \end{figure}
 
