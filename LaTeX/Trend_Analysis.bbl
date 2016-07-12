@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -198,3 +199,176 @@ Wood, S., 2006: \textit{Generalized additive models: an introduction with R}.
   CRC press.
 
 \end{thebibliography}
+||||||| merged common ancestors
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\renewcommand{\UrlFont}{\rmfamily}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Blanchette et~al.(2008)Blanchette, {Melissa Miner}, Raimondi, Lohse,
+  Heady,, and Broitman}]{Blanchette2008}
+Blanchette, C.~A., C.~{Melissa Miner}, P.~T. Raimondi, D.~Lohse, K.~E.~K.
+  Heady, and B.~R. Broitman, 2008: {Biogeographical patterns of rocky
+  intertidal communities along the Pacific coast of North America}.
+  \textit{Journal of Biogeography}, \textbf{35~(9)}, 1593--1607,
+  \urlprefix\url{http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2699.2008.01913.x/full
+  papers3://publication/uuid/0929998D-0949-45DA-82D2-F0600CFAD204}.
+
+\bibitem[{Broitman et~al.(2008)Broitman, Mieszkowska, Helmuth,, and
+  Blanchette}]{Broitman2008a}
+Broitman, B.~R., N.~Mieszkowska, B.~Helmuth, and C.~A. Blanchette, 2008:
+  {Climate and recruitment of rocky shore intertidal invertebrates in the
+  eastern North Atlantic.} \textit{Ecology}, \textbf{89~(11 Suppl)}, S81----90,
+  \urlprefix\url{http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed{\&}id=19097486{\&}retmode=ref{\&}cmd=prlinks
+  papers3://publication/uuid/46800558-AD2A-4B96-A1D9-B392C1463C45}.
+
+\bibitem[{Brown et~al.(1999)Brown, Minnett, Evans, Kearns, Kilpatrick, Kumar,
+  Sikorski,, and Z{\'{a}}vody}]{Brown1999}
+Brown, O.~B., P.~J. Minnett, R.~Evans, E.~Kearns, K.~Kilpatrick, A.~Kumar,
+  R.~Sikorski, and A.~Z{\'{a}}vody, 1999: {MODIS Infrared Sea Surface
+  Temperature Algorithm Algorithm Theoretical Basis Document Version 2.0}.
+  \textit{University of Miami}, 31\,098--33\,149,
+  \urlprefix\url{http://www.optics.marine.usf.edu/references/atbd{\_}mod25.pdf
+  papers3://publication/uuid/8A68617B-5B33-4944-8527-9B9C45A4D7DA}.
+
+\bibitem[{Cliff et~al.(1988)Cliff, Dudley,, and Davis}]{Cliff1988}
+Cliff, G., S.~F.~J. Dudley, and B.~Davis, 1988: {Sharks caught in the
+  protective gill nets off Natal, South Africa. 1. The sandbar shark
+  Carcharhinus plumbeus (Nardo)}. \textit{South African Journal of Marine
+  Science}, \textbf{7~(1)}, 255--265,
+  \urlprefix\url{papers3://publication/uuid/F2B21B07-A45F-4893-8959-F91F1FEC34EC}.
+
+\bibitem[{Couce et~al.(2012)Couce, Ridgwell,, and Hendy}]{Couce2012}
+Couce, E., A.~Ridgwell, and E.~J. Hendy, 2012: {Environmental controls on the
+  global distribution of shallow-water coral reefs}. \textit{Journal of
+  Biogeography}, \textbf{39~(8)}, 1508--1523,
+  \urlprefix\url{papers3://publication/uuid/CCC43CB7-8DC3-4066-9D75-183199A6A826}.
+
+\bibitem[{Franzke(2012)}]{Franzke2012}
+Franzke, C., 2012: {Nonlinear trends, long-range dependence, and climate noise
+  properties of surface temperature}. \textit{Journal of Climate},
+  \textbf{25~(12)}, 4172--4183, \doi{10.1175/JCLI-D-11-00293.1}.
+
+\bibitem[{Grant et~al.(2010)Grant, Tronina, Ramalho, {Kurz Besson},
+  Lobo-Do-Vale, {Santos Pereira}, Jones,, and Chaves}]{Grant2010}
+Grant, O.~M., L.~Tronina, J.~C. Ramalho, C.~{Kurz Besson}, R.~Lobo-Do-Vale,
+  J.~{Santos Pereira}, H.~G. Jones, and M.~M. Chaves, 2010: {The impact of
+  drought on leaf physiology of Quercus suber L. trees: Comparison of an
+  extreme drought event with chronic rainfall reduction}. \textit{Journal of
+  Experimental Botany}, \textbf{61~(15)}, 4361--4371, \doi{10.1093/jxb/erq239}.
+
+\bibitem[{Hutchings et~al.(2009)}]{Hutchings2009}
+Hutchings, L., and Coauthors, 2009: {The Benguela Current: An ecosystem of four
+  components}. \textit{Progress in Oceanography}, \textbf{83~(1-4)}, 15--32,
+  \doi{10.1016/j.pocean.2009.07.046},
+  \urlprefix\url{http://dx.doi.org/10.1016/j.pocean.2009.07.046}.
+
+\bibitem[{IPCC(2013)}]{IPCC2013}
+IPCC, 2013: Ipcc, 2013: climate change 2013: the physical science basis.
+  contribution of working group i to the fifth assessment report of the
+  intergovernmental panel on climate change.
+
+\bibitem[{Karl et~al.(2015)}]{Karl2015}
+Karl, T.~R., and Coauthors, 2015: {Possible artifacts of data biases in the
+  recent global surface warming hiatus}. \textit{Science}, \textbf{348~(6242)},
+  1469--1472, \doi{10.1126/science.aaa5632},
+  \urlprefix\url{http://www.sciencemag.org/cgi/doi/10.1126/science.aaa5632}.
+
+\bibitem[{Kennedy et~al.(2011)Kennedy, Rayner, Smith, Saunby,, and
+  Parker}]{Kennedy2011}
+Kennedy, J.~J., N.~A. Rayner, R.~O. Smith, M.~Saunby, and D.~E. Parker, 2011:
+  {Reassessing biases and other uncertainties in sea-surface temperature
+  observations measured in situ since 1850, part 1: measurement and sampling
+  uncertainties}. \textit{Journal of Geophysical Research Atmospheres},
+  \textbf{116},
+  \urlprefix\url{http://appconv.metoffice.gov.uk/hadsst3/part{\_}1{\_}figinline.pdf
+  papers3://publication/uuid/1F693114-A582-40EF-BF08-ADC9A0C8753D}.
+
+\bibitem[{Lathlean and Minchinton(2012)Lathlean, and Minchinton}]{Lathlean2012}
+Lathlean, J.~A., and T.~E. Minchinton, 2012: {Manipulating thermal stress on
+  rocky shores to predict patterns of recruitment of marine invertebrates under
+  a changing climate}. \textit{Marine Ecology Progress Series}, \textbf{467},
+  121--136, \doi{10.3354/meps09996}.
+
+\bibitem[{Martin et~al.(2012)}]{Martin2012}
+Martin, M., and Coauthors, 2012: {Group for High Resolution Sea Surface
+  temperature (GHRSST) analysis fields inter-comparisons. Part 1: A GHRSST
+  multi-product ensemble (GMPE)}. \textit{Deep Sea Research Part II: Topical
+  Studies in Oceanography}, \textbf{77-80}, 21--30,
+  \urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S0967064512000616
+  papers3://publication/doi/10.1016/j.dsr2.2012.04.013}.
+
+\bibitem[{Pinheiro and Bates(2006)Pinheiro, and Bates}]{pinheiro2006mixed}
+Pinheiro, J., and D.~Bates, 2006: \textit{Mixed-effects models in S and
+  S-PLUS}. Springer Science \& Business Media.
+
+\bibitem[{{R Core Team}(2013)}]{R}
+{R Core Team}, 2013: \textit{{R: A Language and Environment for Statistical
+  Computing}}. Vienna, Austria, R Foundation for Statistical Computing,
+  \urlprefix\url{http://www.r-project.org/}.
+
+\bibitem[{Reynolds and Smith(1994)Reynolds, and Smith}]{Reynolds1994}
+Reynolds, R.~W., and T.~M. Smith, 1994: {Improved Global Sea Surface
+  Temperature Analyses Using Optimum Interpolation}. \textit{Journal of
+  Climate}, \textbf{7~(6)}, 929--948,
+  \urlprefix\url{http://journals.ametsoc.org/doi/abs/10.1175/1520-0442(1994)007<0929:IGSSTA>2.0.CO;2
+  (null)}.
+
+\bibitem[{Roberts(2005)}]{Roberts2005}
+Roberts, M.~J., 2005: {Chokka squid (Loligo vulgaris reynaudii) abundance
+  linked to changes in South Africa's Agulhas Bank ecosystem during spawning
+  and the early life cycle}. \textit{ICES Journal of Marine Science},
+  \textbf{62~(1)}, 33--55, \doi{10.1016/j.icesjms.2004.10.002}.
+
+\bibitem[{Santos et~al.(2012)Santos, Gomez-Gesteira, DeCastro,, and
+  Alvarez}]{Santos2012a}
+Santos, F., M.~Gomez-Gesteira, M.~DeCastro, and I.~Alvarez, 2012: {Differences
+  in coastal and oceanic SST trends due to the strengthening of coastal
+  upwelling along the Benguela current system}. \textit{Continental Shelf
+  Research}, \textbf{34}, 79--86,
+  \urlprefix\url{http://linkinghub.elsevier.com/retrieve/pii/S027843431100375X
+  papers3://publication/doi/10.1016/j.csr.2011.12.004}.
+
+\bibitem[{Scherrer and K{\"{o}}rner(2010)Scherrer, and
+  K{\"{o}}rner}]{Scherrer2010}
+Scherrer, D., and C.~K{\"{o}}rner, 2010: {Infra-red thermometry of alpine
+  landscapes challenges climatic warming projections}. \textit{Global Change
+  Biology}, \textbf{16~(9)}, 2602--2613,
+  \doi{10.1111/j.1365-2486.2009.02122.x}.
+
+\bibitem[{Smit et~al.(2013)Smit, Roberts, Anderson, Dufois, Dudley, Bornman,
+  Olbers,, and Bolton}]{Smit2013}
+Smit, A.~J., M.~Roberts, R.~J. Anderson, F.~Dufois, S.~F.~J. Dudley, T.~G.
+  Bornman, J.~Olbers, and J.~J. Bolton, 2013: {A coastal seawater temperature
+  dataset for biogeographical studies: Large biases between in situ and
+  remotely-sensed data sets around the coast of South Africa}. \textit{PLoS
+  ONE}, \textbf{8~(12)}, \doi{10.1371/journal.pone.0081944}.
+
+\bibitem[{Tittensor et~al.(2010)Tittensor, Mora, Jetz, Lotze, Ricard, Berghe,,
+  and Worm}]{Tittensor2010}
+Tittensor, D.~P., C.~Mora, W.~Jetz, H.~K. Lotze, D.~Ricard, E.~V. Berghe, and
+  B.~Worm, 2010: {Global patterns and predictors of marine biodiversity across
+  taxa}. \textit{Nature}, \textbf{466~(7310)}, 1098--1101,
+  \urlprefix\url{papers3://publication/uuid/17033849-5C51-400F-851F-C0B29F893EA2}.
+
+\bibitem[{Tyberghein et~al.(2012)Tyberghein, Verbruggen, Pauly, Troupin,
+  Mineur,, and {De Clerck}}]{Tyberghein2012}
+Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
+  Clerck}, 2012: {Bio-ORACLE: a global environmental dataset for marine species
+  distribution modelling}. \textit{Global Ecology and Biogeography},
+  \textbf{21~(2)}, 272--281,
+  \urlprefix\url{papers3://publication/uuid/56E29A48-EEAD-42C8-8CE1-CB01FDFB7BDE}.
+
+\bibitem[{Wood(2006)}]{Wood2006}
+Wood, S., 2006: \textit{Generalized additive models: an introduction with R}.
+  CRC press.
+
+\end{thebibliography}
+=======
+>>>>>>> b2336b50a8935932933119b07d9d78ecbe6a66ba
