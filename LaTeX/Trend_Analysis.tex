@@ -128,28 +128,40 @@ We must mention that much of the meta-data pertaining to the older temperature r
 % Some strong statement prior to the conclusion is needed. Also double check that the above paragraphs flow nice from one into the other.
 
 
-\emph{RWS: None of this text has been edited. I must still do so.}
 \section{Conclusion}
 We draw several key conclusions:
 
 \begin{enumerate}
-\item There is not a significant relationship between the goodness of fit (\emph{R}\textsuperscript{2}) of a linear model to a time series and the NA\% of that time series when the NAs are filled in via linear interpolation. This is an important finding as it means that, within reason, linear interpolation may be used to fill gaps in a time series before applying any time series analysis methods.
+% Length points
+\item The length of a time series has the largest effect on the accuracy and significance (\emph{p}) of modelled trends however, natural variability (SD) also has a large effect on the significance (\emph{p}) of the modelled trend.
 
-\item Length has the largest effect on the goodness of fit (\emph{R}\textsuperscript{2}) of the decadal trend and natural variability (SD) has the largest effect on the significance (\emph{p}) of the trend detected.
+\item There is a rapid increase in the accuracy and significance of modelled trends as time series lengths extend from 10 to 20 years. This improvement slows from 20 to 30 years, and as time series approach 40 years in length the accuracy of models becomes nearly exact. Modelled results from time series at or under 10 years in length should be interpreted with extreme caution.
 
-\item There is a predictable decrease in the goodness of fit (\emph{R}\textsuperscript{2}) of a linear model to the trend line of a time series as it extends from 10 to 20 years in length. The goodness of fit (\emph{R}\textsuperscript{2}) then begins to increase once the time series becomes roughly 30+ years long. Analyses of time series at or under 10 years in length should be interpreted with extreme caution in spite of them often having strong \emph{R}\textsuperscript{2} values.
+\item Whereas time series with a reasonable decadal trend (i.e. \SI{0.1}{\degreeCelsius}~dec$^{-1}$) and 520 months in lengths will generally allow for perfect model accuracy, an additional 120 months is often required for the detected trend to be considered significant (\emph{p} \leq 0.05).
 
-\item Within the first decade of a time series, if the temperatures within the last few months move strongly in the opposite direction from the prevailing trend, the linear model used to detect the trendline may show an abrupt change in direction (\emph{i.e.} a positive trend can become negative and \emph{vice versa}).
 
-\item After the first decade of data, the changes detected in almost all trends for all 105 time series become more gradual; however, many trend lines still change direction over the course of the following two decades.
+% SD points
+\item The length of a time series required to detect a reasonable decadal trend (i.e. \SI{0.1}{\degreeCelsius}~dec$^{-1}$) may rapidly exceed 100 years when a large amount of variance is present.
 
-\item It is at these changes in direction that the \emph{p}-values for the time series plummet, though generally they tend to follow the same pattern of becoming weaker and then slowly stronger over time, as we see in the \emph{R}\textsuperscript{2} values.
 
-\item There is a slight linear decrease in \emph{R}\textsuperscript{2} as the natural thermal variability (SD) of seawater increases; however, the decrease in \emph{p}-values is larger and more rapid.
+% DT points
+\item The greater the decadal trend is within a time series, the more accurately it will be modelled regardless of the amount of variance in the time series.
 
-\item A precision greater than \SI{0.5}{\degreeCelsius} is not required to confidently detect the long-term trend in a time series. This is an important consideration as many studies investigating the effects of climate change \citep[e.g.][]{Grant2010, Scherrer2010, Lathlean2012} do use lower precision \SI{0.1}{\degreeCelsius} data. That being said, a precision of \SI{0.001}{\degreeCelsius} or \SI{0.01}{\degreeCelsius} is preferable over \SI{0.5}{\degreeCelsius}. In fact, because the results from the higher precision of \SI{0.001}{\degreeCelsius} were almost identical to the \SI{0.5}{\degreeCelsius} tests, the higher precision is only necessary when one needs to identify trends at a precision of \SI{0.01}{\degreeCelsius} or greater \citep{Karl2015}. This finding means that older, lower precision data may be combined with newer higher precision data within the same time series without concern that the reduced overall data precision will have a large negative impact on the time series ability to detect decadal trends. Indeed, extending time series in this way will only serve to make them more dependable as length is the primary criteria through which one should initially assess a time series ability to detect climate change before refining ones assumptions with any statistical analyses.
 
-\item Decreasing the precision of measurements to greater than \SI{0.1}{\degreeCelsius} has almost no appreciable effect on a time series ability to detect a long term trend, provided that the reported effect size matches the level of precision by the instruments.
+ %  NA points
+\item There is a complicated relationship between the accuracy of a trend fitted to a time series and the \%\texttt{NA} of that time series, which is exacerbated as the \%\texttt{NA} increases. The modelled \emph{p}-values for small or non-existent decadal trends move towards 0 whereas modelled \emph{p}-values for larger trends move away from zero. Increasing thee potential to commit both type I and type II errors.
+
+\item Filling \texttt{NA} values via linear interpolation drives the \emph{p}-value of modelled slopes greatly towards zero and this effect is increased by the size of the decadal trend present in the data. It is therefore very important not to use linear interpolation to fill gaps in data.
+
+
+% Precision points
+\item A precision greater than \SI{0.5}{\degreeCelsius} is not required to confidently detect the long-term trend in a time series however, precisions at or greater than \SI{0.1}{\degreeCelsius} will reduce the length required to accurately detect a long term trend in the data if one does exist. This is an important consideration as many studies investigating the effects of climate change \citep[e.g.][]{Grant2010, Scherrer2010, Lathlean2012} do use lower precision \SI{0.1}{\degreeCelsius} data. 
+
+\item Because time series with data precisions of \SIrange{0.1}{0.001}{\degreeCelsius} produce comparable results, lower precision data may be combined with newer higher precision data within the same time series without concern that the reduced overall data precision may have a negative impact on a models ability to detect decadal trends. Indeed, extending time series in this way will only serve to make them more dependable as length is the primary criteria through which one should initially assess a time series ability to detect climate change before refining ones assumptions with any statistical analyses.
+
+\item Improving the precision of measurements to greater than \SI{0.1}{\degreeCelsius} has almost no appreciable effect on a models ability to detect a long-term trend, provided that the reported effect size matches the level of precision by the instruments.
+
+\item A time series with data precision greater than \SI{0.1}{\degreeCelsius} is only necessary when an investigation requires that the decadal trend be known to an accuracy of \SI{0.01}{\degreeCelsius} or greater \citep{Karl2015}. 
 \end{enumerate}
 
 We understand that time series of \textgreater 30 years may be exceedingly rare. Therefore, while we move forward as a scientific community investigating the issues of climate change, the increasing length and continuity of any current and future time series must be ensured in order to construct and maintain a clear understanding of the trends in changing temperature that are occurring throughout Earth's oceans.
@@ -158,14 +170,14 @@ We understand that time series of \textgreater 30 years may be exceedingly rare.
 %==============================================================================
 
 \acknowledgments
-The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for contributing all of the raw data used in this study. Without it, this article and the SACTN would not be possible. This research was supported by NRF Grant (CPRR14072378735). The authors report no financial conflicts of interests. The data and analyses used in this paper may be found at https://github.com/schrob040/Trend\_Analysis.
+The authors would like to thank DAFF, DEA, EKZNW, KZNSB, SAWS and SAEON for their contributions of the raw data used in this study. Without it, this article and the SACTN would not be possible. This research was supported by NRF Grant (CPRR14072378735). The authors report no financial conflicts of interests. The data and analyses used in this paper may be found at https://github.com/schrob040/Trend\_Analysis.
 
 %
 %==============================================================================
 
 \appendix
 \appendixtitle{Effects of linear interpolation}
-Blurb here about linear unterpolation effects.... Figure \ref{figureA1}. \emph{RWS - This figure still needs to be updated to the current standard. It is still a rough draft.}
+Many methods for interpolating missing values within a time series exist. As it is beyond the scope of this paper to investigate the differences in interpolation quality we have not gone through the pains of doing so. Our initial methodology called for linearly interpolating the missng data values (\texttt{NA}) found within our time series. The logic in doing so was that by only using time series with less than 15\%NA the effect of linear interpolating would be minimal. In order to be thorough in our methodology we tested the effect that linear interpolation was having and found that it was significant. The result of the effect of the amount of linear interpolation that is present in a time series may be seen in Figure \ref{figureA1}. The only difference between Figure \ref{figure06} and Figure \ref{figureA1} is that the \texttt{NA} values in Figure \ref{figure06} were left as is and in \ref{figureA1} they were filled with linear interpolation. One may immediately note in the figure showing the interpolated data how many more of the time series that have decadal trends larger than \SI{0.1}{\degreeCelsius}~dec$^{-1}$ are significant compared to the non-interpolated data. It is for this reason that we strongly advise against the use of simple linear interpolation to fill missing gaps in time series.
 
 \bibliographystyle{ametsoc2014}
 \bibliography{references}

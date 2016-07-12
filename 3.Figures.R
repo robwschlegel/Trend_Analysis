@@ -344,8 +344,8 @@ dat_gro %>%
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
 ggsave("graph/all_plt7_no_interp_grown.pdf", plot = last_plot(), width = 4, height = 7, units = "in")
 
-#############################################################################
-### 11. Relationship between NA% and significance of detected trend
+
+# The effect of interpolation on the data ---------------------------------
 
 ## Load the data that has percent NA and type columns to add them to the GLS data frames
 load("data/SACTN_sub2.Rdata")
@@ -357,34 +357,33 @@ SACTN_sub2 <- as.data.frame(SACTN_sub2)
 load("data/gls_fitted_full_interp_grown.RData")
 gls_df_interp <- gls_df
 gls_df_interp$index <- as.factor(paste(gls_df_interp$site, gls_df_interp$src, sep = "/ "))
-# gls_df_interp$type <- NA
-# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "thermo"]))] <- "thermo"
-# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "old"]))] <- "old"
-# gls_df_interp$type[gls_df_interp$index %in% levels(droplevels(SACTN_sub2$index[SACTN_sub2$type == "new"]))] <- "new"
+length(gls_df_interp$site[gls_df_interp$p_trend <= 0.05])
 # The non-interpolated data
 load("data/gls_fitted_full_nointerp_grown.RData")
 gls_df_non <- gls_df; rm(gls_df)
+length(gls_df_non$site[gls_df_non$p_trend <= 0.05])
+
+test <- gls_df_non[gls_df_non$p_trend <= 0.05,]
 
 ## Subset gls_fitted_full_interp_grown results by max(year_index) and Prec0.001 # Or just use a "natural" data frame
 # The interpolated data
 gls_df_interp <- gls_df_interp %>%
   group_by(site, src) %>%
-  # filter(DT == "DT020") %>%
-  filter(prec == "prec0001") #%>%
+  filter(prec == "prec0001") %>%
   filter(year_index == max(year_index))
 
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
   group_by(site, src) %>%
-  # filter(DT == "DT020") %>%
+  filter(prec == "prec0001") %>%
   filter(year_index == max(year_index))
 
-## Add NA% from data_summary2 # The warning issues persist... :(
+## Add NA% from data_summary2
 # The interpolated data
-# gls_df_interp <- gls_df_interp %>%
-#   group_by(index) %>%
-#   mutate(interp_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
-# gls_df_interp <- data.frame(gls_df_interp)
+gls_df_interp <- gls_df_interp %>%
+  group_by(index) %>%
+  mutate(interp_perc = SACTN_sub2$na_perc[SACTN_sub2$index == index][1])
+gls_df_interp <- data.frame(gls_df_interp)
 
 # The non-interpolated data
 gls_df_non <- gls_df_non %>%
@@ -393,18 +392,16 @@ gls_df_non <- gls_df_non %>%
 gls_df_non <- data.frame(gls_df_non)
 
 ## "Grow" the limit of NA/ Interp used on the data 
-    # I have since realised that these differences could be calculated easily without for loops...
-
 # Set limits for missing data
 miss_limit <- c(1, 2.5, 5, 7.5, 10, 12.5, 15)
 
 # Grow the interpolated data
-# gls_df_interp_grow <- data.frame()
-# for(i in 1:length(miss_limit)){
-#   data1 <- data.frame(gls_df_interp[gls_df_interp$interp_perc <= miss_limit[i],])
-#   data1$miss_limit <- miss_limit[i]
-#   gls_df_interp_grow <- rbind(gls_df_interp_grow, data1)
-# }; rm(data1)
+gls_df_interp_grow <- data.frame()
+for(i in 1:length(miss_limit)){
+  data1 <- data.frame(gls_df_interp[gls_df_interp$interp_perc <= miss_limit[i],])
+  data1$miss_limit <- miss_limit[i]
+  gls_df_interp_grow <- rbind(gls_df_interp_grow, data1)
+}; rm(data1)
 
 # Grow the non-interpolated data
 gls_df_non_grow <- data.frame()
@@ -414,17 +411,16 @@ for(i in 1:length(miss_limit)) {
   gls_df_non_grow <- rbind(gls_df_non_grow, data1)
 }; rm(data1)
 
-## Show relation between p_trend and missing values
-# # The interpolated data
-# ggplot(data = gls_df_interp_grow, aes(x = interp_perc, y = p_trend)) +
-#   geom_point(aes(colour = as.factor(DT))) +
-#   # geom_smooth(aes(colour = as.factor(DT)), method = "glm", alpha = 0.2) + 
-#   geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
-#   facet_wrap(~miss_limit, scales = "free_x")
-# ggsave("interp.pdf", height = 8, width = 10)
+## Correct the "DT" column for plotting
+# The interpolated data
+gls_df_interp_grow$DT[gls_df_interp_grow$DT == "DT000"] <- 0
+gls_df_interp_grow$DT[gls_df_interp_grow$DT == "DT005"] <- 0.05
+gls_df_interp_grow$DT[gls_df_interp_grow$DT == "DT010"] <- 0.10
+gls_df_interp_grow$DT[gls_df_interp_grow$DT == "DT015"] <- 0.15
+gls_df_interp_grow$DT[gls_df_interp_grow$DT == "DT020"] <- 0.20
+gls_df_interp_grow$DT <- as.numeric(gls_df_interp_grow$DT)
 
 # The non-interpolated data
-head(gls_df_non_grow)
 gls_df_non_grow$DT[gls_df_non_grow$DT == "DT000"] <- 0
 gls_df_non_grow$DT[gls_df_non_grow$DT == "DT005"] <- 0.05
 gls_df_non_grow$DT[gls_df_non_grow$DT == "DT010"] <- 0.10
@@ -432,6 +428,23 @@ gls_df_non_grow$DT[gls_df_non_grow$DT == "DT015"] <- 0.15
 gls_df_non_grow$DT[gls_df_non_grow$DT == "DT020"] <- 0.20
 gls_df_non_grow$DT <- as.numeric(gls_df_non_grow$DT)
 
+## Graph the relationship between p_trend and missing values
+# The interpolated data
+gls_df_interp_grow %>% 
+  filter(miss_limit != 7.5) %>% 
+  ggplot(aes(x = log(interp_perc), y = p_trend)) +
+  geom_point(aes(shape = as.factor(DT)), col = "black", stroke = 0.3) +
+  geom_smooth(aes(fill = as.factor(DT)), method = "lm", size = 0.3, col = "black") +
+  # geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
+  scale_x_continuous(name = "Log % NA Interpolated") +
+  scale_y_continuous(name = "p-value") +
+  scale_fill_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
+  scale_shape_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
+  facet_wrap(~miss_limit, scales = "free_x") 
+ggsave("graph/interp_NA_perc.pdf", height = 6, width = 10)
+
+
+# The non-interpolated data
 library(fitdistrplus)
 descdist(gls_df_non_grow$na_perc, boot = 500, graph = TRUE)
 plot(hist(gls_df_non_grow$na_perc))
