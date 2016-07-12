@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.14)  12 JUL 2016 20:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.14)  13 JUL 2016 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -648,77 +648,7 @@ Variant \prop_get:NVNTF already defined; not changing it on line 373
 Package: translator 2010/06/12 ver 1.10
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/translator-language-mappings
-.tex))) (./Trend_Analysis.aux
-
-Package natbib Warning: Citation `Blanchette2008' multiply defined.
-
-
-Package natbib Warning: Citation `Broitman2008a' multiply defined.
-
-
-Package natbib Warning: Citation `Brown1999' multiply defined.
-
-
-Package natbib Warning: Citation `Cliff1988' multiply defined.
-
-
-Package natbib Warning: Citation `Couce2012' multiply defined.
-
-
-Package natbib Warning: Citation `Franzke2012' multiply defined.
-
-
-Package natbib Warning: Citation `Grant2010' multiply defined.
-
-
-Package natbib Warning: Citation `Hutchings2009' multiply defined.
-
-
-Package natbib Warning: Citation `IPCC2013' multiply defined.
-
-
-Package natbib Warning: Citation `Karl2015' multiply defined.
-
-
-Package natbib Warning: Citation `Kennedy2011' multiply defined.
-
-
-Package natbib Warning: Citation `Lathlean2012' multiply defined.
-
-
-Package natbib Warning: Citation `Martin2012' multiply defined.
-
-
-Package natbib Warning: Citation `pinheiro2006mixed' multiply defined.
-
-
-Package natbib Warning: Citation `R' multiply defined.
-
-
-Package natbib Warning: Citation `Reynolds1994' multiply defined.
-
-
-Package natbib Warning: Citation `Roberts2005' multiply defined.
-
-
-Package natbib Warning: Citation `Santos2012a' multiply defined.
-
-
-Package natbib Warning: Citation `Scherrer2010' multiply defined.
-
-
-Package natbib Warning: Citation `Smit2013' multiply defined.
-
-
-Package natbib Warning: Citation `Tittensor2010' multiply defined.
-
-
-Package natbib Warning: Citation `Tyberghein2012' multiply defined.
-
-
-Package natbib Warning: Citation `Wood2006' multiply defined.
-
-)
+.tex))) (./Trend_Analysis.aux)
 \openout1 = `Trend_Analysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -734,7 +664,8 @@ LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 36.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -858,15 +789,76 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 38.
  [2]
+
+Package natbib Warning: Citation `Roberts2005' on page 3 undefined on input lin
+e 41.
+
+
+Package natbib Warning: Citation `Hutchings2009' on page 3 undefined on input l
+ine 41.
+
+
+Package natbib Warning: Citation `Santos2012a' on page 3 undefined on input lin
+e 41.
+
+
+Package natbib Warning: Citation `Blanchette2008' on page 3 undefined on input 
+line 41.
+
+
+Package natbib Warning: Citation `Tittensor2010' on page 3 undefined on input l
+ine 41.
+
+
+Package natbib Warning: Citation `Couce2012' on page 3 undefined on input line 
+41.
+
+
+Package natbib Warning: Citation `Smit2013' on page 3 undefined on input line 4
+1.
+
+
+Package natbib Warning: Citation `Blanchette2008' on page 3 undefined on input 
+line 41.
+
+
+Package natbib Warning: Citation `Broitman2008a' on page 3 undefined on input l
+ine 41.
+
+
+Package natbib Warning: Citation `Tyberghein2012' on page 3 undefined on input 
+line 41.
+
+
+Package natbib Warning: Citation `Reynolds1994' on page 3 undefined on input li
+ne 43.
+
+
+Package natbib Warning: Citation `Brown1999' on page 3 undefined on input line 
+43.
+
+
+Package natbib Warning: Citation `Martin2012' on page 3 undefined on input line
+ 43.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
+
+Package natbib Warning: Citation `Cliff1988' on page 5 undefined on input line 
+54.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
+
+Package natbib Warning: Citation `R' on page 6 undefined on input line 63.
+
 [6]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -874,23 +866,85 @@ Missing character: There is no ˜ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [7] [8]
-Underfull \vbox (badness 2772) has occurred while \output is active []
 
- [9]
-[10]
+
+Package natbib Warning: Citation `Kennedy2011' on page 7 undefined on input lin
+e 70.
+
+
+Package natbib Warning: Citation `IPCC2013' on page 7 undefined on input line 7
+0.
+
+[7]
+
+Package natbib Warning: Citation `Franzke2012' on page 8 undefined on input lin
+e 79.
+
+
+Package natbib Warning: Citation `Stocker2013' on page 8 undefined on input lin
+e 79.
+
+
+Package natbib Warning: Citation `Wilks2011' on page 8 undefined on input line 
+79.
+
+
+Package natbib Warning: Citation `Stocker2013' on page 8 undefined on input lin
+e 79.
+
+
+Package natbib Warning: Citation `Scinocca2010' on page 8 undefined on input li
+ne 79.
+
+
+Package natbib Warning: Citation `Wood2006' on page 8 undefined on input line 7
+9.
+
+
+Package natbib Warning: Citation `vonStorch1999' on page 8 undefined on input l
+ine 79.
+
+
+Package natbib Warning: Citation `Santer2008' on page 8 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `Wood2006' on page 8 undefined on input line 7
+9.
+
+
+Package natbib Warning: Citation `pinheiro2006mixed' on page 8 undefined on inp
+ut line 79.
+
+
+Package natbib Warning: Citation `pinheiro2006mixed' on page 8 undefined on inp
+ut line 79.
+
+[8]
+
+Package natbib Warning: Citation `IPCC2013supp' on page 9 undefined on input li
+ne 91.
+
+[9] [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+Package natbib Warning: Citation `Smit2013' on page 13 undefined on input line 
+113.
+
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
+
+Package natbib Warning: Citation `IPCC2013' on page 15 undefined on input line 
+119.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
@@ -901,203 +955,32 @@ LaTeX Warning: Reference `Bolton2012' on page 16 undefined on input line 123.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[17]
 
- [17]
-[18] [19] (./Trend_Analysis.bbl
-Underfull \hbox (badness 3068) in paragraph at lines 15--21
-[]\OT1/ptm/m/n/12 Blanchette, C. A., C. Melissa Miner, P. T. Rai-mondi, D. Lohs
-e, K. E. K. Heady,
- []
+Package natbib Warning: Citation `Grant2010' on page 18 undefined on input line
+ 158.
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 15--21
-\OT1/ptm/m/n/12 and B. R. Broit-man, 2008: Bio-geo-graph-i-cal pat-terns of roc
-ky in-ter-tidal com-mu-ni-ties
- []
+Package natbib Warning: Citation `Scherrer2010' on page 18 undefined on input l
+ine 158.
 
 
-Underfull \hbox (badness 2261) in paragraph at lines 15--21
-\OT1/ptm/m/n/12 along the Pa-cific coast of North Amer-ica. \OT1/ptm/m/it/12 Jo
-ur-nal of Bio-geog-ra-phy\OT1/ptm/m/n/12 , \OT1/ptm/b/n/12 35 (9)\OT1/ptm/m/n/1
-2 , 1593--
- []
+Package natbib Warning: Citation `Lathlean2012' on page 18 undefined on input l
+ine 158.
 
+[18]
 
-Underfull \hbox (badness 1412) in paragraph at lines 24--29
-[]\OT1/ptm/m/n/12 Broitman, B. R., N. Mieszkowska, B. Hel-muth, and C. A. Blanc
-hette, 2008: Cli-mate
- []
+Package natbib Warning: Citation `Karl2015' on page 19 undefined on input line 
+164.
 
-
-Underfull \hbox (badness 2158) in paragraph at lines 24--29
-\OT1/ptm/m/n/12 and re-cruit-ment of rocky shore in-ter-tidal in-ver-te-brates 
-in the east-ern North At-lantic.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--29
-\OT1/ptm/m/it/12 Ecol-ogy\OT1/ptm/m/n/12 , \OT1/ptm/b/n/12 89 (11 Suppl)\OT1/pt
-m/m/n/12 , S81----90, URL $http : / / eutils . ncbi . nlm . nih . gov / entrez 
-/ eutils /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--29
-\OT1/ptm/m/n/12 elink . fcgi ? dbfrom = pubmed\OMS/ztmcm/m/n/12 fn \OT1/ptm/m/n
-/12 & []id = 19097486\OMS/ztmcm/m/n/12 fn \OT1/ptm/m/n/12 & []retmode = ref\OMS
-/ztmcm/m/n/12 fn \OT1/ptm/m/n/12 & []cmd = prlinkspapers3 :
- []
-
-
-Underfull \hbox (badness 7522) in paragraph at lines 32--38
-[]\OT1/ptm/m/n/12 Brown, O. B., P. J. Min-nett, R. Evans, E. Kearns, K. Kil-pat
-rick, A. Ku-mar,
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 32--38
-\OT1/ptm/m/n/12 R. Siko-rski, and A. Z[]avody, 1999: MODIS In-frared Sea Sur-fa
-ce Tem-per-a-ture Al-
- []
-
-
-Underfull \hbox (badness 5711) in paragraph at lines 32--38
-\OT1/ptm/m/n/12 go-rithm Al-go-rithm The-o-ret-i-cal Ba-sis Doc-u-ment Ver-sion
- 2.0. \OT1/ptm/m/it/12 Uni-ver-sity of Mi-ami\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 40--45
-\OT1/ptm/m/n/12 off Na-tal, South Africa. 1. The sand-bar shark Car-charhi-nus 
-plumbeus (Nardo). \OT1/ptm/m/it/12 South
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 40--45
-\OT1/ptm/m/it/12 African Jour-nal of Ma-rine Sci-ence\OT1/ptm/m/n/12 , \OT1/ptm
-/b/n/12 7 (1)\OT1/ptm/m/n/12 , 255--265, URL $papers3 : / / publication / uuid 
-/
- []
-
-[20]
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
- [21]
-Underfull \hbox (badness 1237) in paragraph at lines 103--109
-[]\OT1/ptm/m/n/12 Martin, M., and Coau-thors, 2012: Group for High Res-o-lu-tio
-n Sea Sur-face tem-per-a-ture
- []
-
-[22]
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
- [23]
-Underfull \hbox (badness 1931) in paragraph at lines 183--188
-[]\OT1/ptm/m/n/12 Tyberghein, L., H. Ver-bruggen, K. Pauly, C. Troupin, F. Mine
-ur, and O. De Clerck,
- []
-
-
-Underfull \hbox (badness 3068) in paragraph at lines 216--222
-[]\OT1/ptm/m/n/12 Blanchette, C. A., C. Melissa Miner, P. T. Rai-mondi, D. Lohs
-e, K. E. K. Heady,
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 216--222
-\OT1/ptm/m/n/12 and B. R. Broit-man, 2008: Bio-geo-graph-i-cal pat-terns of roc
-ky in-ter-tidal com-mu-ni-ties
- []
-
-
-Underfull \hbox (badness 2261) in paragraph at lines 216--222
-\OT1/ptm/m/n/12 along the Pa-cific coast of North Amer-ica. \OT1/ptm/m/it/12 Jo
-ur-nal of Bio-geog-ra-phy\OT1/ptm/m/n/12 , \OT1/ptm/b/n/12 35 (9)\OT1/ptm/m/n/1
-2 , 1593--
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 225--230
-[]\OT1/ptm/m/n/12 Broitman, B. R., N. Mieszkowska, B. Hel-muth, and C. A. Blanc
-hette, 2008: Cli-mate
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 225--230
-\OT1/ptm/m/n/12 and re-cruit-ment of rocky shore in-ter-tidal in-ver-te-brates 
-in the east-ern North At-lantic.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-\OT1/ptm/m/it/12 Ecol-ogy\OT1/ptm/m/n/12 , \OT1/ptm/b/n/12 89 (11 Suppl)\OT1/pt
-m/m/n/12 , S81----90, URL $http : / / eutils . ncbi . nlm . nih . gov / entrez 
-/ eutils /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
-\OT1/ptm/m/n/12 elink . fcgi ? dbfrom = pubmed\OMS/ztmcm/m/n/12 fn \OT1/ptm/m/n
-/12 & []id = 19097486\OMS/ztmcm/m/n/12 fn \OT1/ptm/m/n/12 & []retmode = ref\OMS
-/ztmcm/m/n/12 fn \OT1/ptm/m/n/12 & []cmd = prlinkspapers3 :
- []
-
-[24]
-Underfull \hbox (badness 7522) in paragraph at lines 233--239
-[]\OT1/ptm/m/n/12 Brown, O. B., P. J. Min-nett, R. Evans, E. Kearns, K. Kil-pat
-rick, A. Ku-mar,
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 233--239
-\OT1/ptm/m/n/12 R. Siko-rski, and A. Z[]avody, 1999: MODIS In-frared Sea Sur-fa
-ce Tem-per-a-ture Al-
- []
-
-
-Underfull \hbox (badness 5711) in paragraph at lines 233--239
-\OT1/ptm/m/n/12 go-rithm Al-go-rithm The-o-ret-i-cal Ba-sis Doc-u-ment Ver-sion
- 2.0. \OT1/ptm/m/it/12 Uni-ver-sity of Mi-ami\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 241--246
-\OT1/ptm/m/n/12 off Na-tal, South Africa. 1. The sand-bar shark Car-charhi-nus 
-plumbeus (Nardo). \OT1/ptm/m/it/12 South
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 241--246
-\OT1/ptm/m/it/12 African Jour-nal of Ma-rine Sci-ence\OT1/ptm/m/n/12 , \OT1/ptm
-/b/n/12 7 (1)\OT1/ptm/m/n/12 , 255--265, URL $papers3 : / / publication / uuid 
-/
- []
-
-[25]
-Underfull \hbox (badness 1237) in paragraph at lines 300--306
-[]\OT1/ptm/m/n/12 Martin, M., and Coau-thors, 2012: Group for High Res-o-lu-tio
-n Sea Sur-face tem-per-a-ture
- []
-
-
-Underfull \vbox (badness 1092) has occurred while \output is active []
-
- [26]
-[27]
-Underfull \hbox (badness 1931) in paragraph at lines 362--367
-[]\OT1/ptm/m/n/12 Tyberghein, L., H. Ver-bruggen, K. Pauly, C. Troupin, F. Mine
-ur, and O. De Clerck,
- []
-
-)
+[19] (./Trend_Analysis.bbl)
 \openout4 = `Trend_Analysis.fff'.
 
  (Trend_Analysis.fff)
 
-Package natbib Warning: There were multiply defined citations.
+Package natbib Warning: There were undefined citations.
 
-AED endfloat: Processing end Figures and Tables [28] (./Trend_Analysis.lof
+AED endfloat: Processing end Figures and Tables [20] (./Trend_Analysis.lof
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
@@ -1109,54 +992,52 @@ LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <10.5> not available
 \tf@lof=\write5
 \openout5 = `Trend_Analysis.lof'.
 
- [29
+ [21
 
 
-] (./Trend_Analysis.fff <figure01.pdf, id=106, 578.16pt x 361.35pt>
+] (./Trend_Analysis.fff <figure01.pdf, id=81, 578.16pt x 361.35pt>
 File: figure01.pdf Graphic file (type pdf)
 
 <use figure01.pdf>
 Package pdftex.def Info: figure01.pdf used on input line 2.
 (pdftex.def)             Requested size: 213.39566pt x 133.37209pt.
- [30 <./figure01.pdf>]
-<figure00.pdf, id=120, 578.16pt x 234.8775pt>
+ [22 <./figure01.pdf>]
+<figure00.pdf, id=95, 578.16pt x 234.8775pt>
 File: figure00.pdf Graphic file (type pdf)
  <use figure00.pdf>
 Package pdftex.def Info: figure00.pdf used on input line 9.
 (pdftex.def)             Requested size: 213.39566pt x 86.69185pt.
- [31 <./figure00.pdf>] <figure02.pdf, id=132, 505.89pt x 325.215pt>
+ [23 <./figure00.pdf>] <figure02.pdf, id=106, 505.89pt x 325.215pt>
 File: figure02.pdf Graphic file (type pdf)
  <use figure02.pdf>
 Package pdftex.def Info: figure02.pdf used on input line 16.
 (pdftex.def)             Requested size: 213.39566pt x 137.18484pt.
-
-[32 <./figure02.pdf>] <figure03.pdf, id=147, 578.16pt x 144.54pt>
+ [24 <./figure02.pdf>] <figure03.pdf, id=121, 578.16pt x 144.54pt>
 File: figure03.pdf Graphic file (type pdf)
-
-<use figure03.pdf>
+ <use figure03.pdf>
 Package pdftex.def Info: figure03.pdf used on input line 23.
 (pdftex.def)             Requested size: 213.39566pt x 53.34883pt.
- [33 <./figure03.pdf>]
-<figure04.pdf, id=161, 361.35pt x 505.89pt>
+
+[25 <./figure03.pdf>] <figure04.pdf, id=136, 361.35pt x 505.89pt>
 File: figure04.pdf Graphic file (type pdf)
- <use figure04.pdf>
+
+<use figure04.pdf>
 Package pdftex.def Info: figure04.pdf used on input line 30.
 (pdftex.def)             Requested size: 213.39566pt x 298.75812pt.
- [34 <./figure04.pdf>] <figure05.pdf, id=176, 289.08pt x 505.89pt>
+ [26 <./figure04.pdf>]
+<figure05.pdf, id=150, 289.08pt x 505.89pt>
 File: figure05.pdf Graphic file (type pdf)
  <use figure05.pdf>
 Package pdftex.def Info: figure05.pdf used on input line 37.
 (pdftex.def)             Requested size: 213.39566pt x 373.44185pt.
- [35 <./figure05.pdf>] <figure06.pdf, id=190, 722.7pt x 433.62pt>
+ [27 <./figure05.pdf>] <figure06.pdf, id=165, 722.7pt x 433.62pt>
 File: figure06.pdf Graphic file (type pdf)
  <use figure06.pdf>
 Package pdftex.def Info: figure06.pdf used on input line 44.
 (pdftex.def)             Requested size: 213.39566pt x 128.03589pt.
-
-[36 <./figure06.pdf>] <figure07.pdf, id=204, 433.62pt x 216.81pt>
+ [28 <./figure06.pdf>] <figure07.pdf, id=179, 433.62pt x 216.81pt>
 File: figure07.pdf Graphic file (type pdf)
-
-<use figure07.pdf>
+ <use figure07.pdf>
 Package pdftex.def Info: figure07.pdf used on input line 51.
 (pdftex.def)             Requested size: 213.39566pt x 106.69766pt.
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 52.
@@ -1181,18 +1062,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-[37 <./figure07.pdf>] <figureA1.pdf, id=214, 722.7pt x 578.16pt>
+[29 <./figure07.pdf>] <figureA1.pdf, id=188, 722.7pt x 578.16pt>
 File: figureA1.pdf Graphic file (type pdf)
 
 <use figureA1.pdf>
 Package pdftex.def Info: figureA1.pdf used on input line 58.
 (pdftex.def)             Requested size: 213.39566pt x 170.71451pt.
- [38 <./figureA1.pdf>]) (./Trend_Analysis.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+ [30 <./figureA1.pdf>]) (./Trend_Analysis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
@@ -1202,10 +1078,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12416 strings out of 494910
- 248624 string characters out of 6178755
- 271397 words of memory out of 5000000
- 15380 multiletter control sequences out of 15000+600000
+ 12352 strings out of 494910
+ 247325 string characters out of 6178755
+ 268660 words of memory out of 5000000
+ 15316 multiletter control sequences out of 15000+600000
  64490 words of font info for 154 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  39i,10n,37p,10420b,1010s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1221,10 +1097,10 @@ nts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on Trend_Analysis.pdf (38 pages, 998286 bytes).
+Output written on Trend_Analysis.pdf (30 pages, 977368 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
+ 241 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
