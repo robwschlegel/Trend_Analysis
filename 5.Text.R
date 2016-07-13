@@ -133,6 +133,8 @@ gls_df_natural <- data.frame(gls_df_natural)
 gls_df_natural_no_0 <- gls_df_natural %>% 
   filter(DT_real != 0.00)
 
+length(gls_df_natural_no_0$site[gls_df_natural_no_0$DT_perc <= 5.0])
+
 ## Intro
 # Quantify the effect on DT_perc AND p_trend of: length, DT, SD_initial, NA, precision
   # Use linear models as this more broadly measures the relationship between the variables
