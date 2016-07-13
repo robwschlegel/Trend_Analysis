@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \renewcommand{\UrlFont}{\rmfamily}
@@ -9,12 +9,25 @@
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem[{Aguilar et~al.(2003)Aguilar, Auer, Brunet, Peterson,, and
+  Wieringa}]{Aguilar2003}
+Aguilar, E., I.~Auer, M.~Brunet, T.~Peterson, and J.~Wieringa, 2003: Guidelines
+  on climate metadata and homogenization. world climate programme data and
+  monitoring wcdmp-no. 53, wmo-td no. 1186. \textit{World Meteorological
+  Organization, Geneva}.
+
 \bibitem[{Blanchette et~al.(2008)Blanchette, {Melissa Miner}, Raimondi, Lohse,
   Heady,, and Broitman}]{Blanchette2008}
 Blanchette, C.~A., C.~{Melissa Miner}, P.~T. Raimondi, D.~Lohse, K.~E.~K.
   Heady, and B.~R. Broitman, 2008: {Biogeographical patterns of rocky
   intertidal communities along the Pacific coast of North America}.
   \textit{Journal of Biogeography}, \textbf{35~(9)}, 1593--1607.
+
+\bibitem[{Bolton et~al.(2012)Bolton, Anderson, Smit,, and Rothman}]{Bolton2012}
+Bolton, J.~J., R.~J. Anderson, A.~J. Smit, and M.~D. Rothman, 2012: {South
+  African kelp moving eastwards: the discovery of Ecklonia maxima (Osbeck)
+  Papenfuss at De Hoop Nature Reserve on the south coast of South Africa}.
+  \textit{African Journal of Marine Science}, \textbf{34~(1)}, 147--151.
 
 \bibitem[{Broitman et~al.(2008)Broitman, Mieszkowska, Helmuth,, and
   Blanchette}]{Broitman2008a}
@@ -45,6 +58,11 @@ Franzke, C., 2012: {Nonlinear trends, long-range dependence, and climate noise
   properties of surface temperature}. \textit{Journal of Climate},
   \textbf{25~(12)}, 4172--4183, \doi{10.1175/JCLI-D-11-00293.1}.
 
+\bibitem[{Freeman et~al.(2016)}]{Freeman:2016db}
+Freeman, E., and Coauthors, 2016: {ICOADS Release 3.0: a major update to the
+  historical marine climate record}. \textit{International Journal of
+  Climatology}, 1--22.
+
 \bibitem[{Grant et~al.(2010)Grant, Tronina, Ramalho, {Kurz Besson},
   Lobo-Do-Vale, {Santos Pereira}, Jones,, and Chaves}]{Grant2010}
 Grant, O.~M., L.~Tronina, J.~C. Ramalho, C.~{Kurz Besson}, R.~Lobo-Do-Vale,
@@ -67,10 +85,10 @@ IPCC, 2013: \textit{IPCC, 2013: climate change 2013: The Physical Science
   Basis. Contribution of working group I to the Fifth Assessment Report of the
   Intergovernmental Panel on Climate Change}. Cambridge University Press.
 
-\bibitem[{Karl et~al.(2015)}]{Karl2015}
-Karl, T.~R., and Coauthors, 2015: {Possible artifacts of data biases in the
-  recent global surface warming hiatus}. \textit{Science}, \textbf{348~(6242)},
-  1469--1472, \doi{10.1126/science.aaa5632}.
+\bibitem[{Jarraud(2008)}]{Jarraud2008}
+Jarraud, M., 2008: Guide to meteorological instruments and methods of
+  observation (wmo-no. 8). \textit{World Meteorological Organisation: Geneva,
+  Switzerland}.
 
 \bibitem[{Kennedy et~al.(2011)Kennedy, Rayner, Smith, Saunby,, and
   Parker}]{Kennedy2011}
@@ -184,6 +202,10 @@ Tyberghein, L., H.~Verbruggen, K.~Pauly, C.~Troupin, F.~Mineur, and O.~{De
 \bibitem[{Von~Storch(1999)}]{vonStorch1999}
 Von~Storch, H., 1999: Misuses of statistical analysis in climate research.
   \textit{Analysis of Climate Variability}, Springer, 11--26.
+
+\bibitem[{Wernberg et~al.(2016)}]{Wernberg2016}
+Wernberg, T., and Coauthors, 2016: {Climate-driven regime shift of a temperate
+  marine ecosystem}. \textit{Science}, \textbf{353~(6295)}, 169--172.
 
 \bibitem[{Wilks(2011)}]{Wilks2011}
 Wilks, D.~S., 2011: \textit{Statistical methods in the atmospheric sciences},
