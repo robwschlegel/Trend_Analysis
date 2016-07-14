@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \renewcommand{\UrlFont}{\rmfamily}
@@ -184,6 +184,11 @@ Stocker, T., and Coauthors, 2013: \textit{IPCC, 2013: climate change 2013: the
   physical science basis. Contribution of working group I to the fifth
   assessment report of the intergovernmental panel on climate change}.
   Cambridge University Press.
+
+\bibitem[{Straub et~al.(2016)Straub, Thomsen,, and Wernberg}]{Straub2016}
+Straub, S.~C., M.~S. Thomsen, and T.~Wernberg, 2016: The dynamic biogeography
+  of the anthropocene: The speed of recent range shifts in seaweeds.
+  \textit{Seaweed Phylogeography}, Springer, 63--93.
 
 \bibitem[{Tittensor et~al.(2010)Tittensor, Mora, Jetz, Lotze, Ricard, Berghe,,
   and Worm}]{Tittensor2010}

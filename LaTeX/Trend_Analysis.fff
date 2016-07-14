@@ -42,7 +42,7 @@
  
 \begin{figure}
 \centering \includegraphics[width=7.5cm]{figure06}
-\caption[\small The relationship between \%\texttt{NA} and the significance of a fitted trend]{The relationship between \%\texttt{NA} and the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The the fitted lines and 95\% confidence intervals represent each of the five decadal trends assessed. }
+\caption[\small The relationship between the percentage of missing values (\%\texttt{NA}) and the significance of a fitted trend]{The relationship between the percentage of missing values (\%\texttt{NA}) and the significance of a fitted trend. Each panel shows the effect of an increasingly larger amount of missing values. The fitted lines and 95\% confidence intervals represent each of the five decadal trends assessed.}
 \label{figure06}
 \end{figure}
 \efloatseparator
