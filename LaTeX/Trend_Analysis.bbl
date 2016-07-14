@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \renewcommand{\UrlFont}{\rmfamily}
@@ -115,6 +115,13 @@ Mead, A., and Coauthors, 2013: {Human-mediated drivers of change {\textemdash}
   impacts on coastal ecosystems and marine biota of South Africa}.
   \textit{African Journal of Marine Science}, \textbf{35~(3)}, 403--425.
 
+\bibitem[{Ohring et~al.(2005)Ohring, Wielicki, Spencer, Emery,, and
+  Datla}]{Ohring2005}
+Ohring, G., B.~Wielicki, R.~Spencer, B.~Emery, and R.~Datla, 2005: {Satellite
+  Instrument Calibration for Measuring Global Climate Change: Report of a
+  Workshop}. \textit{Bulletin of the American Meteorological Society},
+  \textbf{86~(9)}, 1303--1313.
+
 \bibitem[{Pinheiro and Bates(2006)Pinheiro, and Bates}]{pinheiro2006mixed}
 Pinheiro, J., and D.~Bates, 2006: \textit{Mixed-effects models in S and
   S-PLUS}. Springer Science \& Business Media.
@@ -184,6 +191,11 @@ Stocker, T., and Coauthors, 2013: \textit{IPCC, 2013: climate change 2013: the
   physical science basis. Contribution of working group I to the fifth
   assessment report of the intergovernmental panel on climate change}.
   Cambridge University Press.
+
+\bibitem[{Straub et~al.(2016)Straub, Thomsen,, and Wernberg}]{Straub2016}
+Straub, S.~C., M.~S. Thomsen, and T.~Wernberg, 2016: The dynamic biogeography
+  of the anthropocene: The speed of recent range shifts in seaweeds.
+  \textit{Seaweed Phylogeography}, Springer, 63--93.
 
 \bibitem[{Tittensor et~al.(2010)Tittensor, Mora, Jetz, Lotze, Ricard, Berghe,,
   and Worm}]{Tittensor2010}
