@@ -100,24 +100,24 @@ SA
 
 map <- SA + 
   # Oceans
-  annotate("text", label = "Indian\nOcean", x = 32.60, y = -32.9, size = 4.0, angle = 0) +
-  annotate("text", label = "Atlantic\nOcean", x = 15.50, y = -32.9, size = 4.0, angle = 0) +
+  annotate("text", label = "Indian\nOcean", x = 32.60, y = -32.9, size = 5.0, angle = 0) +
+  annotate("text", label = "Atlantic\nOcean", x = 15.50, y = -32.9, size = 5.0, angle = 0) +
   # Benguela
   geom_segment(aes(x = 17.2, y = -32.6, xend = 15.2, yend = -29.5),
                arrow = arrow(length = unit(0.4, "cm")), size = 1.0, colour = "grey50") +
-  annotate("text", label = "Benguela", x = 16.1, y = -31.5, size = 3.0, angle = 300) +
+  annotate("text", label = "Benguela", x = 16.1, y = -31.5, size = 4.0, angle = 297) +
   # Agulhas
   geom_segment(aes(x = 33, y = -29.5, xend = 29.8, yend = -33.0),
                arrow = arrow(length = unit(0.4, "cm")), size = 1.0, colour = "grey50") +
-  annotate("text", label = "Agulhas", x = 31.6, y = -31.6, size = 3.0, angle = 53) +
+  annotate("text", label = "Agulhas", x = 31.6, y = -31.6, size = 4.0, angle = 53) +
   # Landmass
-  annotate("text", label = "South\nAfrica", x = 24.00, y = -31.00, size = 7, angle = 0) +
+  annotate("text", label = "South\nAfrica", x = 24.00, y = -31.00, size = 8, angle = 0) +
   # The unused stations
-  geom_point(data = sites, aes(lon, lat), colour = "black", size = 3.5, alpha = 0.3) +
-  geom_point(data = sites, aes(lon, lat), colour = "white", size = 2.0, alpha = 0.3) +
+  geom_point(data = sites, aes(lon, lat), colour = "black", size = 4.0, alpha = 0.3) +
+  geom_point(data = sites, aes(lon, lat), colour = "white", size = 2.5, alpha = 0.3) +
   # The used stations
-  geom_point(data = sites_sub, aes(lon, lat), colour = "black", size = 3.5) +
-  geom_point(data = sites_sub, aes(lon, lat), colour = "white", size = 2.0) +
+  geom_point(data = sites_sub, aes(lon, lat), colour = "black", size = 4.0) +
+  geom_point(data = sites_sub, aes(lon, lat), colour = "white", size = 2.5) +
   # scale_colour_grey(breaks = c("new", "old", "thermo"),
   #                   label = c("new", "old", "thermo")) +
   # guides(shape = guide_legend("Type", override.aes = list(size = 2.5, colour = "black"))) +
@@ -159,7 +159,8 @@ SACTN_flat %>% # remains unchanged
                outlier.shape = 21, notch = TRUE, fill = "grey80", varwidth = TRUE) +
   scale_x_discrete(name = "Time series no.", labels = 1:length(levels(SACTN_flat$index))) +
   scale_y_continuous(name = expression(paste("Detrended temperature anomaly (", degree, "C)"))) +
-  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5, size = 8))
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5, size = 8),
+        axis.title = element_text(size = 12))
 ggsave("graph/all_plt1.pdf", plot = last_plot(), width = 8.0, height = 3.25, units = "in")
 
 # data prep for correlation -----------------------------------------------
@@ -246,7 +247,9 @@ dat %>%
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C/dec)")),
                      breaks = c(-0.2, 0, 0.05, 0.1, 0.15, 0.2, 0.4)) +
   scale_colour_distiller(name = "Time series length (months)", palette = "Spectral") +
-  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
+  theme(axis.text.x  = element_text(angle = 90, vjust = 0.5),
+        axis.title = element_text(size = 14),
+        legend.title = element_text(size = 10))
 ggsave("graph/all_plt1_no_interp_natural.pdf", plot = last_plot(), width = 7, height = 4.5, units = "in")
 
 # plotting modelled trend vs. length (natural, no-interp) -----------------
@@ -271,8 +274,10 @@ dat_gro %>%
   facet_wrap("DT", ncol = 5) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5),
         legend.position = "right",
-        legend.direction = "vertical")
-ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
+        legend.direction = "vertical",
+        axis.title = element_text(size = 14),
+        legend.title = element_text(size = 10))
+ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 3, units = "in")
 
 # plotting p-value vs. SD (initial) (natural, no-interp) ------------------
 dat %>%
@@ -281,10 +286,12 @@ dat %>%
   geom_point(aes(size = length), col = "black", shape = 21, stroke = 0.2) +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
-  scale_size_continuous(name = "Length (months)") +
+  scale_size_continuous(name = "Time series length (months)") +
   facet_wrap("DT", ncol = 1)
 ggsave("graph/all_plt4_no_interp_natural.pdf", plot = last_plot(), width = 5, height = 7,
        units = "in")
+
+## NB: "graph/all_plt4_no_interp_natural_coast.pdf" created in "5.Text.R"
 
 # plotting p-value vs. SD (initial) (grown, no-interp) --------------------
 dat_gro %>%
@@ -460,7 +467,9 @@ gls_df_non_grow %>%
   scale_y_continuous(name = "p-value") +
   scale_fill_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
   scale_shape_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
-  facet_wrap(~miss_limit, scales = "free_x") 
+  facet_wrap(~miss_limit, scales = "free_x") +
+  theme(axis.title = element_text(size = 16),
+        legend.title = element_text(size = 14))
 ggsave("graph/non_NA_perc.pdf", height = 6, width = 10)
 
 ## Calculate correlation summary between p_trend and missing values

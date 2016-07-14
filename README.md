@@ -47,3 +47,21 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 
 ## 2016/07/11
 * Discussion section smoothed out
+
+## 2016/07/12
+* Additional references added
+* Exploratory analyses performed
+* Discussion section finished
+
+## 2016/07/13
+* Compiling issues addressed
+* Specific points by reviewers addressed
+* Conclusion section finished
+
+## 2016/07/14
+* Addressed all reviewer comments by line item
+* Added final references
+* Corrected reference format for submission
+* Corrected figure size and text sizes therein
+* Final proofread
+* Submitted paper for further review

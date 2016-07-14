@@ -133,7 +133,9 @@ gls_df_natural <- data.frame(gls_df_natural)
 gls_df_natural_no_0 <- gls_df_natural %>% 
   filter(DT_real != 0.00)
 
-length(gls_df_natural_no_0$site[gls_df_natural_no_0$DT_perc <= 5.0])
+# Calculate the number of models accurate to within 5% of the slope that are not significant
+accuracy1 <- gls_df_natural_no_0[abs(gls_df_natural_no_0$DT_perc) <= 10.0 & gls_df_natural_no_0$p_trend > 0.05,] # 317
+accuracy2 <- gls_df_natural_no_0[abs(gls_df_natural_no_0$DT_perc) <= 5.0 & gls_df_natural_no_0$p_trend > 0.05,] # 155
 
 ## Intro
 # Quantify the effect on DT_perc AND p_trend of: length, DT, SD_initial, NA, precision
@@ -416,7 +418,7 @@ length(levels(droplevels(gls_nat$index[gls_nat$coast == "sc"]))) # 21
 length(levels(droplevels(gls_nat$index[gls_nat$coast == "ec"]))) # 47
 
 # Shape data for plotting
-dat <- gls_nat %>%
+dat <- gls_df_natural %>%
   filter(prec == "prec001") %>%
   select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
          p_trend, length, coast) %>%
@@ -435,8 +437,10 @@ dat %>%
   geom_smooth(aes(colour = coast), method = "glm") +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
-  scale_size_continuous(name = "Length (months)") +
-  facet_wrap("DT", ncol = 1)
+  scale_size_continuous(name = "Time series length (months)") +
+  facet_wrap("DT", ncol = 1) +
+  theme(axis.title = element_text(size = 12),
+        legend.title = element_text(size = 10))
 ggsave("graph/all_plt4_no_interp_natural_coast.pdf", plot = last_plot(), width = 5, height = 7,
        units = "in")
 
