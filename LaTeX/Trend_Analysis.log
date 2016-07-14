@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.14)  14 JUL 2016 11:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.14)  14 JUL 2016 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -945,7 +945,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  12436 strings out of 494910
  249039 string characters out of 6178755
- 269588 words of memory out of 5000000
+ 270588 words of memory out of 5000000
  15401 multiletter control sequences out of 15000+600000
  64490 words of font info for 154 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
@@ -962,7 +962,7 @@ nts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on Trend_Analysis.pdf (34 pages, 923675 bytes).
+Output written on Trend_Analysis.pdf (34 pages, 923690 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  175 compressed objects within 2 object streams
