@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.17)  14 JUL 2016 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.17)  14 JUL 2016 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -252,38 +252,10 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \rot@float@box=\box54
 \rot@mess@toks=\toks20
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/endfloat/endfloat.sty
-Package: endfloat 2011/12/25 v2.5d LaTeX2e package puts figures and tables at e
-nd (jdm)
-\c@posttable=\count110
-\efloat@postttt=\write3
-\@ef@tttopen=\count111
-\c@postfigure=\count112
-\efloat@postfff=\write4
-\@ef@fffopen=\count113
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count114
-\output=\toks21
-\linenoprevgraf=\count115
-\linenumbersep=\dimen123
-\linenumberwidth=\dimen124
-\c@linenumber=\count116
-\c@pagewiselinenumber=\count117
-\c@LN@truepage=\count118
-\c@internallinenumber=\count119
-\c@internallinenumbers=\count120
-\quotelinenumbersep=\dimen125
-\bframerule=\dimen126
-\bframesep=\dimen127
-\bframebox=\box55
-LaTeX Info: Redefining \\ on input line 3056.
-)
-\c@extraauth=\count121
-\c@loopnum=\count122
-\thanksnum=\count123
-\savethanksnum=\count124
+\c@extraauth=\count110
+\c@loopnum=\count111
+\thanksnum=\count112
+\savethanksnum=\count113
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
@@ -302,31 +274,31 @@ L3 Module: l3tl 2015/07/14 v5659 L3 Token lists
 L3 Module: l3str 2015/07/14 v5659 L3 Strings
 L3 Module: l3seq 2015/07/24 v5681 L3 Sequences and stacks
 L3 Module: l3int 2015/07/14 v5659 L3 Integers
-\c_max_int=\count125
-\l_tmpa_int=\count126
-\l_tmpb_int=\count127
-\g_tmpa_int=\count128
-\g_tmpb_int=\count129
+\c_max_int=\count114
+\l_tmpa_int=\count115
+\l_tmpb_int=\count116
+\g_tmpa_int=\count117
+\g_tmpb_int=\count118
 L3 Module: l3quark 2015/07/14 v5659 L3 Quarks
 L3 Module: l3prg 2015/07/30 v5722 L3 Control structures
-\g__prg_map_int=\count130
+\g__prg_map_int=\count119
 L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
 L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
 L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
 L3 Module: l3msg 2015/02/26 v5537 L3 Messages
 L3 Module: l3file 2015/07/30 v5714 L3 File and I/O operations
-\l_iow_line_count_int=\count131
-\l__iow_target_count_int=\count132
-\l__iow_current_line_int=\count133
-\l__iow_current_word_int=\count134
-\l__iow_current_indentation_int=\count135
+\l_iow_line_count_int=\count120
+\l__iow_target_count_int=\count121
+\l__iow_current_line_int=\count122
+\l__iow_current_word_int=\count123
+\l__iow_current_indentation_int=\count124
 L3 Module: l3skip 2015/07/14 v5659 L3 Dimensions and skips
-\c_zero_dim=\dimen128
-\c_max_dim=\dimen129
-\l_tmpa_dim=\dimen130
-\l_tmpb_dim=\dimen131
-\g_tmpa_dim=\dimen132
-\g_tmpb_dim=\dimen133
+\c_zero_dim=\dimen123
+\c_max_dim=\dimen124
+\l_tmpa_dim=\dimen125
+\l_tmpb_dim=\dimen126
+\g_tmpa_dim=\dimen127
+\g_tmpb_dim=\dimen128
 \c_zero_skip=\skip52
 \c_max_skip=\skip53
 \l_tmpa_skip=\skip54
@@ -340,62 +312,62 @@ L3 Module: l3skip 2015/07/14 v5659 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2015/07/26 v5684 L3 Key-value interfaces
-\g__keyval_level_int=\count136
-\l_keys_choice_int=\count137
+\g__keyval_level_int=\count125
+\l_keys_choice_int=\count126
 L3 Module: l3fp 2015/07/09 v5652 L3 Floating points
-\c__fp_leading_shift_int=\count138
-\c__fp_middle_shift_int=\count139
-\c__fp_trailing_shift_int=\count140
-\c__fp_big_leading_shift_int=\count141
-\c__fp_big_middle_shift_int=\count142
-\c__fp_big_trailing_shift_int=\count143
-\c__fp_Bigg_leading_shift_int=\count144
-\c__fp_Bigg_middle_shift_int=\count145
-\c__fp_Bigg_trailing_shift_int=\count146
+\c__fp_leading_shift_int=\count127
+\c__fp_middle_shift_int=\count128
+\c__fp_trailing_shift_int=\count129
+\c__fp_big_leading_shift_int=\count130
+\c__fp_big_middle_shift_int=\count131
+\c__fp_big_trailing_shift_int=\count132
+\c__fp_Bigg_leading_shift_int=\count133
+\c__fp_Bigg_middle_shift_int=\count134
+\c__fp_Bigg_trailing_shift_int=\count135
 L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
-\c_empty_box=\box56
-\l_tmpa_box=\box57
-\l_tmpb_box=\box58
-\g_tmpa_box=\box59
-\g_tmpb_box=\box60
+\c_empty_box=\box55
+\l_tmpa_box=\box56
+\l_tmpb_box=\box57
+\g_tmpa_box=\box58
+\g_tmpb_box=\box59
 L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
-\l__coffin_internal_box=\box61
-\l__coffin_internal_dim=\dimen134
-\l__coffin_offset_x_dim=\dimen135
-\l__coffin_offset_y_dim=\dimen136
-\l__coffin_x_dim=\dimen137
-\l__coffin_y_dim=\dimen138
-\l__coffin_x_prime_dim=\dimen139
-\l__coffin_y_prime_dim=\dimen140
-\c_empty_coffin=\box62
-\l__coffin_aligned_coffin=\box63
-\l__coffin_aligned_internal_coffin=\box64
-\l_tmpa_coffin=\box65
-\l_tmpb_coffin=\box66
-\l__coffin_display_coffin=\box67
-\l__coffin_display_coord_coffin=\box68
-\l__coffin_display_pole_coffin=\box69
-\l__coffin_display_offset_dim=\dimen141
-\l__coffin_display_x_dim=\dimen142
-\l__coffin_display_y_dim=\dimen143
+\l__coffin_internal_box=\box60
+\l__coffin_internal_dim=\dimen129
+\l__coffin_offset_x_dim=\dimen130
+\l__coffin_offset_y_dim=\dimen131
+\l__coffin_x_dim=\dimen132
+\l__coffin_y_dim=\dimen133
+\l__coffin_x_prime_dim=\dimen134
+\l__coffin_y_prime_dim=\dimen135
+\c_empty_coffin=\box61
+\l__coffin_aligned_coffin=\box62
+\l__coffin_aligned_internal_coffin=\box63
+\l_tmpa_coffin=\box64
+\l_tmpb_coffin=\box65
+\l__coffin_display_coffin=\box66
+\l__coffin_display_coord_coffin=\box67
+\l__coffin_display_pole_coffin=\box68
+\l__coffin_display_offset_dim=\dimen136
+\l__coffin_display_x_dim=\dimen137
+\l__coffin_display_y_dim=\dimen138
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
 L3 Module: l3candidates 2015/07/22 v5677 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen144
-\l__box_bottom_dim=\dimen145
-\l__box_left_dim=\dimen146
-\l__box_right_dim=\dimen147
-\l__box_top_new_dim=\dimen148
-\l__box_bottom_new_dim=\dimen149
-\l__box_left_new_dim=\dimen150
-\l__box_right_new_dim=\dimen151
-\l__box_internal_box=\box70
-\l__coffin_bounding_shift_dim=\dimen152
-\l__coffin_left_corner_dim=\dimen153
-\l__coffin_right_corner_dim=\dimen154
-\l__coffin_bottom_corner_dim=\dimen155
-\l__coffin_top_corner_dim=\dimen156
-\l__coffin_scaled_total_height_dim=\dimen157
-\l__coffin_scaled_width_dim=\dimen158
+\l__box_top_dim=\dimen139
+\l__box_bottom_dim=\dimen140
+\l__box_left_dim=\dimen141
+\l__box_right_dim=\dimen142
+\l__box_top_new_dim=\dimen143
+\l__box_bottom_new_dim=\dimen144
+\l__box_left_new_dim=\dimen145
+\l__box_right_new_dim=\dimen146
+\l__box_internal_box=\box69
+\l__coffin_bounding_shift_dim=\dimen147
+\l__coffin_left_corner_dim=\dimen148
+\l__coffin_right_corner_dim=\dimen149
+\l__coffin_bottom_corner_dim=\dimen150
+\l__coffin_top_corner_dim=\dimen151
+\l__coffin_scaled_total_height_dim=\dimen152
+\l__coffin_scaled_width_dim=\dimen153
 L3 Module: l3luatex 2015/06/30 v5646 L3 Experimental LuaTeX-specific functions
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
@@ -403,23 +375,23 @@ File: l3unicode-data.def 2015/07/20 v-1 L3 Unicode data
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2015/06/30 v5646 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count147
+\l__driver_color_stack_int=\count136
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2015/07/28 v5700 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count148
-\l__xparse_m_args_int=\count149
-\l__xparse_mandatory_args_int=\count150
-\l__xparse_processor_int=\count151
-\l__xparse_v_nesting_int=\count152
+\l__xparse_current_arg_int=\count137
+\l__xparse_m_args_int=\count138
+\l__xparse_mandatory_args_int=\count139
+\l__xparse_processor_int=\count140
+\l__xparse_v_nesting_int=\count141
 )
 Package: siunitx 2015/07/17 v2.6h A comprehensive (SI) units package
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen159
-\extrarowheight=\dimen160
-\NC@list=\toks22
+\col@sep=\dimen154
+\extrarowheight=\dimen155
+\NC@list=\toks21
 \extratabsurround=\skip58
 \backup@length=\skip59
 )
@@ -427,47 +399,47 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 Package: l3keys2e 2015/07/28 v5700 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
-\l__siunitx_tmp_box=\box71
-\l__siunitx_tmp_dim=\dimen161
-\l__siunitx_tmp_int=\count153
+\l__siunitx_tmp_box=\box70
+\l__siunitx_tmp_dim=\dimen156
+\l__siunitx_tmp_int=\count142
 Variant \prop_get:NVNT already defined; not changing it on line 380
 Variant \prop_get:NVNF already defined; not changing it on line 381
 Variant \prop_get:NVNTF already defined; not changing it on line 382
-\l__siunitx_number_mantissa_length_int=\count154
-\l__siunitx_number_uncert_length_int=\count155
-\l__siunitx_round_int=\count156
-\l__siunitx_process_decimal_int=\count157
-\l__siunitx_process_uncertainty_int=\count158
-\l__siunitx_process_fixed_int=\count159
-\l__siunitx_process_integer_min_int=\count160
-\l__siunitx_process_precision_int=\count161
-\l__siunitx_group_min_int=\count162
-\l__siunitx_angle_marker_box=\box72
-\l__siunitx_angle_unit_box=\box73
-\l__siunitx_angle_marker_dim=\dimen162
-\l__siunitx_angle_unit_dim=\dimen163
-\l__siunitx_unit_int=\count163
-\l__siunitx_unit_denominator_int=\count164
-\l__siunitx_unit_numerator_int=\count165
-\l__siunitx_unit_prefix_int=\count166
-\l__siunitx_unit_prefix_base_int=\count167
-\l__siunitx_unit_prefix_gram_int=\count168
-\l__siunitx_number_product_int=\count169
+\l__siunitx_number_mantissa_length_int=\count143
+\l__siunitx_number_uncert_length_int=\count144
+\l__siunitx_round_int=\count145
+\l__siunitx_process_decimal_int=\count146
+\l__siunitx_process_uncertainty_int=\count147
+\l__siunitx_process_fixed_int=\count148
+\l__siunitx_process_integer_min_int=\count149
+\l__siunitx_process_precision_int=\count150
+\l__siunitx_group_min_int=\count151
+\l__siunitx_angle_marker_box=\box71
+\l__siunitx_angle_unit_box=\box72
+\l__siunitx_angle_marker_dim=\dimen157
+\l__siunitx_angle_unit_dim=\dimen158
+\l__siunitx_unit_int=\count152
+\l__siunitx_unit_denominator_int=\count153
+\l__siunitx_unit_numerator_int=\count154
+\l__siunitx_unit_prefix_int=\count155
+\l__siunitx_unit_prefix_base_int=\count156
+\l__siunitx_unit_prefix_gram_int=\count157
+\l__siunitx_number_product_int=\count158
 \c__siunitx_one_fill_skip=\skip60
 \l__siunitx_table_unit_align_skip=\skip61
-\l__siunitx_table_exponent_dim=\dimen164
-\l__siunitx_table_integer_dim=\dimen165
-\l__siunitx_table_mantissa_dim=\dimen166
-\l__siunitx_table_marker_dim=\dimen167
-\l__siunitx_table_result_dim=\dimen168
-\l__siunitx_table_uncert_dim=\dimen169
-\l__siunitx_table_fill_pre_dim=\dimen170
-\l__siunitx_table_fill_post_dim=\dimen171
-\l__siunitx_table_fill_mid_dim=\dimen172
-\l__siunitx_table_pre_box=\box74
-\l__siunitx_table_post_box=\box75
-\l__siunitx_table_mantissa_box=\box76
-\l__siunitx_table_result_box=\box77
+\l__siunitx_table_exponent_dim=\dimen159
+\l__siunitx_table_integer_dim=\dimen160
+\l__siunitx_table_mantissa_dim=\dimen161
+\l__siunitx_table_marker_dim=\dimen162
+\l__siunitx_table_result_dim=\dimen163
+\l__siunitx_table_uncert_dim=\dimen164
+\l__siunitx_table_fill_pre_dim=\dimen165
+\l__siunitx_table_fill_post_dim=\dimen166
+\l__siunitx_table_fill_mid_dim=\dimen167
+\l__siunitx_table_pre_box=\box73
+\l__siunitx_table_post_box=\box74
+\l__siunitx_table_mantissa_box=\box75
+\l__siunitx_table_result_box=\box76
 \l__siunitx_table_number_align_skip=\skip62
 \l__siunitx_table_text_align_skip=\skip63
 .................................................
@@ -595,36 +567,36 @@ Package: translator 2010/06/12 ver 1.10
 uage-mappings.tex))) (./Trend_Analysis.aux)
 \openout1 = `Trend_Analysis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count170
-\scratchdimen=\dimen173
-\scratchbox=\box78
-\nofMPsegments=\count171
-\nofMParguments=\count172
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count173
-\MPscratchDim=\dimen174
-\MPnumerator=\count174
-\makeMPintoPDFobject=\count175
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count159
+\scratchdimen=\dimen168
+\scratchbox=\box77
+\nofMPsegments=\count160
+\nofMParguments=\count161
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count162
+\MPscratchDim=\dimen169
+\MPnumerator=\count163
+\makeMPintoPDFobject=\count164
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -680,79 +652,112 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/local/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2015/07/17 v2.6h siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count176
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 30
+\c__siunitx_mathsf_int=\count165
+LaTeX Font Info:    Calculating math sizes for size <9.85> on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 29
 .
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 30
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 29
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 30
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 29
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 30
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 29
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.85> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.28905> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.91005> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+\c__siunitx_mathtt_int=\count166
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
-\c__siunitx_mathtt_int=\count177
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 31.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
 )
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 4.85pt on input line 32.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7.28905> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 31.
 
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
-[1{/Users/ajsmit/Library/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.
-map}]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 32.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlptm.fd
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.29004> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.10005> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 31.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 32.
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8.5> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 31.
 
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
+(Font)              size <8> substituted on input line 31.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+
+Overfull \vbox (22.7106pt too high) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+ [1{/Users/ajsmit/Library/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex
+.map}
+
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \vbox (102.16792pt too high) has occurred while \output is active []
-
-
-[3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-[7]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ˜ in font ptmr7t!
@@ -760,160 +765,98 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[3]
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9.85> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 89.
+ [4]
+Underfull \vbox (badness 2229) has occurred while \output is active []
 
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [5]
+[6] (./Trend_Analysis.bbl [7]
+Underfull \hbox (badness 1571) in paragraph at lines 120--124
+[]\OT1/ptm/m/n/8 Ohring, G., B. Wielicki, R. Spencer, B. Emery, and R. Datla,
+ []
 
- [9]
-[10] [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-Underfull \vbox (badness 1946) has occurred while \output is active []
-
- [19]
-(./Trend_Analysis.bbl [20] [21]
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
- [22]
-[23] [24])
-\openout4 = `Trend_Analysis.fff'.
-
- (Trend_Analysis.fff)
-AED endfloat: Processing end Figures and Tables [25] (./Trend_Analysis.lof
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-)
-\tf@lof=\write5
-\openout5 = `Trend_Analysis.lof'.
-
-
-[26
-
-
-] (./Trend_Analysis.fff <figure01.pdf, id=96, 578.16pt x 361.35pt>
+) <figure01.pdf, id=37, 578.16pt x 361.35pt>
 File: figure01.pdf Graphic file (type pdf)
-
-<use figure01.pdf>
-Package pdftex.def Info: figure01.pdf used on input line 2.
+ <use figure01.pdf>
+Package pdftex.def Info: figure01.pdf used on input line 330.
 (pdftex.def)             Requested size: 213.39566pt x 133.37209pt.
- [27 <./figure01.pdf>]
-<figure00.pdf, id=110, 578.16pt x 234.8775pt>
+
+<figure00.pdf, id=38, 578.16pt x 234.8775pt>
 File: figure00.pdf Graphic file (type pdf)
  <use figure00.pdf>
-Package pdftex.def Info: figure00.pdf used on input line 9.
+Package pdftex.def Info: figure00.pdf used on input line 336.
 (pdftex.def)             Requested size: 213.39566pt x 86.69185pt.
- [28 <./figure00.pdf>] <figure02.pdf, id=121, 505.89pt x 325.215pt>
+
+<figure02.pdf, id=39, 505.89pt x 325.215pt>
 File: figure02.pdf Graphic file (type pdf)
  <use figure02.pdf>
-Package pdftex.def Info: figure02.pdf used on input line 16.
+Package pdftex.def Info: figure02.pdf used on input line 342.
 (pdftex.def)             Requested size: 213.39566pt x 137.18484pt.
 
-[29 <./figure02.pdf>] <figure03.pdf, id=136, 578.16pt x 144.54pt>
+<figure03.pdf, id=40, 578.16pt x 144.54pt>
 File: figure03.pdf Graphic file (type pdf)
-
-<use figure03.pdf>
-Package pdftex.def Info: figure03.pdf used on input line 23.
+ <use figure03.pdf>
+Package pdftex.def Info: figure03.pdf used on input line 348.
 (pdftex.def)             Requested size: 213.39566pt x 53.34883pt.
- [30 <./figure03.pdf>]
-<figure04.pdf, id=150, 361.35pt x 505.89pt>
+
+<figure04.pdf, id=41, 361.35pt x 505.89pt>
 File: figure04.pdf Graphic file (type pdf)
  <use figure04.pdf>
-Package pdftex.def Info: figure04.pdf used on input line 30.
+Package pdftex.def Info: figure04.pdf used on input line 354.
 (pdftex.def)             Requested size: 213.39566pt x 298.75812pt.
- [31 <./figure04.pdf>] <figure05.pdf, id=166, 289.08pt x 505.89pt>
+
+<figure05.pdf, id=42, 289.08pt x 505.89pt>
 File: figure05.pdf Graphic file (type pdf)
  <use figure05.pdf>
-Package pdftex.def Info: figure05.pdf used on input line 37.
+Package pdftex.def Info: figure05.pdf used on input line 360.
 (pdftex.def)             Requested size: 213.39566pt x 373.44185pt.
- [32 <./figure05.pdf>] <figure06.pdf, id=180, 722.7pt x 433.62pt>
+
+<figure06.pdf, id=43, 722.7pt x 433.62pt>
 File: figure06.pdf Graphic file (type pdf)
  <use figure06.pdf>
-Package pdftex.def Info: figure06.pdf used on input line 44.
+Package pdftex.def Info: figure06.pdf used on input line 366.
 (pdftex.def)             Requested size: 213.39566pt x 128.03589pt.
 
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 45.
-
-[33 <./figure06.pdf>] <figure07.pdf, id=195, 433.62pt x 216.81pt>
+<figure07.pdf, id=44, 433.62pt x 216.81pt>
 File: figure07.pdf Graphic file (type pdf)
-
-<use figure07.pdf>
-Package pdftex.def Info: figure07.pdf used on input line 51.
+ <use figure07.pdf>
+Package pdftex.def Info: figure07.pdf used on input line 372.
 (pdftex.def)             Requested size: 213.39566pt x 106.69766pt.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 52.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 52.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 52.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 52.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 52.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.77005> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.30006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-[34 <./figure07.pdf>]) (./Trend_Analysis.aux)
+ [8 <./figure01.pdf>] [9 <./figure00.pdf> <./figure02.pdf> <./figure03.pdf> <./
+figure04.pdf>]
+[10 <./figure05.pdf> <./figure06.pdf> <./figure07.pdf>] (./Trend_Analysis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
+(Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 13466 strings out of 493091
- 263754 string characters out of 6134964
- 280575 words of memory out of 5000000
- 16752 multiletter control sequences out of 15000+600000
- 63476 words of font info for 152 fonts, out of 8000000 for 9000
+ 13090 strings out of 493091
+ 258227 string characters out of 6134964
+ 284534 words of memory out of 5000000
+ 16381 multiletter control sequences out of 15000+600000
+ 84687 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,42p,10395b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,14n,42p,10395b,948s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on Trend_Analysis.pdf (34 pages, 923618 bytes).
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on Trend_Analysis.pdf (10 pages, 915635 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
+ 168 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
