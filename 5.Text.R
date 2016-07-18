@@ -382,7 +382,7 @@ gls_df_natural_no_0 %>%
   facet_grid(prec~DT)
 
 # Set model for use
-lm_fun<- function(df) {
+lm_fun <- function(df) {
     model <- glm(abs(DT_perc)~length, data = df)
     stats <- data.frame(
         intercept = round(as.numeric(coef(model)[1]), 4),
@@ -411,13 +411,13 @@ DT_perc_length_df <- DT_perc_length_df %>%
 
 ## Is it easier to detect a trend on which coast?
 
-
 # Number of sites per coast
-length(levels(droplevels(gls_nat$index[gls_nat$coast == "wc"]))) # 16
-length(levels(droplevels(gls_nat$index[gls_nat$coast == "sc"]))) # 21
-length(levels(droplevels(gls_nat$index[gls_nat$coast == "ec"]))) # 47
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$coast == "wc"]))) # 16
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$coast == "sc"]))) # 21
+length(levels(droplevels(gls_df_natural$index[gls_df_natural$coast == "ec"]))) # 47
 
 # Shape data for plotting
+  # Only show precision 0.01
 dat <- gls_df_natural %>%
   filter(prec == "prec001") %>%
   select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
@@ -434,7 +434,8 @@ dat %>%
   ggplot(aes(x = sd_initial, y = p_trend)) + bw_update +
   geom_hline(yintercept = 0.05, col = "red") +
   geom_point(aes(size = length, colour = coast), shape = 21, stroke = 0.2) +
-  geom_smooth(aes(colour = coast), method = "glm") +
+  # geom_smooth(aes(colour = coast), method = "glm") +
+  geom_smooth(aes(fill = coast), method = "lm", size = 0.3, col = "black") +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Time series length (months)") +

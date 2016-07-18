@@ -340,16 +340,20 @@ dat %>%
 ggsave("graph/all_plt7_no_interp_natural.pdf", plot = last_plot(), width = 8, height = 2, units = "in")
 
 # plotting ts length vs. se_trend (grown, no-interp) ----------------------
+dat_gro_DT020 <- dat_gro %>%
+  filter(DT == "DT020")
+
 dat_gro %>%
+  filter(DT == 0.20) %>% 
   ggplot(aes(x = year_index, y = se_trend, group = fac)) +
-  geom_line(aes(col = sd_initial), alpha = 0.35, show.legend = TRUE) +
+  geom_line(aes(col = sd_initial), alpha = 0.7, show.legend = TRUE) +
   scale_x_continuous(name = "Time series length (years)") +
   scale_y_continuous(name = "SE of trend") +
   scale_colour_distiller(name = expression(paste("Initial SD (", degree, "C)")),
                          palette = "Spectral") +
-  facet_wrap("DT", ncol = 1) +
+  # facet_wrap("DT", ncol = 1) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
-ggsave("graph/all_plt7_no_interp_grown.pdf", plot = last_plot(), width = 4, height = 7, units = "in")
+ggsave("graph/all_plt7_no_interp_grown.pdf", plot = last_plot(), width = 4, height = 2, units = "in")
 
 
 # The effect of interpolation on the data ---------------------------------
