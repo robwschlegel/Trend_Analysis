@@ -49,7 +49,7 @@
  
 \begin{figure}
 \centering \includegraphics[width=1.0\textwidth]{figure08}
-\caption{Plots representing correlations of the modeled trends acquired at different levels of rounding, which can be interpreted as representations of different measurement precisions. The effect of rounding from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} may be seen in the panel on the left. The panel on the right shows that rounding from a precision of \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has an visibly greater effect on the deterioration of the correlation between the two sets of estimated trends.}
+\caption{Plots representing correlations of the modeled trends acquired at different levels of rounding, which can be interpreted as representations of different measurement precisions. The effect of rounding from \SI{0.001}{\degreeCelsius} to \SI{0.01}{\degreeCelsius} may be seen in the panel on the left. The panel on the right shows that rounding from a precision of \SI{0.001}{\degreeCelsius} to \SI{0.5}{\degreeCelsius} has a visibly greater effect on the deterioration of the correlation between the two sets of estimated trends.}
 \label{figure08}
 \end{figure}
 \efloatseparator
