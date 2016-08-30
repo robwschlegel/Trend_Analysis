@@ -65,3 +65,6 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 * Corrected figure size and text sizes therein
 * Final proofread
 * Submitted paper for further review
+
+## 2016/08/30
+* Addressed final round of reviewer comments
