@@ -139,8 +139,8 @@ accuracy2 <- gls_df_natural_no_0[abs(gls_df_natural_no_0$DT_perc) <= 5.0 & gls_d
 
 ## Intro
 # Quantify the effect on DT_perc AND p_trend of: length, DT, SD_initial, NA, precision
-  # Use linear models as this more broadly measures the relationship between the variables
-  # Not using min and max values as these are only two data points and could be misrepresentative
+# Use linear models as this more broadly measures the relationship between the variables
+# Not using min and max values as these are only two data points and could be misrepresentative
 
 ## Histograms of residuals after fitting GLM to the transformed and untransformed data to find best model
 # hist(glm(abs(DT_perc)~length, data = gls_df_natural_no_0, family = gaussian)$residuals) # Gaussian appears better...
@@ -173,7 +173,7 @@ variable.effects <- function(df) {
               round(as.numeric(coef(model_p)[2]), 4))
   )
   # Effect of DT_real
-    ## NB: These results will be NA when "DT" is used as a grouping variable in plyr!
+  ## NB: These results will be NA when "DT" is used as a grouping variable in plyr!
   model_DT <- glm(abs(DT_perc)~DT_real, family = gaussian, data = df)
   model_p <- glm(p_trend~DT_real, family = gaussian, data = df)
   stats_DT <- data.frame(
@@ -207,7 +207,7 @@ variable.effects <- function(df) {
               round(as.numeric(coef(model_p)[2]), 4))
   )
   # Effect of prec_real
-    ## NB: These results will be NA when "prec" is used as a grouping variable in plyr!
+  ## NB: These results will be NA when "prec" is used as a grouping variable in plyr!
   model_DT <- glm(abs(DT_perc)~prec_real, family = gaussian, data = df)
   model_p <- glm(p_trend~prec_real, family = gaussian, data = df)
   stats_prec <- data.frame(
@@ -227,7 +227,7 @@ variable.effects <- function(df) {
 }
 
 # Calculate relationship of DT_perc with length for all DTs and precisions
-  # Change the grouping variables in the following line to change how the interactions of variables are viewed
+# Change the grouping variables in the following line to change how the interactions of variables are viewed
 mod_vars <- dlply(gls_df_natural_no_0[gls_df_natural_no_0$DT == "DT010",], .(DT, round_any(sd_initial,0.5), prec), .progress = "text", .parallel = FALSE, variable.effects)
 vars_df <- ldply(mod_vars, data.frame, .progress = "text")
 vars_df_sub <- vars_df %>% 
@@ -246,30 +246,30 @@ ggplot(data=gls_df_natural_no_0, aes(x = DT_real, y=abs(DT_perc)))+ # Visualise 
   geom_point() +
   geom_smooth(method = "glm")
 (max(gls_df_natural_no_0$length) * coef(lm(abs(abs(DT_perc))~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$length) * coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~length, data = gls_df_natural_no_0))[1])
-  # -112.14% is the spread of DT accuracy imposed by the natural length range in the dataset
+# -112.14% is the spread of DT accuracy imposed by the natural length range in the dataset
 
 # predict(gls_df_natural_no_0, lm(abs(abs(DT_perc))~length))
 
 # DT #
 (max(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$DT_real) * coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~DT_real, data = gls_df_natural_no_0))[1])
-  # -71.66% range
+# -71.66% range
 
 # sd_initial #
 # ggplot(data=gls_df_natural_no_0[,c(7,17)], aes(x = sd_initial, y=abs(DT_perc)))+ # Visualise test
 #   geom_point() +
 #   geom_smooth(method = "lm")
 (max(gls_df_natural_no_0$sd_initial) * coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$sd_initial) * coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~sd_initial, data = gls_df_natural_no_0))[1])
-  # -14.84% range
-    # Admittedly, a linear relationship isn't the best description
+# -14.84% range
+# Admittedly, a linear relationship isn't the best description
 
 # NA% #
 (max(gls_df_natural_no_0$na_perc) * coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[1]) - (min(gls_df_natural_no_0$na_perc) * coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[2] + coef(lm(abs(DT_perc)~na_perc, data = gls_df_natural_no_0))[1])
-  # 12.84% range
+# 12.84% range
 
 # Precision #
-  # Run analysis
+# Run analysis
 (max(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1]) - (min(gls_df_natural_no_0_precision$prec_real) * coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[2] + coef(lm(abs(DT_perc)~prec_real, data = gls_df_natural_no_0_precision))[1])
-  # -0.20% range
+# -0.20% range
 ggplot(data = gls_df_natural_no_0_precision[,c(17,19)],
        aes(x = prec_real, y=abs(DT_perc)))+ # Visualise test
   geom_point() +
@@ -362,7 +362,7 @@ prec_range_results_table <- prec_results_table %>%
   mutate(DT_perc_sd = range(DT_perc_sd)[2]-range(DT_perc_sd)[1]) %>% 
   mutate(se_trend_mean = range(se_trend_mean)[2]-range(se_trend_mean)[1]) %>% 
   mutate(se_trend_sd = range(se_trend_sd)[2]-range(se_trend_sd)[1])
-  # No one "prec" provides the best fit, but "prec05" is always the worst
+# No one "prec" provides the best fit, but "prec05" is always the worst
 
 prec_range_results_table <- prec_range_results_table[c(1,3:10)] %>% 
   unique()
@@ -383,31 +383,31 @@ gls_df_natural_no_0 %>%
 
 # Set model for use
 lm_fun <- function(df) {
-    model <- glm(abs(DT_perc)~length, data = df)
-    stats <- data.frame(
-        intercept = round(as.numeric(coef(model)[1]), 4),
-        slope = round(as.numeric(coef(model)[2]), 4)
-      )
-    return(stats)
+  model <- glm(abs(DT_perc)~length, data = df)
+  stats <- data.frame(
+    intercept = round(as.numeric(coef(model)[1]), 4),
+    slope = round(as.numeric(coef(model)[2]), 4)
+  )
+  return(stats)
 }
 
 # Calculate relationship of DT_perc with length for all DTs and precisions
 mod_lm <- dlply(gls_df_natural_no_0, .(DT, prec), .progress = "text", .parallel = FALSE, lm_fun)
 DT_perc_length_df <- ldply(mod_lm, data.frame, .progress = "text")
-  ## The results are very interesting but I will need to take a look at them with fresh eyes
+## The results are very interesting but I will need to take a look at them with fresh eyes
 ggplot(lm_df, aes(x = intercept, y = slope)) +
   geom_point(aes(colour = DT, shape = prec)) #+
-  # geom_line(aes(colour = DT))
-  ## The effect of DT on the relationship between length and DT_perc appears very significant
-  ## The effect of prec05 also appears significantly different from the other precisions
-  ## Also, the effect of DT on the aforementioned relationship appears oddly linear
-    ## What could that mean?
+# geom_line(aes(colour = DT))
+## The effect of DT on the relationship between length and DT_perc appears very significant
+## The effect of prec05 also appears significantly different from the other precisions
+## Also, the effect of DT on the aforementioned relationship appears oddly linear
+## What could that mean?
 
 # Calculate when each pairing would allow the modelled slope to become the same as the real slope
 DT_perc_length_df <- DT_perc_length_df %>% 
   mutate(singularity = intercept/slope)
-  # This may not be the best way to measure this...
-    # Perhaps calculating when the slope first enters a 90% CI range would be better...
+# This may not be the best way to measure this...
+# Perhaps calculating when the slope first enters a 90% CI range would be better...
 
 ## Is it easier to detect a trend on which coast?
 
@@ -417,7 +417,7 @@ length(levels(droplevels(gls_df_natural$index[gls_df_natural$coast == "sc"]))) #
 length(levels(droplevels(gls_df_natural$index[gls_df_natural$coast == "ec"]))) # 47
 
 # Shape data for plotting
-  # Only show precision 0.01
+# Only show precision 0.01
 dat <- gls_df_natural %>%
   filter(prec == "prec001") %>%
   select(site, src, DT, DT_model, se_trend, sd_initial, sd_residual,
@@ -432,13 +432,14 @@ dat$DT <- as.numeric(dat$DT)
 
 dat %>%
   ggplot(aes(x = sd_initial, y = p_trend)) + bw_update +
-  geom_hline(yintercept = 0.05, col = "red") +
-  geom_point(aes(size = length, colour = coast), shape = 21, stroke = 0.2) +
+  geom_hline(yintercept = 0.05, col = "black") +
+  geom_point(aes(size = length, shape = coast), stroke = 0.2) +
   # geom_smooth(aes(colour = coast), method = "glm") +
-  geom_smooth(aes(fill = coast), method = "lm", size = 0.3, col = "black") +
+  geom_smooth(aes(linetype = coast), method = "lm", size = 0.3, col = "black", fill = "grey20") +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Time series length (months)") +
+  scale_shape_discrete(solid = F) +
   facet_wrap("DT", ncol = 1) +
   theme(axis.title = element_text(size = 12),
         legend.title = element_text(size = 10))

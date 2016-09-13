@@ -1,6 +1,6 @@
 \begin{figure}
 \centering \includegraphics[width=1.0\textwidth]{figure01}
-\caption{Map of South Africa indicating the location of the 129 time series comprising the South African Coastal Temperature Network. The location of the 84 time series used in this study are shown as solid white circles and the unused data sets as opaque.}
+\caption{Map of South Africa indicating the location of the 129 time series currently comprising the South African Coastal Temperature Network. The location of the 84 time series used in this study are shown as solid white circles and the unused time series as opaque.}
 \label{figure01}
 \end{figure}
 \efloatseparator
@@ -14,35 +14,35 @@
  
 \begin{figure}
 \centering \includegraphics[width=1.0\textwidth]{figure03}
-\caption{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box and whisker plot shows the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data and their colors are scaled according to the length of the time series they represent.}
+\caption{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box and whisker plot shows the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data and their sizes are scaled according to the length of the time series they represent.}
 \label{figure03}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
 \centering \includegraphics[width=1.0\textwidth]{figure04}
-\caption{The relationship between the length of a time series, the size of the modeled trend and its standard error (SE). Each individual line shows the modeled trend for one of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 years in length to the maximum duration available for the site. The panels show the progressive effect that decadal trend has on this relationship (indicated by the numeral above each panel), and color is mapped to the SE of the trend.}
+\caption{The relationship between the length of a time series, the size of the modeled trend and its standard error (SE). Each individual line shows the modeled trend for one of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 years in length to the maximum duration available for the site. The panels show the progressive effect that decadal trend has on this relationship (indicated by the numeral above each panel), and the SE of the trend is shown in shades of gray.}
 \label{figure04}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
 \centering \includegraphics[width=0.65\textwidth]{figure05}
-\caption{The effect of the SD of the anomaly time series before adding a decadal trend (`Initial SD'), or rounding the data to the different levels of precision, on the significance of the modeled trend. The size of the symbols are scaled in direct proportion to the time series length. Time series belonging to the three South African coastal sections are represented in color. The east coast (ec) typically has the most stable thermal regime of the three coasts, with the south coast (sc) having the greatest amount of variance and the west coast (wc) consisting of areas with both high and low variance. Linear models with 95\% confidence intervals (indicated by colored ribbons) have been fitted separately for each coastal section, and illustrate the interaction between Initial SD in each group and the significance (\emph{p}-value) of the GLS models. The panels, from top to bottom, show increasing decadal trends as indicated by numerals above the panels.}
+\caption{The effect of the SD of the anomaly time series before adding a decadal trend (`Initial SD'), or rounding the data to the different levels of precision, on the significance of the modeled trend. The size of the symbols are scaled in direct proportion to the time series length. Time series belonging to the three South African coastal sections are represented with shapes. The east coast (ec) typically has the most stable thermal regime of the three coasts, with the south coast (sc) having the greatest amount of variance and the west coast (wc) consisting of areas with both high and low variance. Linear models with 95\% confidence intervals (indicated by gray ribbons) have been fitted separately for each coastal section, and illustrate the interaction between Initial SD in each group and the significance (\emph{p}-value) of the GLS models. The panels, from top to bottom, show increasing decadal trends as indicated by numerals above the panels. The bold black line in each panel denotes \emph{p}-value = 0.05.}
 \label{figure05}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
 \centering \includegraphics[width=0.65\textwidth]{figure06}
-\caption{The relationship between the effect of Initial SD (\emph{i.e.} the variance of the anomaly time series before adding artificial decadal trends; shown here in color), on the standard error (SE) of a modeled trend, controlled for by the length of the time series. The effect of the size of the added decadal trends on the relationship is imperceptible and therefore only decadal trend of \SI{0.2}{\degreeCelsius}~dec$^{-1}$ is presented.}
+\caption{The relationship between the effect of Initial SD (\emph{i.e.} the variance of the anomaly time series before adding artificial decadal trends; shown here in shades of gray), on the standard error (SE) of a modeled trend, controlled for by the length of the time series. The effect of the size of the added decadal trends on the relationship is imperceptible and therefore only the fitted decadal trend of \SI{0.20}{\degreeCelsius}~dec$^{-1}$ is presented.}
 \label{figure06}
 \end{figure}
 \efloatseparator
  
 \begin{figure}
 \centering \includegraphics[width=1.0\textwidth]{figure07}
-\caption{The relationship between the amount of missing values (\%\texttt{NA}) and the significance of a modeled trend. Each panel shows the effect of an increasingly larger amount of missing values, indicated above each panel by numerals. The fitted lines and 95\% confidence intervals (shown as colored bands) represent each of the five decadal trends assessed.}
+\caption{The relationship between the amount of missing values (\%\texttt{NA}) and the significance of a modeled trend. Each panel shows the effect of an increasingly larger amount of missing values, indicated above each panel by numerals. The fitted lines and 95\% confidence intervals (shown as shaded gray bands) represent each of the five decadal trends assessed.}
 \label{figure07}
 \end{figure}
 \efloatseparator
