@@ -122,7 +122,7 @@ map <- SA +
   #                   label = c("new", "old", "thermo")) +
   # guides(shape = guide_legend("Type", override.aes = list(size = 2.5, colour = "black"))) +
   labs(title = NULL, x = NULL, y = NULL) #+
-  # theme(legend.key = element_blank())
+# theme(legend.key = element_blank())
 map
 
 ##########################################################################
