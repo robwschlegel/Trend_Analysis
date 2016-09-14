@@ -154,9 +154,9 @@ SACTN_flat
 # boxplots ----------------------------------------------------------------
 SACTN_flat %>% # remains unchanged
   ggplot(aes(x = index, y = temp, group = index)) +
-  geom_hline(yintercept = 0, size = 0.4, col = "red") +
   geom_boxplot(size = 0.3, outlier.size = 0.5, show.legend = FALSE,
                outlier.shape = 21, notch = TRUE, fill = "grey80", varwidth = TRUE) +
+  geom_hline(yintercept = 0, size = 0.8, col = "black", linetype = "dashed") +
   scale_x_discrete(name = "Time series no.", labels = 1:length(levels(SACTN_flat$index))) +
   scale_y_continuous(name = expression(paste("Detrended temperature anomaly (", degree, "C)"))) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5, size = 8),
@@ -183,9 +183,9 @@ cor2 <- cor.test(x = x1$DT_model, y = x4$DT_model)
 # correlation plots -------------------------------------------------------
 pdf(file = "graph/correlations_new.pdf", width = 6, height = 3)
 par(mfrow=c(1, 2))
-plot(x1$DT_model, x2$DT_model, pch = ".", col = "red", type = "p",
+plot(x1$DT_model, x2$DT_model, pch = ".", col = "black", type = "p",
      xlab = "Precision: 0.001", ylab = "Precision: 0.01")
-plot(x1$DT_model, x4$DT_model, pch = ".", col = "red", type = "p",
+plot(x1$DT_model, x4$DT_model, pch = ".", col = "black", type = "p",
      xlab = "Precision: 0.001", ylab = "Precision: 0.5")
 par(mfrow=c(1, 1))
 dev.off()
@@ -239,14 +239,18 @@ dat %>%
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
 ggsave("graph/all_plt0_no_interp_natural.pdf", plot = last_plot(), width = 7, height = 4.5, units = "in")
 
+bins <- cut(dat$length, breaks = seq(from = min(dat$length) - 1, to = max(dat$length), length.out = 10), 
+            right = FALSE, include.lowest = TRUE)
+
 dat %>%
   ggplot(aes(x = DT, y = DT_model, group = as.factor(DT))) +
-  geom_jitter(aes(col = length), show.legend = TRUE, width = 0.015, shape = 1) +
-  geom_boxplot(fill = "grey20", alpha = 0.35, outlier.colour = NA, size = 0.3) +
+  geom_boxplot(fill = "white", outlier.colour = NA, size = 0.3) +
+  geom_jitter(aes(size = length), show.legend = TRUE, width = 0.025, shape = 1) +
   scale_x_continuous(name = expression(paste("Actual trend (", degree, "C/dec)"))) +
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C/dec)")),
                      breaks = c(-0.2, 0, 0.05, 0.1, 0.15, 0.2, 0.4)) +
-  scale_colour_distiller(name = "Time series length (months)", palette = "Spectral") +
+  # scale_colour_grey(name = "Time series length (months)", start = 1, end = 0.1, na.value = "red") +
+  scale_size_area(name = "Time series length (months)", max_size = 3) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5),
         axis.title = element_text(size = 14),
         legend.title = element_text(size = 10))
@@ -270,14 +274,14 @@ dat_gro %>%
   scale_x_continuous(name = "Time series length (years)") +
   scale_y_continuous(name = expression(paste("Model trend (", degree, "C)")),
                      limits = c(-2, 2)) +
-  scale_colour_distiller(name = "SE of trend", palette = "Spectral") +
+  scale_colour_distiller(name = "SE of trend", palette = "Greys") +
   facet_wrap("DT", ncol = 5) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5),
         legend.position = "right",
         legend.direction = "vertical",
         axis.title = element_text(size = 14),
         legend.title = element_text(size = 10))
-ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 3, units = "in")
+ggsave("graph/all_plt2_no_interp_gro.pdf", plot = last_plot(), width = 8, height = 2.0, units = "in")
 
 # plotting p-value vs. SD (initial) (natural, no-interp) ------------------
 dat %>%
@@ -346,11 +350,11 @@ dat_gro_DT020 <- dat_gro %>%
 dat_gro %>%
   filter(DT == 0.20) %>% 
   ggplot(aes(x = year_index, y = se_trend, group = fac)) +
-  geom_line(aes(col = sd_initial), alpha = 0.7, show.legend = TRUE) +
+  geom_line(aes(col = sd_initial), alpha = 0.7, show.legend = TRUE, size = 0.5) +
   scale_x_continuous(name = "Time series length (years)") +
   scale_y_continuous(name = "SE of trend") +
   scale_colour_distiller(name = expression(paste("Initial SD (", degree, "C)")),
-                         palette = "Spectral") +
+                         direction = 1, palette = "Greys") +
   # facet_wrap("DT", ncol = 1) +
   theme(axis.text.x  = element_text(angle = 90, vjust = 0.5))
 ggsave("graph/all_plt7_no_interp_grown.pdf", plot = last_plot(), width = 4, height = 2, units = "in")
@@ -449,7 +453,7 @@ gls_df_interp_grow %>%
   # geom_smooth(aes(colour = as.factor(DT)), method = "glm", method.args = list(family = "poisson")) +
   scale_x_continuous(name = "Log % NA Interpolated") +
   scale_y_continuous(name = "p-value") +
-  scale_fill_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
+  scale_fill_grey(name = expression(paste("Trend (", degree, "C/dec)")), start = 0.1, end = 0.9) +
   scale_shape_discrete(name = expression(paste("Trend (", degree, "C/dec)"))) +
   facet_wrap(~miss_limit, scales = "free_x") 
 ggsave("graph/interp_NA_perc.pdf", height = 6, width = 10)

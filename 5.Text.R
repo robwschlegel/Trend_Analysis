@@ -432,13 +432,14 @@ dat$DT <- as.numeric(dat$DT)
 
 dat %>%
   ggplot(aes(x = sd_initial, y = p_trend)) + bw_update +
-  geom_hline(yintercept = 0.05, col = "red") +
-  geom_point(aes(size = length, colour = coast), shape = 21, stroke = 0.2) +
+  geom_hline(yintercept = 0.05, col = "black") +
+  geom_point(aes(size = length, shape = coast), stroke = 0.2) +
   # geom_smooth(aes(colour = coast), method = "glm") +
-  geom_smooth(aes(fill = coast), method = "lm", size = 0.3, col = "black") +
+  geom_smooth(aes(linetype = coast), method = "lm", size = 0.3, col = "black", fill = "grey20") +
   scale_y_continuous(name = "p-value", limits = c(0, 1)) +
   scale_x_continuous(name = expression(paste("Initial SD (", degree, "C)"))) +
   scale_size_continuous(name = "Time series length (months)") +
+  scale_shape_discrete(solid = F) +
   facet_wrap("DT", ncol = 1) +
   theme(axis.title = element_text(size = 12),
         legend.title = element_text(size = 10))
