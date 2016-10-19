@@ -68,3 +68,6 @@ All of the files used to produce "Effects of Natural Variability of Seawater Tem
 
 ## 2016/08/30
 * Addressed final round of reviewer comments
+
+## 2016/10/19
+* Made changes to match those made by editor during type setting

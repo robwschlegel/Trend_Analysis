@@ -13,12 +13,12 @@
 %==============================================================================
 \bibpunct{(}{)}{;}{a}{}{,}
 
-\title{Climate change in coastal seas: time series properties affecting trend estimation}
+\title{Climate change in coastal waters: time series properties affecting trend estimation}
 
 \authors{Robert W. Schlegel\correspondingauthor{Robert W. Schlegel, Department of Biodiversity and Conservation Biology, University of the Western Cape, Bellville, Republic of South Africa.}
  and Albertus J. Smit}
 
-\affiliation{Department of Biodiversity and Conservation Biology, University of the Western Cape, Bellville, Republic of South Africa}
+\affiliation{Department of Biodiversity and Conservation Biology, University of the Western Cape, Robert Sobukwe Road, Bellville, 7535, Republic of South Africa}
 
 \email{3503570@myuwc.ac.za}
 
@@ -89,7 +89,7 @@ and the white noise series is
 
 $$w_{t} \sim \mathrm{i.i.d.}~N(0,\sigma^{2})$$
 
-This approach is similar to that of the IPCC, although the latter uses an AR(1) error term \citep{IPCC2013supp}. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended time series would affect the models' ability to detect trends -- in other words, by comparing the estimates of the trends themselves and how these deviate from the known trend.
+This approach is similar to that of the IPCC, although the latter uses an AR(1) error term \citep{IPCC2013supp}. Another difference from the IPCC approach is that we nested the autoregressive component within year. This modeling approach allowed us to assess how various properties of the detrended time series would affect the models' ability to detect trends by comparing the estimates of the trends against the known artificially added trends.
 
 \section{Results}
 
@@ -101,7 +101,7 @@ This approach is similar to that of the IPCC, although the latter uses an AR(1) 
 
 \begin{figure}
 \centering \includegraphics[width=0.50\textwidth]{figure03}
-\caption{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box and whisker plot shows the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data and their sizes are scaled according to the length of the time series they represent.}
+\caption{The effect of time series length on the ability of the GLS model to accurately detect the trend added to each time series. The box and whisker plot shows the first and third quartile as the extremities of the boxes, the median is shown as the horizontal line within each box, and the minima and maxima are indicated by the whiskers. Points indicate the spread of the actual data and their size are scaled according to the length of the time series they represent.}
 \label{figure03}
 \end{figure}
 
@@ -111,19 +111,19 @@ As would be expected, the size of the decadal trend estimated by the GLS increas
 
 \begin{figure}
 \centering \includegraphics[width=0.50\textwidth]{figure04}
-\caption{The relationship between the length of a time series, the size of the modeled trend and its standard error (SE). Each individual line shows the modeled trend for one of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 years in length to the maximum duration available for the site. The panels show the progressive effect that decadal trend has on this relationship (indicated by the numeral above each panel), and the SE of the trend is shown in shades of gray.}
+\caption{The relationship between the length of a time series, the size of the modeled trend and its standard error (SE). Each individual line shows the modeled trend for 1 of the 84 sites used in this analysis to which a model was fitted iteratively as the time series length was `grown' from 5 yr in length to the maximum duration available for the site. The panels show the progressive effect that decadal trend has on this relationship (indicated by the numeral above each panel), and the gray shade shown on the right, is mapped to the SE of the trend.}
 \label{figure04}
 \end{figure}
 
 \begin{figure}
 \centering \includegraphics[width=0.50\textwidth]{figure05}
-\caption{The effect of the SD of the anomaly time series before adding a decadal trend (`Initial SD'), or rounding the data to the different levels of precision, on the significance of the modeled trend. The size of the symbols are scaled in direct proportion to the time series length. Time series belonging to the three South African coastal sections are represented with shapes. The east coast (ec) typically has the most stable thermal regime of the three coasts, with the south coast (sc) having the greatest amount of variance and the west coast (wc) consisting of areas with both high and low variance. Linear models with 95\% confidence intervals (indicated by gray ribbons) have been fitted separately for each coastal section, and illustrate the interaction between Initial SD in each group and the significance (\emph{p}-value) of the GLS models. The panels, from top to bottom, show increasing decadal trends as indicated by numerals above the panels. The bold black line in each panel denotes \emph{p}-value = 0.05.}
+\caption{The effect of the SD ($^{\circ}$C) of the anomaly time series before adding a decadal trend (initial SD), or rounding the data to the different levels of precision, on the significance of the modeled trend. The size of the symbols are scaled in direct proportion to the time series length and are shown at the top of the figure. Time series belonging to the three South African coastal sections are represented with shapes. The east coast (ec) typically has the most stable thermal regime of the three coasts, with the south coast (sc) having the greatest amount of variance and the west coast (wc) consisting of areas with both high and low variance. Linear models with 95\% confidence intervals (indicated by gray ribbons) have been fitted separately for each coastal section, and illustrate the interaction between Initial SD in each group and the significance (\emph{p}-value) of the GLS models. The panels, from top to bottom, show increasing decadal trends as indicated by numerals above the panels.}
 \label{figure05}
 \end{figure}
 
 \begin{figure}
 \centering \includegraphics[width=0.50\textwidth]{figure06}
-\caption{The relationship between the effect of Initial SD (\emph{i.e.} the variance of the anomaly time series before adding artificial decadal trends; shown here in shades of gray), on the standard error (SE) of a modeled trend, controlled for by the length of the time series. The effect of the size of the added decadal trends on the relationship is imperceptible and therefore only the fitted decadal trend of \SI{0.20}{\degreeCelsius}~dec$^{-1}$ is presented.}
+\caption{The relationship between the effect of initial SD ($^{\circ}$C) (\emph{i.e.} the variance of the anomaly time series before adding artificial decadal trends; shown here in shades of gray), on the standard error (SE) of a modeled trend, controlled for by the length of the time series. The effect of the size of the added decadal trends on the relationship is imperceptible and therefore only a decadal trend of \SI{0.20}{\degreeCelsius}~dec$^{-1}$ is presented.}
 \label{figure06}
 \end{figure}
 
@@ -133,7 +133,7 @@ The number of \texttt{NA}s permitted in any of our time series was limited to 15
 
 \begin{figure}
 \centering \includegraphics[width=0.50\textwidth]{figure07}
-\caption{The relationship between the amount of missing values (\%\texttt{NA}) and the significance of a modeled trend. Each panel shows the effect of an increasingly larger amount of missing values, indicated above each panel by numerals. The fitted lines and 95\% confidence intervals (shown as shaded gray bands) represent each of the five decadal trends assessed.}
+\caption{The relationship between the amount of missing values (log \%\texttt{NA}) and the significance of a modeled trend (\emph{p} value). Each panel shows the effect of an increasingly larger amount of missing values indicated above each panel by numerals (from top left to bottom right): 1, 2.5, 5, 10, 12.5, and 15. The fitted black lines and 95\% confidence intervals (shown as gray-shaded bands) represent each of the five decadal trends assessed ($^{\circ}$C decade$^{-1}$) shown using different black symbols: 0 (circles), 0.05 (triangles), 0.1 (squares), 0.15 (crosses), and 0.2 (squares with an $\times$ symbol inside).}
 \label{figure07}
 \end{figure}
 
@@ -154,7 +154,7 @@ An analysis with a large number of variables as shown here is bound to have a me
 \section{Discussion}
 The strongest finding of this analysis is that the accurate detection of long-term trends in time series primarily concerns the length of a dataset. But there is also a host of nuances resulting from time series length, the steepness of the decadal trend the model is asked to detect, the influence of the SD of a time series, the amount of missing values and the precision at which the data have been measured or recorded that interact with one-another and which must be considered.
 
-Whereas time series with smaller variances (shown as SD in this study) generally produce model fits that are statistically significant (\emph{i.e.} with decadal trends that are significantly different from \SI{0}{\degreeCelsius}~dec$^{-1}$ at \emph{p} \textless~0.05) and with smaller SE of the estimated trends after shorter lengths of time, we also see that increasing a time series' length beyond 25 years, but preferably beyond 30 years, will increase the likelihood of detecting a decadal temperature change even in very variable datasets. Detecting temperature change in highly variable coastal environments, such as those around the coast of South Africa and many temperate coastal environments globally, will therefore benefit from access to the longest possible time series available. This phenomenon is demonstrated in Figure \ref{figure05}, which uses shape to show the time series binned by the three different coastal sections of South Africa \citep{Smit2013}. Of these three coastal sections the east coast is known to have the most stable thermal regime (\emph{i.e.} with the smallest variance), with the south coast having the greatest variance. Long time series at sites of low variance result in great improvements in our ability to detect significant climate change trends, and this effect is most obvious in time series with steeper decadal trends. The selection of sites for long-term monitoring must therefore account for the location of study and necessitate adequate planning to collect a long enough time series.
+Whereas time series with smaller variances (shown as SD in this study) generally produce model fits that are statistically significant (\emph{i.e.} with decadal trends that are significantly different from \SI{0}{\degreeCelsius}~dec$^{-1}$ at \emph{p} \textless~0.05) and with smaller SE of the estimated trends after shorter lengths of time, we also see that increasing a time series' length beyond 25 years, but preferably beyond 30 years, will increase the likelihood of detecting a decadal temperature change even in very variable datasets. Detecting temperature change in highly variable coastal environments, such as those around the coast of South Africa and many temperate coastal environments globally, will therefore benefit from access to the longest possible time series available. This phenomenon is demonstrated in Figure \ref{figure05}, which uses symbols to show the time series binned by the three different coastal sections of South Africa \citep{Smit2013}. Of these three coastal sections the east coast is known to have the most stable thermal regime (\emph{i.e.} with the smallest variance), with the south coast having the greatest variance. Long time series at sites of low variance result in great improvements in our ability to detect significant climate change trends, and this effect is most obvious in time series with steeper decadal trends. The selection of sites for long-term monitoring must therefore account for the location of study and necessitate adequate planning to collect a long enough time series.
 
 The detection of long-term trends requires long-term data, a fact that is already firmly established in climate change research \citep{Ohring2005, IPCC2013}. The length of these time series is firmly under the control of the investigator with sufficient foresight and perseverance to plan the installation and management of new instrument networks that will yield usable results only after about three-quarters of a typical academic career has passed. Should such data already exist -- and considering the scarcity of such long-term records that are already yielding benefits today -- we must ensure that these sources of data are managed and curated with great care and diligence as they are practically irreplaceable. For this reason, it is essential that we understand the inherent strengths and weaknesses of such existing sources of data so that we may fully maximize their utility and extract from them the model coefficients needed to detect decadal temperature trends, and know the accuracy of these estimates to the best of our ability. There are many time series \textless~20 years in length that should be avoided, where possible, for trend analysis. These will mature with time and their maintenance needs to be ensured going forward.
 
@@ -166,28 +166,28 @@ As 50 year coastal seawater temperature time series are probably very scarce, it
 
 It is important to take note of the accuracy of the models, not only to focus on the significance of their results. Indeed, the \emph{p}-value given for the slope in a model does not show how well the model detects the true trend in the data (known \emph{a-priori} in this study); rather, it tells us if the detected trend is significantly different from \SI{0}{\degreeCelsius}~dec$^{-1}$. This is not particularly useful for applying the results of climate change research more broadly to biotic interests. For example, of the 1,344 models (84 base time series $\times~4$ decadal trends $\times~4$ levels of precision) fitted to time series with decadal trends $\geq~\SI{0.05}{\degreeCelsius}$~dec$^{-1}$, 317 of these  were accurate to within 10\% of the decadal trend known \emph{a priori}, but not significant (\emph{p}~$\geq~0.05$). That a long term trend does exist, may be accurately detected by a model and related to an observed change in the natural world -- such as range expansion/contraction of coastal biota \citep{Bolton2012,Straub2016,Wernberg2016} -- is more important than whether or not the model can show if that trend is significantly different from \SI{0}{\degreeCelsius}~dec$^{-1}$ in a statistical sense.
 
-We must mention also that much of the meta-data pertaining to the older temperature records used here have over time been lost. Unlike the bulk of the International Comprehensive Ocean-Atmosphere Data Set \citep[ICOADS;][]{Freeman:2016db}, \emph{in situ} coastal seawater temperature monitoring that started in the 1970s in South Africa was not developed with climate change research in mind, and comprehensive records that keep track of details of the instruments used, calibration, their turnover, change in monitoring methods and locations and so forth are not always available as per modern requirements \citep{Aguilar2003}. For studies of climate change \emph{per se} this is a serious limitation and it prevents us from knowing anything about the accuracy of the instruments or potential issues of drift (stability) that may have occurred. We do know however that all time series sampled with thermometers were sampled only with thermometers, and \emph{vice versa} for the UTR time series, ensuring that the precisions of the measured data used in this study are correct. Moving forward with the further development of the SACTN and the establishment of a national standard of data collection and instrument maintenance, we are able to record and archive all these levels of pertinent meta-data, and allowing for the enforcement of SI traceability and the accurate measurement of instrument drift \citep{Jarraud2008}. Nevertheless, the detrended anomaly time series used here were taken only for their variance properties, which we think accurately reflect that of the various coastal sections around the coast. They provide a strong backbone for semi-artificial time series, and we have shown how important insights about model fitting could be derived from these data.
+We must mention also that much of the meta-data pertaining to the older temperature records used here have over time been lost. Unlike the bulk of the International Comprehensive Ocean-Atmosphere Data Set \citep[ICOADS;][]{Freeman:2016db}, \emph{in situ} coastal seawater temperature monitoring that started in the 1970s in South Africa was not developed with climate change research in mind, and comprehensive records that keep track of details of the instruments used, calibration, their turnover, change in monitoring methods and locations and so forth are not always available as per modern requirements \citep{Aguilar2003}. For studies of climate change \emph{per se} this is a serious limitation and it prevents us from knowing anything about the accuracy of the instruments or potential issues of drift (stability) that may have occurred. We do know however that all time series sampled with thermometers were sampled only with thermometers, and \emph{vice versa} for the UTR time series, ensuring that the precisions of the measured data used in this study are correct. Moving forward with the further development of the SACTN and the establishment of a national standard of data collection and instrument maintenance, we are able to record and archive all these levels of pertinent meta-data, and allowing for the enforcement of SI traceability and the accurate measurement of instrument drift \citep{Jarraud2008}. Nevertheless, the detrended anomaly time series used here were taken only for their variance properties, which we think accurately reflect those of the three different coastal sections. They provide a strong backbone for semi-artificial time series, and we have shown how important insights about model fitting could be derived from these data.
 
 \section{Conclusion}
 We draw several key conclusions:
 
 \begin{enumerate}
-\item There is a rapid increase in the accuracy and significance of modeled trends as time series lengths extend from 10 to 20 years. This improvement slows from 20 to 30 years, and as time series approach 40 years in length the accuracy of models becomes nearly exact. Modeled trends from time series at or under 25 years in length should be interpreted with extreme caution.
+\item There is a rapid increase in the accuracy and significance of modeled trends as time series lengths extend from 10 to 20 yr. This improvement slows from 20 to 30 yr, and as time series approach 40 yr in length the accuracy of models becomes nearly exact. Modeled trends from time series at or under 25 yr in length should be interpreted with extreme caution.
 
 \item For our variable coastal seawater, a time series of 520 months in length is required to detect a decadal trend in line with the global average (\emph{i.e.} near \SI{0.1}{\degreeCelsius}~dec$^{-1}$) with perfect accuracy; however, an additional 120 months of data is often required for the detected trend to be considered significant (\emph{p} $\leq 0.05$).
 
-\item The length of a time series required to detect a decadal trend at \SI{0.10}{\degreeCelsius}~dec$^{-1}$ may rapidly exceed 100 years when a large amount of variance is present.
+\item The length of a time series required to detect a decadal trend at \SI{0.10}{\degreeCelsius}~dec$^{-1}$ may rapidly exceed 100 yr when a large amount of variance is present.
 
 \item The larger the decadal trend within a time series, the more accurately it will be modeled regardless of the amount of variance in the time series.
 
 \item There is a complicated relationship between the accuracy of a trend fitted to a time series and the \%\texttt{NA} of that time series. As the \%\texttt{NA} increases, so too does the chance of committing type 1 (with gentle trends) or type 2 errors (with steeper trends).
 
-\item A measurement precision finer than \SI{0.5}{\degreeCelsius} is not required to confidently detect the long-term trend in a time series; however, precisions at or finer than \SI{0.1}{\degreeCelsius} may reduce the length of time required to accurately detect a long term trend, if one does exist, by as much as two years.
+\item A measurement precision finer than \SI{0.5}{\degreeCelsius} is not required to confidently detect the long-term trend in a time series; however, precisions at or finer than \SI{0.1}{\degreeCelsius} may reduce the length of time required to accurately detect a long term trend, if one does exist, by as much as two yr.
 
 \item Improving the precision of measurements finer than \SI{0.1}{\degreeCelsius} has almost no appreciable effect on a models ability to detect a long-term trend, provided that the reported effect size matches the level of precision by the instruments.
 \end{enumerate}
 
-We understand that time series of \textgreater 30 years may be exceedingly rare. Therefore, as we move forward as a scientific community investigating the issues of climate change, the continuity of any current time series of sufficient length must be ensured as these commodities are practically irreplaceable.
+We understand that time series of \textgreater 30 yr may be exceedingly rare. Therefore, as we move forward as a scientific community investigating the issues of climate change, the continuity of any current time series of sufficient length must be ensured as these commodities are practically irreplaceable.
 %
 %==============================================================================
 
@@ -398,7 +398,7 @@ Smit, A.~J., M.~Roberts, R.~J. Anderson, F.~Dufois, S.~F.~J. Dudley, T.~G.
   remotely-sensed data sets around the coast of South Africa}. \textit{PLoS
   ONE}, \textbf{8~(12)}, \doi{10.1371/journal.pone.0081944}.
 
-\bibitem[{Stocker et~al.(2013)}]{IPCC2013}
+\bibitem[{Stocker et~al.(2013)}]{IPCC2013} %This appears as IPCC (2013) in the final publication
 Stocker, T., and Coauthors, 2013: \textit{Climate change 2013: the
   physical science basis. Contribution of working group I to the fifth
   assessment report of the intergovernmental panel on climate change}.
